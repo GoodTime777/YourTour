@@ -139,6 +139,7 @@ body {
 }
 
 .header {
+  overflow-x: hidden;
   letter-spacing: 0px;
   font-weight: 700;
   color: #ffffff;
@@ -148,13 +149,19 @@ body {
   margin: 0px auto 135px auto;
   padding-bottom: 119px;
 }
-@media (min-width: 1024px) and (max-width: 1919px) {
+@media (min-width: 1024px) {
   .header {
     max-width: 1024px;
     background: url("images/pad-header-background.png") no-repeat 50%/cover;
   }
 }
-@media (min-width: 360px) and (max-width: 1023px) {
+@media (min-width: 1025px) and (max-width: 1919px) {
+  .header {
+    width: 100vw;
+    background: url("images/pad-header-background.png") no-repeat 50%/cover;
+  }
+}
+@media (min-width: 360px) {
   .header {
     max-width: 360px;
     background: url("images/pad-header-background.png") no-repeat 50%/cover;
@@ -162,6 +169,12 @@ body {
     padding-left: 21px;
     padding-right: 21px;
     margin-bottom: 75px;
+  }
+}
+@media (min-width: 362px) and (max-width: 1023px) {
+  .header {
+    width: 100vw !important;
+    background: url("images/pad-header-background.png") no-repeat 50%/100vw;
   }
 }
 .header__navigation {
@@ -237,7 +250,7 @@ body {
 }
 .header .navigation-scroll {
   position: fixed;
-  width: 1920px;
+  width: 100vw;
   top: -90px;
   left: 50%;
   transform: translateX(-50%);
@@ -247,14 +260,8 @@ body {
   transition: top 0.5s ease-in-out 0.5s, background-color 0.5s ease-in-out 0.5s;
   z-index: 100;
 }
-@media (min-width: 1024px) and (max-width: 1919px) {
-  .header .navigation-scroll {
-    width: 1024px;
-  }
-}
 @media (min-width: 360px) and (max-width: 1023px) {
   .header .navigation-scroll {
-    width: 360px;
     top: -88.5px;
     margin-bottom: 0;
     padding-left: 20px;
