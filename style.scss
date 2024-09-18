@@ -197,39 +197,22 @@ body {
   overflow-x: hidden;
   @include font();
   position: relative;
-width: 100vw;
-  //max-width: 1920px;
+  width: 100vw;
   background: url("images/header-background.png") no-repeat 100% 120% / cover;
   margin: 0px auto 135px auto;
   padding-bottom: 119px;
 
-  @media (min-width: 1921px) {
-   //width: 100vw !important;
-    background: url("images/header-background.png") no-repeat 100% 120% / cover;
-  }
-
-  @media (min-width: 1024px) {
-    // max-width: 1024px;
+  @media (min-width: 1024px) and(max-width:1919px) {
     background: url("images/pad-header-background.png") no-repeat 50% / cover;
   }
-
-  @media (min-width: 1025px) and(max-width:1919px) {
-    width: 100vw;
-    background: url("images/pad-header-background.png") no-repeat 50% / cover;
-  }
-  @media (min-width: 360px) {
-    //max-width: 360px;
+  @media (min-width: 360px)and(max-width:1023px) {
     background: url("images/pad-header-background.png") no-repeat 50% / cover;
     padding-bottom: 52px;
     padding-left: 21px;
     padding-right: 21px;
     margin-bottom: 75px;
   }
-
-  @media (min-width: 362px) and(max-width:1023px) {
-    width: 100vw;
-    background: url("images/pad-header-background.png") no-repeat 50% / cover;
-  }
+  
 
   &__navigation {
     overflow-x: hidden;
@@ -296,7 +279,6 @@ width: 100vw;
   .navigation-scroll {
     position: fixed;
     width: 1920px;
-
     top: -90px;
     left: 50%;
     transform: translateX(-50%);
@@ -308,11 +290,9 @@ width: 100vw;
 
     @media (min-width: 1024px) and(max-width:1919px) {
       width: 100vw;
-      // width: 1024px;
     }
 
     @media (min-width: 360px) and(max-width:1023px) {
-      // width: 360px;
       width: 100vw;
       top: -88.5px;
       justify-content: center;

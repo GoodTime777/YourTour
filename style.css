@@ -149,35 +149,18 @@ body {
   margin: 0px auto 135px auto;
   padding-bottom: 119px;
 }
-@media (min-width: 1921px) {
-  .header {
-    background: url("images/header-background.png") no-repeat 100% 120%/cover;
-  }
-}
-@media (min-width: 1024px) {
+@media (min-width: 1024px) and (max-width: 1919px) {
   .header {
     background: url("images/pad-header-background.png") no-repeat 50%/cover;
   }
 }
-@media (min-width: 1025px) and (max-width: 1919px) {
-  .header {
-    width: 100vw;
-    background: url("images/pad-header-background.png") no-repeat 50%/cover;
-  }
-}
-@media (min-width: 360px) {
+@media (min-width: 360px) and (max-width: 1023px) {
   .header {
     background: url("images/pad-header-background.png") no-repeat 50%/cover;
     padding-bottom: 52px;
     padding-left: 21px;
     padding-right: 21px;
     margin-bottom: 75px;
-  }
-}
-@media (min-width: 362px) and (max-width: 1023px) {
-  .header {
-    width: 100vw;
-    background: url("images/pad-header-background.png") no-repeat 50%/cover;
   }
 }
 .header__navigation {
