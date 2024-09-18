@@ -144,14 +144,18 @@ body {
   font-weight: 700;
   color: #ffffff;
   position: relative;
-  max-width: 1920px;
+  width: 100vw;
   background: url("images/header-background.png") no-repeat 100% 120%/cover;
   margin: 0px auto 135px auto;
   padding-bottom: 119px;
 }
+@media (min-width: 1921px) {
+  .header {
+    background: url("images/header-background.png") no-repeat 100% 120%/cover;
+  }
+}
 @media (min-width: 1024px) {
   .header {
-    max-width: 1024px;
     background: url("images/pad-header-background.png") no-repeat 50%/cover;
   }
 }
@@ -163,7 +167,6 @@ body {
 }
 @media (min-width: 360px) {
   .header {
-    max-width: 360px;
     background: url("images/pad-header-background.png") no-repeat 50%/cover;
     padding-bottom: 52px;
     padding-left: 21px;
@@ -173,11 +176,12 @@ body {
 }
 @media (min-width: 362px) and (max-width: 1023px) {
   .header {
-    width: 100vw !important;
-    background: url("images/pad-header-background.png") no-repeat 50%/100vw;
+    width: 100vw;
+    background: url("images/pad-header-background.png") no-repeat 50%/cover;
   }
 }
 .header__navigation {
+  overflow-x: hidden;
   position: relative;
   display: flex;
   justify-content: center;
@@ -185,6 +189,7 @@ body {
   gap: 182px;
   padding: 29px 0px;
   top: 0px;
+  overflow-x: hidden;
 }
 @media (min-width: 1024px) and (max-width: 1919px) {
   .header__navigation {
@@ -193,8 +198,8 @@ body {
 }
 @media (min-width: 360px) and (max-width: 1023px) {
   .header__navigation {
-    justify-content: space-between;
-    gap: 0px;
+    justify-content: center;
+    gap: 63px;
     padding: 32.5px 0;
     margin-bottom: 52px;
   }
@@ -250,7 +255,7 @@ body {
 }
 .header .navigation-scroll {
   position: fixed;
-  width: 100vw;
+  width: 1920px;
   top: -90px;
   left: 50%;
   transform: translateX(-50%);
@@ -260,9 +265,17 @@ body {
   transition: top 0.5s ease-in-out 0.5s, background-color 0.5s ease-in-out 0.5s;
   z-index: 100;
 }
+@media (min-width: 1024px) and (max-width: 1919px) {
+  .header .navigation-scroll {
+    width: 100vw;
+  }
+}
 @media (min-width: 360px) and (max-width: 1023px) {
   .header .navigation-scroll {
+    width: 100vw;
     top: -88.5px;
+    justify-content: center;
+    gap: 63px;
     margin-bottom: 0;
     padding-left: 20px;
     padding-right: 20px;
@@ -283,9 +296,14 @@ body {
   margin: 0 auto;
   padding-top: 119px;
 }
+@media (min-width: 1024px) and (max-width: 1919px) {
+  .header__content {
+    max-width: 914px;
+  }
+}
 @media (min-width: 360px) and (max-width: 1023px) {
   .header__content {
-    width: 100%;
+    max-width: 310px;
     gap: 40px;
     padding-top: 0;
   }

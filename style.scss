@@ -197,13 +197,19 @@ body {
   overflow-x: hidden;
   @include font();
   position: relative;
-  max-width: 1920px;
+width: 100vw;
+  //max-width: 1920px;
   background: url("images/header-background.png") no-repeat 100% 120% / cover;
   margin: 0px auto 135px auto;
   padding-bottom: 119px;
 
+  @media (min-width: 1921px) {
+   //width: 100vw !important;
+    background: url("images/header-background.png") no-repeat 100% 120% / cover;
+  }
+
   @media (min-width: 1024px) {
-    max-width: 1024px;
+    // max-width: 1024px;
     background: url("images/pad-header-background.png") no-repeat 50% / cover;
   }
 
@@ -212,7 +218,7 @@ body {
     background: url("images/pad-header-background.png") no-repeat 50% / cover;
   }
   @media (min-width: 360px) {
-    max-width: 360px;
+    //max-width: 360px;
     background: url("images/pad-header-background.png") no-repeat 50% / cover;
     padding-bottom: 52px;
     padding-left: 21px;
@@ -221,23 +227,25 @@ body {
   }
 
   @media (min-width: 362px) and(max-width:1023px) {
-    width: 100vw !important;
-    background: url("images/pad-header-background.png") no-repeat 50% / 100vw;
+    width: 100vw;
+    background: url("images/pad-header-background.png") no-repeat 50% / cover;
   }
 
   &__navigation {
+    overflow-x: hidden;
     position: relative;
     @include flex($gap: 182px);
     padding: 29px 0px;
     top: 0px;
+    overflow-x: hidden;
 
     @media (min-width: 1024px) and(max-width:1919px) {
       gap: 82.5px;
     }
 
     @media (min-width: 360px) and(max-width:1023px) {
-      justify-content: space-between;
-      gap: 0px;
+      justify-content: center;
+      gap: 63px;
       padding: 32.5px 0;
       margin-bottom: 52px;
     }
@@ -287,8 +295,8 @@ body {
 
   .navigation-scroll {
     position: fixed;
-    width: 100vw;
-    //width: 1920px;
+    width: 1920px;
+
     top: -90px;
     left: 50%;
     transform: translateX(-50%);
@@ -299,13 +307,16 @@ body {
     z-index: 100;
 
     @media (min-width: 1024px) and(max-width:1919px) {
-      //width: 100vw;
+      width: 100vw;
       // width: 1024px;
     }
 
     @media (min-width: 360px) and(max-width:1023px) {
       // width: 360px;
+      width: 100vw;
       top: -88.5px;
+      justify-content: center;
+      gap: 63px;
       margin-bottom: 0;
       padding-left: 20px;
       padding-right: 20px;
@@ -327,9 +338,12 @@ body {
     gap: 50px;
     margin: 0 auto;
     padding-top: 119px;
-
+    @media (min-width: 1024px) and(max-width:1919px) {
+      max-width: 914px;
+    }
     @media (min-width: 360px) and(max-width:1023px) {
-      width: 100%;
+      //width: 100%;
+      max-width: 310px;
       gap: 40px;
       padding-top: 0;
     }
