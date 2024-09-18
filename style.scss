@@ -197,17 +197,17 @@ body {
   @include font();
   position: relative;
   max-width: 1920px;
-  background: url(images/header-background.png) no-repeat 100% 120% / cover;
+  background: url('images/header-background.png') no-repeat 100% 120% / cover;
   margin: 0px auto 135px auto;
   padding-bottom: 119px;
 
   @media (min-width: 1024px) and(max-width:1919px) {
     max-width: 1024px;
-    background: url(images/pad-header-background.png) no-repeat 50% / cover;
+    background: url('images/pad-header-background.png') no-repeat 50% / cover;
   }
   @media (min-width: 360px) and(max-width:1023px) {
     max-width: 360px;
-    background: url(images/pad-header-background.png) no-repeat 50% / cover;
+    background: url('images/pad-header-background.png') no-repeat 50% / cover;
     padding-bottom: 52px;
     padding-left: 21px;
     padding-right: 21px;
@@ -710,19 +710,19 @@ body {
         @include fontText($color: $black);
         appearance: none;
         padding: 20px;
-        background: url(/images/arrow-dropdown.svg) no-repeat 456px/26px 26px,
+        background: url('images/arrow-dropdown.svg') no-repeat 456px/26px 26px,
           $select_gradient;
 
         @media (min-width: 1024px) and(max-width:1919px) {
           width: 389px;
-          background: url(/images/arrow-dropdown.svg) no-repeat 346px/26px 26px,
+          background: url('images/arrow-dropdown.svg') no-repeat 346px/26px 26px,
             $select_gradient;
         }
         @media (min-width: 360px) and(max-width:1023px) {
           width: 278px;
           font-size: $fz_16;
           padding: 12px 10px;
-          background: url(/images/arrow-dropdown.svg) no-repeat 246px/26px 26px,
+          background: url('images/arrow-dropdown.svg') no-repeat 246px/26px 26px,
             $select_gradient;
         }
 
@@ -753,15 +753,15 @@ body {
         padding: 17.5px 20px 18px 20px;
       }
       select:hover {
-        background: url(images/arrow-dropdown.svg) no-repeat 456px/26px 26px,
+        background: url('images/arrow-dropdown.svg') no-repeat 456px/26px 26px,
           $select_gradient_hover;
 
         @media (min-width: 1024px) and(max-width:1919px) {
-          background: url(images/arrow-dropdown.svg) no-repeat 346px/26px 26px,
+          background: url('images/arrow-dropdown.svg') no-repeat 346px/26px 26px,
             $select_gradient_hover;
         }
         @media (min-width: 360px) and(max-width:1023px) {
-          background: url(images/arrow-dropdown.svg) no-repeat 246px/26px 26px,
+          background: url('images/arrow-dropdown.svg') no-repeat 246px/26px 26px,
             $select_gradient_hover;
         }
       }
@@ -919,12 +919,12 @@ body {
           position: absolute;
           top: 24%;
           left: 23.5%;
-          background: url(images/Checkbox\ arrow.svg) no-repeat;
+          background: url('images/Checkbox\ arrow.svg') no-repeat;
           width: 0px;
           height: 0px;
 
           @media (min-width: 360px) and(max-width:1023px) {
-            background: url(images/Checkbox\ arrow\ mobile.svg) no-repeat;
+            background: url('images/Checkbox\ arrow\ mobile.svg') no-repeat;
             top: 24%;
             left: 20%;
           }
@@ -1404,50 +1404,50 @@ body {
 
     .one-block {
       background: $stories_gradient,
-        url(images/story\ photo-1.jpg) no-repeat center;
+        url('images/story\ photo-1.jpg') no-repeat center;
       margin-bottom: 50px;
 
       @media (min-width: 1024px) and(max-width:1919px) {
         background: $stories_gradient,
-          url(images/story\ photo-1Pad.png) no-repeat center;
+          url('images/story\ photo-1Pad.png') no-repeat center;
       }
 
       @media (min-width: 360px) and(max-width:1023px) {
         background: $stories_gradient,
-          url(images/story\ photo-1Mobile.png) no-repeat center;
+          url('images/story\ photo-1Mobile.png') no-repeat center;
         margin-bottom: 20px;
       }
     }
 
     .two-block {
       background: $stories_gradient,
-        url(images/story\ photo-2.jpg) no-repeat center;
+        url('images/story\ photo-2.jpg') no-repeat center;
       margin-bottom: 50px;
 
       @media (min-width: 1024px) and(max-width:1919px) {
         background: $stories_gradient,
-          url(images/story\ photo-2Pad.png) no-repeat center;
+          url('images/story\ photo-2Pad.png') no-repeat center;
       }
 
       @media (min-width: 360px) and(max-width:1023px) {
         background: $stories_gradient,
-          url(images/story\ photo-2Mobile.png) no-repeat center;
+          url('images/story\ photo-2Mobile.png') no-repeat center;
         margin-bottom: 20px;
       }
     }
 
     .three-block {
       background: $stories_gradient,
-        url(images/story\ photo-3.jpg) no-repeat center;
+        url('images/story\ photo-3.jpg') no-repeat center;
 
       @media (min-width: 1024px) and(max-width:1919px) {
         background: $stories_gradient,
-          url(images/story\ photo-3Pad.png) no-repeat 48%;
+          url('images/story\ photo-3Pad.png') no-repeat 48%;
       }
 
       @media (min-width: 360px) and(max-width:1023px) {
         background: $stories_gradient,
-          url(images/story\ photo-3Mobile.png) no-repeat center;
+          url('images/story\ photo-3Mobile.png') no-repeat center;
       }
     }
 
@@ -1492,7 +1492,7 @@ body {
       min-width: 370px;
       min-height: 370px;
       border-radius: 50px;
-      background: url(images/footer\ \ photo.jpg) no-repeat center/cover;
+      background: url('images/footer\ \ photo.jpg') no-repeat center/cover;
 
       @media (min-width: 360px) and(max-width:1023px) {
         min-width: 130px;
