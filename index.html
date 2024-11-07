@@ -14,15 +14,15 @@
     />
     <link rel="icon" href="images/favicon/favicon 32х32.svg" />
     <link rel="stylesheet" href="styleNull.css" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css" />    
     <title>YourTour</title>
     <meta name="description" content="Путешествия идеальные." />
   </head>
   <body>
-    <header class="header">
-      <nav class="header__navigation">
+    <header class="header" id="header">
+      <nav class="header__navigation .navigation-scroll">
         <div class="header__navigation-logo">
-          <a href="#" class="header__navigation-logo-icon icon-white"
+          <a href="#header" class="header__navigation-logo-icon icon-white"
             ><img src="images/YourTour.png" alt="logo"
           /></a>
         </div>
@@ -30,28 +30,28 @@
           <ul class="header__navigation-menu-list">
             <li class="header__navigation-menu-list-item">
               <a
-                href="#"
+                href="#card"
                 class="header__navigation-menu-list-item-link underline"
                 >Туры</a
               >
             </li>
             <li class="header__navigation-menu-list-item">
               <a
-                href="#"
+                href="#application"
                 class="header__navigation-menu-list-item-link underline"
                 >Создать тур</a
               >
             </li>
             <li class="header__navigation-menu-list-item">
               <a
-                href="#"
+                href="#reviews"
                 class="header__navigation-menu-list-item-link underline"
                 >Отзывы</a
               >
             </li>
             <li class="header__navigation-menu-list-item">
               <a
-                href="#"
+                href="#stories"
                 class="header__navigation-menu-list-item-link underline"
                 >Истории</a
               >
@@ -67,7 +67,7 @@
           >
         </div>
       </nav>
-      <nav class="header__navigation navigation-scroll">
+      <!-- <nav class="header__navigation navigation-scroll">
         <div class="header__navigation-logo">
           <a href="#" class="header__navigation-logo-icon"
             ><img src="images/YourTourBlack.png" alt="logo"
@@ -113,7 +113,7 @@
             >+7 999 999 99 99</a
           >
         </div>
-      </nav>
+      </nav> -->
       <div class="header__content">
         <h1 class="header__content-title">Идеальные путешествия существуют</h1>
         <p class="header__content-subtitle">
@@ -125,7 +125,7 @@
         </div>
       </div>
     </header>
-    <section class="card">
+    <section class="card" id="card">
       <h2 class="card__title">Выбери свой тур</h2>
       <div id="tabs" class="card__tabs">
         <div class="card__tabs-links">
@@ -532,7 +532,7 @@
         </div>
       </div>
     </section>
-    <section class="application">
+    <section class="application" id="application">
       <h2 class="application__title">Собери свой тур</h2>
       <p class="application__subtitle subtitle">
         Идейные соображения высшего порядка, <br />
@@ -686,7 +686,7 @@
       </div>
     </section>
 
-    <section class="reviews">
+    <section class="reviews" id="reviews">
       <h2 class="reviews__title">
         Отзывы наших <br />
         путешественников
@@ -1324,7 +1324,7 @@
         </div>
       </div>
     </section>
-    <section class="stories">
+    <section class="stories" id="stories">
       <h2 class="stories__title">Истории путешествий</h2>
       <p class="stories__subtitle subtitle">
         Идейные соображения высшего порядка, <br />
@@ -1452,41 +1452,41 @@
         <p class="footer__container-text">Наши социальные сети</p>
         <div class="footer__container-network">
           <div class="footer__container-network-container">
-            <img
-              src="images/inst.png"
-              class="footer__container-network-container-icon inst"
-              alt="inst"
-            />
+            
             <a
               href="#"
               class="footer__container-network-container-link instagram underline"
-            >
+            ><img
+              src="images/inst.png"
+              class="footer__container-network-container-link-icon inst"
+              alt="inst"
+            />
               instagram</a
             >
           </div>
           <div class="footer__container-network-container">
-            <img
-              src="images/fb.png"
-              class="footer__container-network-container-icon fb"
-              alt="fb"
-            />
+           
             <a
               href="#"
               class="footer__container-network-container-link facebook underline"
-            >
+            > <img
+              src="images/fb.png"
+              class="footer__container-network-container-link-icon fb"
+              alt="fb"
+            />
               facebook</a
             >
           </div>
           <div class="footer__container-network-container">
-            <img
-              src="images/vk.png"
-              class="footer__container-network-container-icon vk"
-              alt="vk"
-            />
+            
             <a
               href="#"
               class="footer__container-network-container-link vkontakte underline"
-            >
+            ><img
+              src="images/vk.png"
+              class="footer__container-network-container-link-icon vk"
+              alt="vk"
+            />
               vkontakte</a
             >
           </div>

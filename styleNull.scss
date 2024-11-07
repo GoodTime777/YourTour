@@ -18,7 +18,10 @@
   a:active {
     outline: none;
   }
-  
+  html{
+    scroll-behavior: smooth
+  }
+
   nav,
   footer,
   header,
