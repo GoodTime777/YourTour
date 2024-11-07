@@ -145,7 +145,7 @@ body {
   color: #ffffff;
   position: relative;
   width: 100vw;
-  background: url("images/header-background.png") no-repeat 100% 120%/cover;
+  background: url("images/header-background.png") no-repeat 0% 80%/100%;
   margin: 0px auto 135px auto;
   padding-bottom: 119px;
 }
@@ -592,11 +592,11 @@ body {
 }
 @media (min-width: 360px) and (max-width: 1023px) {
   .card__container-content-items .card-one,
-.card__container-content-items .card-two,
-.card__container-content-items .card-three,
-.card__container-content-items .card-four,
-.card__container-content-items .card-five,
-.card__container-content-items .card-six {
+  .card__container-content-items .card-two,
+  .card__container-content-items .card-three,
+  .card__container-content-items .card-four,
+  .card__container-content-items .card-five,
+  .card__container-content-items .card-six {
     transition: none;
   }
 }
@@ -607,8 +607,8 @@ body {
 }
 @media (min-width: 360px) and (max-width: 1023px) {
   .card__container-content-items .card-one:hover,
-.card__container-content-items .card-four:hover,
-.card__container-content-items .card-five:hover {
+  .card__container-content-items .card-four:hover,
+  .card__container-content-items .card-five:hover {
     background-size: 103%;
   }
 }
@@ -619,8 +619,8 @@ body {
 }
 @media (min-width: 360px) and (max-width: 1023px) {
   .card__container-content-items .card-two:hover,
-.card__container-content-items .card-three:hover,
-.card__container-content-items .card-six:hover {
+  .card__container-content-items .card-three:hover,
+  .card__container-content-items .card-six:hover {
     background-size: 100%;
   }
 }
@@ -809,7 +809,6 @@ body {
   padding: 0;
 }
 .application__box-form-agreement-radiobox {
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   display: flex;
@@ -920,7 +919,7 @@ body {
 }
 @media (min-width: 360px) and (max-width: 1023px) {
   .application__box-form-agreement .custom-radio,
-.application__box-form-agreement .custom-checkbox {
+  .application__box-form-agreement .custom-checkbox {
     width: 20px;
     height: 20px;
   }
@@ -1199,8 +1198,7 @@ body {
   }
 }
 .gallery__container-content-one {
-  -webkit-animation: logo 45s linear infinite;
-          animation: logo 45s linear infinite;
+  animation: logo 45s linear infinite;
 }
 @media (min-width: 360px) and (max-width: 1023px) {
   .gallery__container-content-one {
@@ -1216,31 +1214,14 @@ body {
   }
 }
 .gallery__container-content-three {
-  -webkit-animation: logo 65s linear infinite;
-          animation: logo 65s linear infinite;
+  animation: logo 65s linear infinite;
 }
 @media (min-width: 360px) and (max-width: 1023px) {
   .gallery__container-content-three {
     gap: 10px;
   }
 }
-@-webkit-keyframes logo {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(100%);
-  }
-}
 @keyframes logo {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(100%);
-  }
-}
-@-webkit-keyframes logo-right {
   0% {
     transform: translateX(0%);
   }
@@ -1550,8 +1531,8 @@ body {
 }
 @media (min-width: 360px) and (max-width: 1023px) {
   .stories__container .one-block,
-.stories__container .two-block,
-.stories__container .three-block {
+  .stories__container .two-block,
+  .stories__container .three-block {
     background-size: cover;
   }
 }
@@ -1562,8 +1543,8 @@ body {
 }
 @media (min-width: 360px) and (max-width: 1023px) {
   .stories__container .one-block:hover,
-.stories__container .two-block:hover,
-.stories__container .three-block:hover {
+  .stories__container .two-block:hover,
+  .stories__container .three-block:hover {
     background-size: cover;
   }
 }
