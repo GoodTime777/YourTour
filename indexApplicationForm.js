@@ -30,7 +30,7 @@ inputMail.addEventListener("blur", () => {
 inputDateFrom.setAttribute("min", new Date().toISOString().split("T")[0]);
 inputDateTo.setAttribute("min", new Date().toISOString().split("T")[0]);
 
-console.log(inputs)
+//console.log(inputs)
 inputs.forEach(input => {
   input.addEventListener('focus', () => {
     input.style.boxShadow = " 0px 0px 0px 1px $gray_300 inset";

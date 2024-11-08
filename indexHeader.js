@@ -1,20 +1,22 @@
+const header = document.querySelector(".header");
 const nav = document.querySelector(".header__navigation");
 const navFixed = document.querySelector(".navigation-scroll");
-//const screenWidth = window.screen.width;
+const bd=document.getElementsByTagName('body');
 
-// window.addEventListener("resize", () => {
-//   if (screenWidth >= 360 && screenWidth < 1024) {
-//     navFixed.style.top = `-88px`;
-//   }
-// });
 
-// window.addEventListener("scroll", () => {
-//   const scrollValue = window.pageYOffset;
-//   const navHeight = nav.clientHeight;
-
-//   if (scrollValue > 450) {
-//     navFixed.style.top = `0px`;
-//   } else {
-//     navFixed.style.top = `${-navHeight}px`;
-//   }
-// });
+window.addEventListener("scroll", () => {
+  const scrll = window.scrollY;
+  console.log(window.scrollY);
+  if (scrll >= 450) {
+    nav.classList.add("navigation-scroll");
+    //window.style.marginTop = 90 + "px";
+    //    navFixed.style.transform='translateY(0%)'
+    //  navFixed.style.transition='transform 1.5s'
+  }else {   
+    nav.classList.remove("navigation-scroll");
+   //nav.classList.add("navigation-scroll-hide");
+   //window.style.marginTop = 0 + "px";
+    // navFixed.style.transform='translateY(0%)'
+    // navFixed.style.transition='transform 1.5s'
+  }
+});
