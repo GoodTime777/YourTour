@@ -135,18 +135,18 @@ body {
   position: relative;
   top: 0;
   width: 100vw;
-  background: url("images/header-background.png") no-repeat 0% 100%/100%;
+  background: url("images/header-background.jpg") no-repeat 0% 100%/100%;
   margin: 0px auto 135px auto;
   padding-bottom: 119px;
 }
 @media (min-width: 1000px) and (max-width: 1850px) {
   .header {
-    background: url("images/pad-header-background.png") no-repeat 50%/cover;
+    background: url("images/pad-header-background.jpg") no-repeat 50%/cover;
   }
 }
 @media (min-width: 360px) and (max-width: 999px) {
   .header {
-    background: url("images/pad-header-background.png") no-repeat 50%/cover;
+    background: url("images/pad-header-background.jpg") no-repeat 50%/cover;
     padding-bottom: 52px;
     padding-left: 21px;
     padding-right: 21px;
@@ -524,7 +524,7 @@ body {
 }
 @media (min-width: 1000px) and (max-width: 1850px) {
   .card__container-content-items .card-two {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.5)), url("images/background-card-2.png") no-repeat center;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.5)), url("images/background-card-2.jpg") no-repeat center;
     background-size: 105%;
   }
 }
@@ -539,7 +539,7 @@ body {
 }
 @media (min-width: 1000px) and (max-width: 1850px) {
   .card__container-content-items .card-three {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.5)), url("images/background-card-3.png") no-repeat center top;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.5)), url("images/background-card-3.jpg") no-repeat center top;
     background-size: 104%;
   }
 }
@@ -554,7 +554,7 @@ body {
 }
 @media (min-width: 1000px) and (max-width: 1850px) {
   .card__container-content-items .card-four {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.5)), url("images/background-card-4.png") no-repeat center;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.5)), url("images/background-card-4.jpg") no-repeat center;
     background-size: 104%;
   }
 }
@@ -564,7 +564,7 @@ body {
 }
 @media (min-width: 1000px) and (max-width: 1850px) {
   .card__container-content-items .card-five {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.5)), url("images/background-card-5.png") no-repeat center;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.5)), url("images/background-card-5.jpg") no-repeat center;
     background-size: 104%;
   }
 }
@@ -574,7 +574,7 @@ body {
 }
 @media (min-width: 1000px) and (max-width: 1850px) {
   .card__container-content-items .card-six {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.5)), url("images/background-card-6.png") no-repeat center;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.5)), url("images/background-card-6.jpg") no-repeat center;
     background-size: 105%;
   }
 }
@@ -1573,7 +1573,7 @@ body {
 }
 @media (min-width: 1000px) and (max-width: 1850px) {
   .stories__container .one-block {
-    background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0.01%, rgba(0, 0, 0, 0.2) 100%), url("images/story photo-1Pad.png") no-repeat center;
+    background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0.01%, rgba(0, 0, 0, 0.2) 100%), url("images/story photo-1Pad.jpg") no-repeat center;
   }
 }
 @media (min-width: 360px) and (max-width: 999px) {
@@ -1588,7 +1588,7 @@ body {
 }
 @media (min-width: 1000px) and (max-width: 1850px) {
   .stories__container .two-block {
-    background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0.01%, rgba(0, 0, 0, 0.2) 100%), url("images/story photo-2Pad.png") no-repeat center;
+    background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0.01%, rgba(0, 0, 0, 0.2) 100%), url("images/story photo-2Pad.jpg") no-repeat center;
   }
 }
 @media (min-width: 360px) and (max-width: 999px) {
@@ -1602,7 +1602,7 @@ body {
 }
 @media (min-width: 1000px) and (max-width: 1850px) {
   .stories__container .three-block {
-    background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0.01%, rgba(0, 0, 0, 0.2) 100%), url("images/story photo-3Pad.png") no-repeat 48%;
+    background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0.01%, rgba(0, 0, 0, 0.2) 100%), url("images/story photo-3Pad.jpg") no-repeat 48%;
   }
 }
 @media (min-width: 360px) and (max-width: 999px) {
