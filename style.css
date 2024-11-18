@@ -124,6 +124,7 @@ h3 {
 body {
   font-family: "Roboto", sans-serif;
   background-color: #f9f7f4;
+  overflow-x: hidden;
 }
 
 .header {
@@ -154,14 +155,16 @@ body {
 }
 .header__navigation {
   position: absolute;
+  top: 0px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 182px;
   padding: 29px 0px;
-  top: 0px;
-  transform: translateY(0%);
-  transition: transform 0.5s;
   z-index: 100;
 }
 @media (min-width: 1000px) and (max-width: 1850px) {
@@ -237,28 +240,13 @@ body {
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
   z-index: 9999;
+  transition: top 0.5s linear;
 }
 .header__navigation.navigation-scroll a {
   color: #1b1f2b;
 }
 .header__navigation.navigation-scroll .underline::before {
   background-color: #1b1f2b;
-}
-@keyframes scroll {
-  from {
-    transform: translateY(-100%);
-  }
-  to {
-    transform: translateY(0%);
-  }
-}
-@keyframes scrollBack {
-  from {
-    transform: translateY(0%);
-  }
-  to {
-    transform: translateY(-100%);
-  }
 }
 .header__content {
   max-width: 768px;
@@ -688,6 +676,7 @@ body {
   color: #1b1f2b;
   margin-bottom: 8px;
   margin-left: 1px;
+  pointer-events: none;
 }
 @media (min-width: 360px) and (max-width: 999px) {
   .application__box-form label {
@@ -702,7 +691,7 @@ body {
   color: #1b1f2b;
   background-color: #f9f7f4;
   border-radius: 10px;
-  box-shadow: 0px 0px 0px 1px #ffffff inset;
+  border: 1px solid #f4f0e9;
   padding: 20px;
   cursor: pointer;
 }
@@ -718,9 +707,21 @@ body {
     padding: 11.5px 10px;
   }
 }
+.application__box-form input:focus {
+  background-color: #f4f0e9;
+  color: #1b1f2b;
+  border: 1px solid #a6a6a6;
+}
+.application__box-form ::-moz-placeholder {
+  color: #a6a6a6;
+}
+.application__box-form ::placeholder {
+  color: #a6a6a6;
+}
 .application__box-form select {
   width: 500px;
   border-radius: 10px;
+  border: 1px solid #f4f0e9;
   font-size: 20px;
   letter-spacing: 0px;
   line-height: 142%;
@@ -767,15 +768,27 @@ body {
     background-color: #f9f7f4;
   }
 }
-.application__box-form input#name:invalid {
-  color: red;
-}
 .application__box-form select:required:invalid {
   color: #a6a6a6;
 }
 .application__box-form input[type=date] {
   margin-top: 10px;
   padding: 17.5px 20px 18px 20px;
+}
+.application__box-form select:focus {
+  color: #1b1f2b;
+  border-color: #a6a6a6;
+  background: url("images/arrow-dropdown.svg") no-repeat 456px/26px 26px, linear-gradient(#f4f0e9, #f4f0e9);
+}
+@media (min-width: 1000px) and (max-width: 1850px) {
+  .application__box-form select:focus {
+    background: url("images/arrow-dropdown.svg") no-repeat 346px/26px 26px, linear-gradient(#f4f0e9, #f4f0e9);
+  }
+}
+@media (min-width: 360px) and (max-width: 999px) {
+  .application__box-form select:focus {
+    background: url("images/arrow-dropdown.svg") no-repeat 246px/26px 26px, linear-gradient(#f9f7f4, #f9f7f4);
+  }
 }
 .application__box-form select:hover {
   background: url("images/arrow-dropdown.svg") no-repeat 456px/26px 26px, linear-gradient(#f4f0e9, #f4f0e9);
@@ -787,7 +800,7 @@ body {
 }
 @media (min-width: 360px) and (max-width: 999px) {
   .application__box-form select:hover {
-    background: url("images/arrow-dropdown.svg") no-repeat 246px/26px 26px, #f9f7f4;
+    background: url("images/arrow-dropdown.svg") no-repeat 246px/26px 26px, linear-gradient(#f9f7f4, #f9f7f4);
   }
 }
 .application__box-form-comment {
@@ -939,6 +952,10 @@ body {
 .application__box-form-agreement .custom-radio {
   border-radius: 50%;
 }
+.application__box-form-agreement .custom-radio:focus,
+.application__box-form-agreement .custom-checkbox:focus {
+  border: 2px solid #1b1f2b;
+}
 .application__box-form-agreement .custom-radio::after {
   content: "";
   position: absolute;
@@ -1017,7 +1034,7 @@ body {
   padding-top: 15px;
   padding-bottom: 15px;
   border-radius: 10px;
-  transition: background 0.3s ease-in-out 0.3s;
+  transition: background 0.1s ease-in-out 0.1s;
 }
 @media (min-width: 360px) and (max-width: 999px) {
   .application__box-form-agreement-buttons-btn {

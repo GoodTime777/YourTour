@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
+html {
+  // margin-top: 90px;
+}
 //variables
 $blackForGradient: rgba(0, 0, 0, 0.5);
 $white: #ffffff;
@@ -49,6 +52,7 @@ $card_gradient: linear-gradient(
   rgba(0, 0, 0, 0.5)
 );
 $select_gradient: linear-gradient($beige_100, $beige_100);
+$select_gradient_focus: linear-gradient($beige_200, $beige_200);
 $select_gradient_hover: linear-gradient($beige_200, $beige_200);
 
 //mixins
@@ -197,7 +201,8 @@ h3 {
 body {
   font-family: $mainFont;
   background-color: $beige_100;
-  //overflow-x: hidden;
+  // margin-top: 90px;
+  overflow-x: hidden;
 }
 .header {
   padding-top: 90px;
@@ -222,18 +227,16 @@ body {
   }
 
   &__navigation {
-    //overflow-x: hidden;
-    
+    // overflow-x: hidden;
     position: absolute;
-    
+    top: 0px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
     @include flex($gap: 182px);
     padding: 29px 0px;
-     top: 0px;
-     transform: translateY(0%);
-    transition:transform 0.5s;
-    // transition: top 0.5s;
     z-index: 100;
-    //animation: scrollBack 0.5s forwards ;
 
     @media (min-width: 1000px) and (max-width: 1850px) {
       gap: 82.5px;
@@ -294,49 +297,16 @@ body {
       }
     }
   }
-  // &__navigation.navigation-scroll-hide{
-  //   position: fixed;
-  //   width: 100%;
-  //   top: 0px;
-  //   animation: scrollBack 0.5s forwards ; 
-  //   // transform: translateY(0%);
-  //   // transition:transform 0.5s ease-in 0.5s;  
-  //   background-color: rgba(243, 239, 232, 0.6);
-  //   backdrop-filter: blur(5px);
-     
 
-  //   // @media (min-width: 1000px) and (max-width:1850px) {
-  //   //   width: 100vw;
-  //   // }
-
-  //   //   @media (min-width: 360px) and (max-width:999px) {
-  //   //     width: 100vw;
-  //   //     top: -88.5px;
-  //   //     justify-content: center;
-  //   //     gap: 63px;
-  //   //     margin-bottom: 0;
-  //   //     padding-left: 20px;
-  //   //     padding-right: 20px;
-  //   //   }
-
-  //   a {
-  //     color: $black;
-  //   }
-  //   .underline::before {
-  //     background-color: $black;
-  //   }
-  // }
   &__navigation.navigation-scroll {
     position: fixed;
     width: 100%;
     top: 0px;
-    //animation: scroll 0.5s linear forwards ; 
-    // transform: translateY(0%);
-    // transition:transform 0.5s ease-in 0.5s;  
+
     background-color: rgba(243, 239, 232, 0.6);
     backdrop-filter: blur(5px);
-     z-index: 9999;
-
+    z-index: 9999;
+    transition: top 0.5s linear;
     // @media (min-width: 1000px) and (max-width:1850px) {
     //   width: 100vw;
     // }
@@ -357,24 +327,6 @@ body {
     .underline::before {
       background-color: $black;
     }
-  }
-  @keyframes scroll{
-    from{
-      transform: translateY(-100%);
-    }
-    to{
-      transform: translateY(0%);
-    }
-   
-  }
-  @keyframes scrollBack{
-    from{
-      transform: translateY(0%);
-    }
-    to{
-      transform: translateY(-100%);
-    }
-   
   }
 
   &__content {
@@ -772,17 +724,20 @@ body {
         @include fontText($color: $black);
         margin-bottom: 8px;
         margin-left: 1px;
+        pointer-events: none;
 
         @media (min-width: 360px) and (max-width: 999px) {
           font-size: $fz_16;
         }
       }
+
       input {
         width: 500px;
         @include fontText($color: $black);
         background-color: $beige_100;
         border-radius: 10px;
-        box-shadow: 0px 0px 0px 1px $white inset;
+        border:1px solid $beige_200;
+        //box-shadow: 0px 0px 0px 1px $white inset;
         padding: 20px;
         cursor: pointer;
 
@@ -795,10 +750,21 @@ body {
           padding: 11.5px 10px;
         }
       }
+      input:focus {
+        background-color: $beige_200;
+        color: $black;
+        border:1px solid $gray_300 ;
+        //padding: 19px;
+        //margin: -1px -1px;
+      }
+      ::placeholder {
+        color: $gray_300;
+      }
 
       select {
         width: 500px;
         border-radius: 10px;
+        border: 1px solid $beige_200;
         @include fontText($color: $black);
         appearance: none;
         padding: 20px;
@@ -835,19 +801,31 @@ body {
           background-color: $beige_100;
         }
       }
-
-      input#name:invalid {
-        color: red;
-      }
-
+    
       select:required:invalid {
         color: $gray_300;
       }
 
-      input[type="date"] {
+      input[type="date"] {      
         margin-top: 10px;
         padding: 17.5px 20px 18px 20px;
       }
+
+      select:focus {
+        color: $black;
+        border-color: $gray_300;
+        background: url("images/arrow-dropdown.svg") no-repeat 456px/26px 26px,
+          $select_gradient_hover;
+        @media (min-width: 1000px) and (max-width: 1850px) {
+          background: url("images/arrow-dropdown.svg") no-repeat 346px/26px 26px,
+            $select_gradient_hover;
+        }
+        @media (min-width: 360px) and (max-width: 999px) {
+          background: url("images/arrow-dropdown.svg") no-repeat 246px/26px 26px,
+            $select_gradient;
+        }
+      }
+
       select:hover {
         background: url("images/arrow-dropdown.svg") no-repeat 456px/26px 26px,
           $select_gradient_hover;
@@ -858,9 +836,10 @@ body {
         }
         @media (min-width: 360px) and (max-width: 999px) {
           background: url("images/arrow-dropdown.svg") no-repeat 246px/26px 26px,
-            $beige_100;
+            $select_gradient;
         }
       }
+
       &-comment {
         width: 100%;
 
@@ -985,6 +964,12 @@ body {
         .custom-radio {
           border-radius: 50%;
         }
+
+        .custom-radio:focus,
+        .custom-checkbox:focus {
+          border: 2px solid $black;
+        }
+
         .custom-radio::after {
           content: "";
           position: absolute;
@@ -1060,7 +1045,7 @@ body {
             padding-top: 15px;
             padding-bottom: 15px;
             border-radius: 10px;
-            transition: background 0.3s ease-in-out 0.3s;
+            transition: background 0.1s ease-in-out 0.1s;
 
             @media (min-width: 360px) and (max-width: 999px) {
               width: 134px;

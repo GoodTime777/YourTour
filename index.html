@@ -553,7 +553,8 @@
               id="name"
               placeholder="Введите Ваше имя"
               name="user_name"
-              pattern="^([A-Za-zА-Яа-яЁёs]+\s)*[A-Za-zА-Яа-яЁёs]+$"
+             
+             autocomplete="off"
             />
           </div>
           <div class="application__box-form-select">
@@ -587,32 +588,36 @@
               id="selectorTel"
               placeholder="+ 7 ( _ _ _ ) _ _ _ - _ _ - _ _"
               name="user_tel"
+              autocomplete="off"
             />
           </div>
           <div class="application__box-form-date date-from">
             <label for="date_from">Дата от</label>
             <input
-              required
+              
               class="input-application"
-              onfocus="(this.type='date')"
-              onblur="(this.type='date')"
+                          
               id="date_from"
               placeholder="ДД.ММ.ГГГГ"
+              onfocus="(this.type='date')"
+              onblur="(this.type='date')"
               name="user_date_from"
               max="2028-12-31"
+              required
             />
           </div>
           <div class="application__box-form-date date-to">
             <label for="date_to">Дата до</label>
-            <input
-              required
-              class="input-application"
-              onfocus="(this.type='date')"
-              onblur="(this.type='date')"
+            <input              
+              class="input-application"                          
               id="date_to"
               placeholder="ДД.ММ.ГГГГ"
+              onfocus="(this.type='date')"
+              onblur="(this.type='date')"
               name="user_date_to"
+
               max="2028-12-31"
+              required
             />
           </div>
           <div class="application__box-form-comment">
@@ -669,7 +674,7 @@
             <div class="application__box-form-agreement-buttons">
               <button
                 type="submit"
-                class="application__box-form-agreement-buttons-btn submit"
+                class="application__box-form-agreement-buttons-btn submit agreement-submit"
               >
                 Найти тур
               </button>
