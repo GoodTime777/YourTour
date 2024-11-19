@@ -35,8 +35,8 @@ $fw_bold: 700;
 $fw_medium: 500;
 $fw_regular: 400;
 
-$ls_-1: -1px;
-$ls: 0px;
+$ls_-1: 0px; //-1%
+$ls: 0;
 $ls_2: 2px;
 $ls_4: 4px;
 
@@ -47,9 +47,10 @@ $stories_gradient: linear-gradient(
   rgba(0, 0, 0, 0.2) 100%
 );
 $card_gradient: linear-gradient(
-  rgba(0, 0, 0, 0.4),
+  180deg,
+  rgba(0, 0, 0, 0.5),
   rgba(0, 0, 0, 0.06),
-  rgba(0, 0, 0, 0.5)
+  rgba(0, 0, 0, 0.4)
 );
 $select_gradient: linear-gradient($beige_100, $beige_100);
 $select_gradient_focus: linear-gradient($beige_200, $beige_200);
@@ -142,8 +143,8 @@ h3 {
     position: absolute;
     width: 22px;
     height: 15px;
-    top: 1.3px;
-    padding-left: 15px;
+    top: -0.1px;
+    padding-left: 16px;
 
     @media (min-width: 360px) and (max-width: 999px) {
       top: 1.5px;
@@ -210,9 +211,10 @@ body {
   @include font();
   position: relative;
   top: 0;
-  width: 100vw;
-  background: url("images/header-background.jpg") no-repeat 0% 100% / 100%; //cover
-  margin: 0px auto 135px auto;
+  width: 1920px; //100vw;
+  background: url("images/header-background.jpg") no-repeat 0% 51.2% / 100%
+    99.65%; //cover
+  margin: 0px auto 134px auto;
   padding-bottom: 119px;
 
   @media (min-width: 1000px) and (max-width: 1850px) {
@@ -234,7 +236,7 @@ body {
     right: 0;
     margin-left: auto;
     margin-right: auto;
-    @include flex($gap: 182px);
+    @include flex($gap: 181px);
     padding: 29px 0px;
     z-index: 100;
 
@@ -264,9 +266,13 @@ body {
 
     &-menu {
       &-list {
+        // font-size: 20px;
+        // line-height: 142%;
+        // font-weight: 400;
+        // letter-spacing: 0;
         @include fontText($font-size: $fz_20);
         font-weight: $fw_regular;
-        @include flex($gap: 50px);
+        @include flex($gap: 51px);
 
         @media (min-width: 1000px) and (max-width: 1850px) {
           gap: 30px;
@@ -299,6 +305,7 @@ body {
   }
 
   &__navigation.navigation-scroll {
+    display: none; //временно
     position: fixed;
     width: 100%;
     top: 0px;
@@ -351,8 +358,8 @@ body {
       @include fontText(
         $font-size: $fz_h1,
         $line-height: 109%,
-        $letter-spacing: $ls_2
-      );
+        $letter-spacing: 2px
+      ); // $ls_2 2.15px
 
       @media (min-width: 360px) and (max-width: 999px) {
         font-size: $fz_h1_mobile;
@@ -380,13 +387,15 @@ body {
       &-link {
         @include fontText(
           $font-size: $fz_17,
-          $letter-spacing: $ls_-1,
+          $letter-spacing: -0.1px,
           $color: $black
         );
+        //$ls_-1
         font-weight: $fw_regular;
         border-radius: 10px;
         background-color: $white;
-        padding: 6px 19px 7px 19px;
+        padding: 8px 20px 7.5px 20px;
+        //padding: 6px 19px 7px 19px;
         transition: 0.3s ease;
 
         @media (min-width: 360px) and (max-width: 999px) {
@@ -565,7 +574,7 @@ body {
 
         .card-two {
           background: $card_gradient,
-            url("images/card\ tour\ photo-2.jpg") no-repeat center; // / cover
+            url("images/background-card-2.jpg") no-repeat center; // / cover
           background-size: 100%;
 
           @media (min-width: 1000px) and (max-width: 1850px) {
@@ -582,7 +591,7 @@ body {
 
         .card-three {
           background: $card_gradient,
-            url("images/card\ tour\ photo-3.jpg") no-repeat center;
+            url("images/background-card-3.jpg") no-repeat center;
           background-size: 100%;
 
           @media (min-width: 1000px) and (max-width: 1850px) {
@@ -599,7 +608,7 @@ body {
 
         .card-four {
           background: $card_gradient,
-            url("images/card\ tour\ photo-4.jpg") no-repeat center;
+            url("images/background-card-4.jpg") no-repeat center;
           background-size: 100%;
 
           @media (min-width: 1000px) and (max-width: 1850px) {
@@ -611,7 +620,7 @@ body {
 
         .card-five {
           background: $card_gradient,
-            url("images/card\ tour\ photo-5.jpg") no-repeat center;
+            url("images/background-card-5.jpg") no-repeat center;
           background-size: 100%;
 
           @media (min-width: 1000px) and (max-width: 1850px) {
@@ -623,7 +632,7 @@ body {
 
         .card-six {
           background: $card_gradient,
-            url("images/card\ tour\ photo-6.jpg") no-repeat center;
+            url("images/background-card-6.jpg") no-repeat center;
           background-size: 100%;
 
           @media (min-width: 1000px) and (max-width: 1850px) {
@@ -701,7 +710,7 @@ body {
       display: flex;
       flex-wrap: wrap;
       gap: 33px 30px;
-      padding: 70px;
+      padding: 69px 70px 70px 70px;
       background-color: $white;
       border-radius: 50px;
 
@@ -722,8 +731,8 @@ body {
       }
       label {
         @include fontText($color: $black);
-        margin-bottom: 8px;
-        margin-left: 1px;
+        margin-bottom: 7.3px;
+        //margin-left: 1px;
         pointer-events: none;
 
         @media (min-width: 360px) and (max-width: 999px) {
@@ -738,7 +747,7 @@ body {
         border-radius: 10px;
         border: 1px solid $beige_200;
         //box-shadow: 0px 0px 0px 1px $white inset;
-        padding: 20px;
+        padding: 18.5px 19px 19px 19px;
         cursor: pointer;
 
         @media (min-width: 1000px) and (max-width: 1850px) {
@@ -767,8 +776,8 @@ body {
         border: 1px solid $beige_200;
         @include fontText($color: $black);
         appearance: none;
-        padding: 20px;
-        background: url("images/arrow-dropdown.svg") no-repeat 456px/26px 26px,
+        padding: 19px;
+        background: url("images/arrow-dropdown.svg") no-repeat 454px/26px 26px,
           $select_gradient;
         cursor: pointer;
 
@@ -807,8 +816,8 @@ body {
       }
 
       input[type="date"] {
-        margin-top: 10px;
-        padding: 17.5px 20px 18px 20px;
+        // margin-top: 10px;
+        // padding: 17.5px 20px 18px 20px;
       }
 
       select:focus {
@@ -839,9 +848,23 @@ body {
             $select_gradient;
         }
       }
+      &-name {
+        margin-bottom: 1px;
+      }
+      &-email {
+        margin-bottom: -5px;
+      }
+      .input-application {
+        padding-top: 19px !important;
+      }
 
       &-comment {
         width: 100%;
+        margin-bottom: -4.8px;
+
+        // label{
+
+        // }
 
         textarea {
           @include fontText($color: $black);
@@ -851,7 +874,7 @@ body {
           width: 100%;
           padding: 10px;
           resize: none;
-          margin-top: 8px;
+          // margin-top: 8px;
           cursor: pointer;
 
           @media (min-width: 360px) and (max-width: 999px) {
@@ -915,7 +938,7 @@ body {
           label {
             @include fontText(
               $font-size: $fz_17,
-              $letter-spacing: -1px,
+              $letter-spacing: -0.19px,
               $color: $gray_300
             );
             margin-bottom: 0;
@@ -1086,12 +1109,14 @@ body {
 //////**************
 
 .reviews {
-  margin-bottom: 135px;
+  margin-bottom: 113.5px;
 
   @media (min-width: 360px) and (max-width: 999px) {
     margin-bottom: 75px;
   }
-
+  &__subtitle {
+    margin-top: -1px;
+  }
   &__swiper {
     width: 1170px;
     height: 100%;
@@ -1114,7 +1139,7 @@ body {
     line-height: 122%;
     border-radius: 50px;
     background-color: $beige_200;
-    padding: 40px;
+    padding: 38px 40px 40px 40px;
     cursor: pointer;
 
     @media (min-width: 1000px) and (max-width: 1850px) {
@@ -1135,7 +1160,7 @@ body {
     }
 
     .mari {
-      margin-bottom: 266px;
+      margin-bottom: 265px;
       @media (min-width: 1000px) and (max-width: 1850px) {
         margin-bottom: 378px;
       }
@@ -1145,7 +1170,7 @@ body {
     }
 
     .pavel {
-      margin-bottom: 70px;
+      margin-bottom: 69px;
       @media (min-width: 360px) and (max-width: 999px) {
         margin-bottom: 56px;
       }
@@ -1155,10 +1180,14 @@ body {
       @include flex($justify-content: space-between);
       &-text {
         &-title {
-          margin-bottom: 8px;
+          margin-bottom: 9px;
         }
         &-subtext {
-          @include fontText($font-size: $fz_17, $color: $gray_300);
+          @include fontText(
+            $letter-spacing: -0.15px,
+            $font-size: $fz_17,
+            $color: $gray_300
+          );
 
           @media (min-width: 360px) and (max-width: 999px) {
             @include fontText($font-size: $fz_16, $color: $gray_300);
@@ -1169,6 +1198,7 @@ body {
         img {
           width: 75px;
           height: 75px;
+          border-radius: 50%;
         }
       }
     }
@@ -1274,6 +1304,7 @@ body {
     }
 
     &-content {
+      max-width: 1860px;
       display: flex;
       gap: 30px;
 
@@ -1304,9 +1335,68 @@ body {
         }
       }
 
+      &-one li:nth-child(1) {
+        img {
+          width: 444px;
+        }
+      }
+      &-one li:nth-child(2) {
+        img {
+          width: 441.5px;
+        }
+      }
+      &-one li:nth-child(3) {
+        img {
+          width: 441.5px;
+        }
+      }
+      &-one li:nth-child(4) {
+        img {
+          width: 443px;
+        }
+      }
+
       &-two {
         @media (min-width: 360px) and (max-width: 999px) {
           gap: 10px;
+        }
+      }
+
+      &-two:nth-child(1) {
+      }
+
+      &-two li:nth-child(1) {
+        // position: relative;
+
+        img {
+          height: 301px;
+          width: 349.16px;
+          //         position: absolute;
+          //         height: 100%;
+          //         width: 100%;
+          //         left: 5px;
+          //         top: -3.5px;
+          //        // object-fit:cont
+        }
+      }
+      &-two li:nth-child(2) {
+        img {
+          width: 347.32px;
+        }
+      }
+      &-two li:nth-child(3) {
+        img {
+          width: 347.32px;
+        }
+      }
+      &-two li:nth-child(4) {
+        img {
+          width: 347.32px;
+        }
+      }
+      &-two li:nth-child(5) {
+        img {
+          width: 348.87px;
         }
       }
 
@@ -1336,7 +1426,7 @@ body {
       }
 
       img {
-        max-width: 442px;
+        max-width: 444px;
 
         @media (min-width: 1000px) and (max-width: 1850px) {
           max-width: 315px;
@@ -1354,8 +1444,7 @@ body {
       }
 
       img {
-        max-width: 349px;
-        height: 301px;
+        height: 301px; //301
 
         @media (min-width: 1000px) and (max-width: 1850px) {
           max-width: 231px;
@@ -1381,24 +1470,25 @@ body {
         }
       }
 
-      img.desk {
-        margin-right: -30px;
+      // img.desk {
+      //   margin-right: -30px;
 
-        @media (min-width: 1000px) and (max-width: 1850px) {
-          display: none;
-        }
-        @media (min-width: 360px) and (max-width: 999px) {
-          display: none;
-        }
-      }
+      //   @media (min-width: 1000px) and (max-width: 1850px) {
+      //     display: none;
+      //   }
+      //   @media (min-width: 360px) and (max-width: 999px) {
+      //     display: none;
+      //   }
+      // }
     }
+
     .line-three {
       @media (min-width: 360px) and (max-width: 999px) {
         gap: 10px;
       }
 
       img {
-        max-width: 442px;
+        max-width: 442.5px;
 
         @media (min-width: 1000px) and (max-width: 1850px) {
           max-width: 315px;
