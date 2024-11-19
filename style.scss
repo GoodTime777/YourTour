@@ -1287,15 +1287,17 @@ body {
 //////***************
 
 .gallery {
+  max-width: 1860px;
   margin: 0 auto 135px auto;
   @media (min-width: 360px) and (max-width: 999px) {
     margin-bottom: 75px;
   }
 
   &__container {
+    
     @include flex($gap: 30px, $align-items: center);
-    flex-direction: column;
-
+    //flex-direction: column;
+flex-wrap: wrap;
     @media (min-width: 1000px) and (max-width: 1850px) {
       gap: 20px;
     }
@@ -1304,6 +1306,7 @@ body {
     }
 
     &-content {
+      //position: relative;
       max-width: 1860px;
       display: flex;
       gap: 30px;
@@ -1315,6 +1318,7 @@ body {
       &-one,
       &-two,
       &-three {
+        position: relative;
         display: flex;
         gap: 30px;
         @media (min-width: 1000px) and (max-width: 1850px) {
@@ -1357,26 +1361,19 @@ body {
       }
 
       &-two {
+        position: relative;
         @media (min-width: 360px) and (max-width: 999px) {
           gap: 10px;
         }
       }
 
-      &-two:nth-child(1) {
-      }
+    
 
       &-two li:nth-child(1) {
-        // position: relative;
-
+       
         img {
           height: 301px;
           width: 349.16px;
-          //         position: absolute;
-          //         height: 100%;
-          //         width: 100%;
-          //         left: 5px;
-          //         top: -3.5px;
-          //        // object-fit:cont
         }
       }
       &-two li:nth-child(2) {
@@ -1395,8 +1392,15 @@ body {
         }
       }
       &-two li:nth-child(5) {
+        // position: absolute;
+        // right: 0;
+      //  position: relative;
+     
         img {
+         // position: absolute;
           width: 348.87px;
+           height: 301px;
+        min-width: 100%;
         }
       }
 
