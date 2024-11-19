@@ -1343,8 +1343,8 @@ body {
 }
 .gallery__container-content-two li:nth-child(5) img {
   width: 348.87px;
-  height: 301px;
-  min-width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 @media (min-width: 360px) and (max-width: 999px) {
   .gallery__container-content-three {
