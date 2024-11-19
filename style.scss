@@ -1294,10 +1294,9 @@ body {
   }
 
   &__container {
-    
     @include flex($gap: 30px, $align-items: center);
     //flex-direction: column;
-flex-wrap: wrap;
+    flex-wrap: wrap;
     @media (min-width: 1000px) and (max-width: 1850px) {
       gap: 20px;
     }
@@ -1367,10 +1366,7 @@ flex-wrap: wrap;
         }
       }
 
-    
-
       &-two li:nth-child(1) {
-       
         img {
           height: 301px;
           width: 349.16px;
@@ -1392,15 +1388,8 @@ flex-wrap: wrap;
         }
       }
       &-two li:nth-child(5) {
-        // position: absolute;
-        // right: 0;
-      //  position: relative;
-     
         img {
-         // position: absolute;
           width: 348.87px;
-          // height: 301px;
-          object-fit: contain;
         }
       }
 
@@ -1510,11 +1499,15 @@ flex-wrap: wrap;
 .stories {
   text-align: center;
   margin-bottom: 135px;
+  margin-top: -1.5px; //!
 
   @media (min-width: 360px) and (max-width: 999px) {
     padding-right: 21px;
     padding-left: 21px;
     margin-bottom: 75px;
+  }
+  &__subtitle {
+    line-height: 141.1%;
   }
 
   &__container {
