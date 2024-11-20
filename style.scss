@@ -621,7 +621,7 @@ letter-spacing: 0px;
 
           @media (min-width: 1000px) and (max-width: 1850px) {
             background: $card_gradient,
-              url("images/background-card-2.jpg") no-repeat 100%; // / cover
+              url("images/background-card-2-pad.jpg") no-repeat 100%; // / cover
             background-size:100%;
           }
 
@@ -638,7 +638,7 @@ letter-spacing: 0px;
 
           @media (min-width: 1000px) and (max-width: 1850px) {
             background: $card_gradient,
-              url("images/background-card-3.jpg") no-repeat right 65%;
+              url("images/background-card-3-pad.jpg") no-repeat right 65%;
             background-size: 100%;
           }
 
@@ -650,13 +650,13 @@ letter-spacing: 0px;
 
         .card-four {
           background: $card_gradient,
-            url("images/background-card-4.jpg") no-repeat center;
+            url("images/background-card-4-pad.jpg") no-repeat center;
           background-size: 100%;
 
           @media (min-width: 1000px) and (max-width: 1850px) {
             background: $card_gradient,
               url("images/background-card-4.jpg") no-repeat center;
-            background-size: 104%;
+            background-size: 100%;
           }
         }
 
@@ -667,8 +667,8 @@ letter-spacing: 0px;
 
           @media (min-width: 1000px) and (max-width: 1850px) {
             background: $card_gradient,
-              url("images/background-card-5.jpg") no-repeat center; // / 100% 100%;
-            background-size: 104%;
+              url("images/background-card-5-pad.jpg") no-repeat center; // / 100% 100%;
+            background-size: 100%;
           }
         }
 
@@ -679,8 +679,8 @@ letter-spacing: 0px;
 
           @media (min-width: 1000px) and (max-width: 1850px) {
             background: $card_gradient,
-              url("images/background-card-6.jpg") no-repeat center;
-            background-size: 105%;
+              url("images/background-card-6-pad.jpg") no-repeat center;
+            background-size: 100%;
           }
 
           @media (min-width: 360px) and (max-width: 999px) {
@@ -757,8 +757,8 @@ letter-spacing: 0px;
       border-radius: 50px;
 
       @media (min-width: 1000px) and (max-width: 1850px) {
-        gap: 33px 20px;
-        padding: 60px;
+        gap: 32.5px 20px;
+        padding: 59px 60px 60px 60px;
       }
       @media (min-width: 360px) and (max-width: 999px) {
         border-radius: 20px;
@@ -825,7 +825,7 @@ letter-spacing: 0px;
 
         @media (min-width: 1000px) and (max-width: 1850px) {
           width: 389px;
-          background: url("images/arrow-dropdown.svg") no-repeat 346px/26px 26px,
+          background: url("images/arrow-dropdown.svg") no-repeat 342.5px/26px 26px,
             $select_gradient;
         }
         @media (min-width: 360px) and (max-width: 999px) {

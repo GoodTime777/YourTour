@@ -560,7 +560,7 @@ body {
 }
 @media (min-width: 1000px) and (max-width: 1850px) {
   .card__container-content-items .card-two {
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.4)), url("images/background-card-2.jpg") no-repeat 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.4)), url("images/background-card-2-pad.jpg") no-repeat 100%;
     background-size: 100%;
   }
 }
@@ -575,7 +575,7 @@ body {
 }
 @media (min-width: 1000px) and (max-width: 1850px) {
   .card__container-content-items .card-three {
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.4)), url("images/background-card-3.jpg") no-repeat right 65%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.4)), url("images/background-card-3-pad.jpg") no-repeat right 65%;
     background-size: 100%;
   }
 }
@@ -585,13 +585,13 @@ body {
   }
 }
 .card__container-content-items .card-four {
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.4)), url("images/background-card-4.jpg") no-repeat center;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.4)), url("images/background-card-4-pad.jpg") no-repeat center;
   background-size: 100%;
 }
 @media (min-width: 1000px) and (max-width: 1850px) {
   .card__container-content-items .card-four {
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.4)), url("images/background-card-4.jpg") no-repeat center;
-    background-size: 104%;
+    background-size: 100%;
   }
 }
 .card__container-content-items .card-five {
@@ -600,8 +600,8 @@ body {
 }
 @media (min-width: 1000px) and (max-width: 1850px) {
   .card__container-content-items .card-five {
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.4)), url("images/background-card-5.jpg") no-repeat center;
-    background-size: 104%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.4)), url("images/background-card-5-pad.jpg") no-repeat center;
+    background-size: 100%;
   }
 }
 .card__container-content-items .card-six {
@@ -610,8 +610,8 @@ body {
 }
 @media (min-width: 1000px) and (max-width: 1850px) {
   .card__container-content-items .card-six {
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.4)), url("images/background-card-6.jpg") no-repeat center;
-    background-size: 105%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.4)), url("images/background-card-6-pad.jpg") no-repeat center;
+    background-size: 100%;
   }
 }
 @media (min-width: 360px) and (max-width: 999px) {
@@ -689,8 +689,8 @@ body {
 }
 @media (min-width: 1000px) and (max-width: 1850px) {
   .application__box-form {
-    gap: 33px 20px;
-    padding: 60px;
+    gap: 32.5px 20px;
+    padding: 59px 60px 60px 60px;
   }
 }
 @media (min-width: 360px) and (max-width: 999px) {
@@ -771,7 +771,7 @@ body {
 @media (min-width: 1000px) and (max-width: 1850px) {
   .application__box-form select {
     width: 389px;
-    background: url("images/arrow-dropdown.svg") no-repeat 346px/26px 26px, linear-gradient(#f9f7f4, #f9f7f4);
+    background: url("images/arrow-dropdown.svg") no-repeat 342.5px/26px 26px, linear-gradient(#f9f7f4, #f9f7f4);
   }
 }
 @media (min-width: 360px) and (max-width: 999px) {
