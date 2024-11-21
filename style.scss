@@ -1609,6 +1609,11 @@ margin-bottom: 1.4px;
     }
   }
 
+  &__subtitle{
+    line-height: 143%;
+    margin-bottom: 49px;
+  }
+
   &__container {
     @include flex($gap: 30px, $align-items: center);
     //flex-direction: column;
@@ -1630,6 +1635,10 @@ margin-bottom: 1.4px;
         max-width: 984px;
         //justify-content: center;
         gap: 20px;
+      }
+
+      @media (min-width: 360px) and (max-width: 999px) {
+        max-width: 318px;
       }
 
       &-one,
@@ -1675,7 +1684,7 @@ margin-bottom: 1.4px;
           }
 
           @media (min-width: 360px) and (max-width: 999px){
-
+object-fit: fill;
           }
         }
       }
@@ -1702,6 +1711,9 @@ margin-bottom: 1.4px;
             width: 314.63px;
             object-fit: fill;
           }
+          @media (min-width: 360px) and (max-width: 999px){
+            object-fit: fill;
+                      }
         }
       }
 
@@ -1711,6 +1723,7 @@ margin-bottom: 1.4px;
           gap: 10px;
           img{
             height: 110px !important;
+            width: 99.33px !important;
           }
         }
       }
@@ -1719,7 +1732,17 @@ margin-bottom: 1.4px;
         img {
           height: 301px;
           width: 349.16px;
+  @media (min-width: 360px) and (max-width: 999px) {
+          
+            object-position: 51.1% 50%;
+          
+
         }
+      
+        // 
+         // object-fit: cover;
+        }
+
       }
       &-two li:nth-child(2) {
         img {
@@ -1737,6 +1760,14 @@ margin-bottom: 1.4px;
 
           @media (min-width: 1000px) and (max-width: 1850px) {
             object-fit: contain;
+          }
+          @media (min-width: 360px) and (max-width: 999px) {
+           object-fit: cover;
+              //object-fit: fill;
+              object-position: 51.1% 51%;
+            
+          // 
+           // object-fit: cover;
           }
         }
       }
@@ -1765,15 +1796,12 @@ margin-bottom: 1.4px;
         overflow: hidden;
         img {
           @media (min-width: 1000px) and (max-width: 1850px) {
-            //  width:98%;
-            // object-fit: fill;
-
-            object-position: 57.5% 50%;
-            //  height: 94%;
-
-            //width: 314.63px;
-
-            //object-fit: fill;
+                       object-position: 57.5% 50%;
+          
+          }
+          @media (min-width: 360px) and (max-width: 999px){
+            object-fit: cover;
+            object-position: 50% 50.5%;
           }
         }
       }
@@ -1782,6 +1810,10 @@ margin-bottom: 1.4px;
           @media (min-width: 1000px) and (max-width: 1850px) {
             object-position: 50.51% 50%;
           }
+          @media (min-width: 360px) and (max-width: 999px){
+            object-position: 49% 50.5%;
+          }
+
         }
       }
       &-three li:nth-child(3) {
@@ -1837,7 +1869,7 @@ margin-bottom: 1.4px;
         }
 
         @media (min-width: 360px) and (max-width: 999px) {
-          max-width: 99px;
+         // max-width: 99px;
           height: 110px;
         }
       }
