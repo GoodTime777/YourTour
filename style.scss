@@ -1837,6 +1837,16 @@ object-fit: fill;
           display: none;
         }
       }
+      .padd{
+        @media (min-width: 1000px) and (max-width: 1850px){
+          display: block;
+        }
+        @media (min-width: 360px) and (max-width: 999px){
+          display: none;
+
+        }
+      }
+    
     }
     .line-one {
       @media (min-width: 360px) and (max-width: 999px) {

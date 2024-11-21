@@ -1713,6 +1713,16 @@ body {
     display: none;
   }
 }
+@media (min-width: 1000px) and (max-width: 1850px) {
+  .gallery__container-content .padd {
+    display: block;
+  }
+}
+@media (min-width: 360px) and (max-width: 999px) {
+  .gallery__container-content .padd {
+    display: none;
+  }
+}
 @media (min-width: 360px) and (max-width: 999px) {
   .gallery__container .line-one {
     gap: 18px;
