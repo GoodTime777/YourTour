@@ -1331,6 +1331,11 @@ body {
   max-width: 1860px;
   margin: 0 auto 135px auto;
 }
+@media (min-width: 1000px) and (max-width: 1850px) {
+  .gallery {
+    margin-bottom: 136.5px;
+  }
+}
 @media (min-width: 360px) and (max-width: 999px) {
   .gallery {
     margin-bottom: 75px;
@@ -1460,6 +1465,15 @@ body {
 @media (min-width: 360px) and (max-width: 999px) {
   .gallery__container-content-three {
     gap: 10px;
+  }
+}
+.gallery__container-content-three li:nth-child(1) {
+  overflow: hidden;
+}
+@media (min-width: 1000px) and (max-width: 1850px) {
+  .gallery__container-content-three li:nth-child(1) img {
+    -o-object-position: 57.5% 50%;
+       object-position: 57.5% 50%;
   }
 }
 @media (min-width: 1000px) and (max-width: 1850px) {
@@ -1704,7 +1718,7 @@ body {
   }
 }
 .stories__container .one-block {
-  background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0.01%, rgba(0, 0, 0, 0.2) 100%), url("images/story photo-1.jpg") no-repeat center/100%;
+  background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0.01%, rgba(0, 0, 0, 0.2) 100%), url("images/story photo-1.jpg") no-repeat center;
   margin-bottom: 50px;
 }
 @media (min-width: 1000px) and (max-width: 1850px) {
@@ -1722,7 +1736,7 @@ body {
   bottom: 61px;
 }
 .stories__container .two-block {
-  background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0.01%, rgba(0, 0, 0, 0.2) 100%), url("images/story photo-2.jpg") no-repeat center/100% 100%;
+  background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0.01%, rgba(0, 0, 0, 0.2) 100%), url("images/story photo-2.jpg") no-repeat center;
   margin-bottom: 49px;
 }
 @media (min-width: 1000px) and (max-width: 1850px) {
@@ -1740,11 +1754,11 @@ body {
   margin-top: -8px;
 }
 .stories__container .three-block {
-  background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0.01%, rgba(0, 0, 0, 0.2) 100%), url("images/story photo-3.jpg") no-repeat center/100% 100%;
+  background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0.01%, rgba(0, 0, 0, 0.2) 100%), url("images/story photo-3.jpg") no-repeat center;
 }
 @media (min-width: 1000px) and (max-width: 1850px) {
   .stories__container .three-block {
-    background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0.01%, rgba(0, 0, 0, 0.2) 100%), url("images/story photo-3Pad.jpg") no-repeat 48%;
+    background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0.01%, rgba(0, 0, 0, 0.2) 100%), url("images//story photo-3Pad.png") no-repeat 48%;
   }
 }
 @media (min-width: 360px) and (max-width: 999px) {
@@ -1757,6 +1771,11 @@ body {
 }
 .three-block .stories__container-block-network {
   bottom: 61px;
+}
+.stories__container .one-block,
+.stories__container .two-block,
+.stories__container .three-block {
+  background-size: 100% 100%;
 }
 @media (min-width: 360px) and (max-width: 999px) {
   .stories__container .one-block,
@@ -1774,7 +1793,7 @@ body {
   .stories__container .one-block:hover,
   .stories__container .two-block:hover,
   .stories__container .three-block:hover {
-    background-size: cover;
+    background-size: 100%;
   }
 }
 

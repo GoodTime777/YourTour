@@ -1384,6 +1384,11 @@ margin-bottom: 32.5px;
 .gallery {
   max-width: 1860px;
   margin: 0 auto 135px auto;
+
+  @media (min-width: 1000px) and (max-width: 1850px) {
+    margin-bottom: 136.5px;
+  }
+
   @media (min-width: 360px) and (max-width: 999px) {
     margin-bottom: 75px;
   }
@@ -1530,14 +1535,17 @@ object-fit:contain ;
       &-three li:nth-child(1) {
         // width: 314.63px;
         // height: 301px;
+         overflow: hidden;
         img {
        
 
           @media (min-width: 1000px) and (max-width: 1850px){
-           //object-fit: cover;
-              ///object-position: 50% 70%;
+          //  width:98%;
+         // object-fit: fill;
+          
+              object-position: 57.5% 50%;
           //  height: 94%;
-          //  width: 94%;
+           
 
             
  //width: 314.63px;
@@ -1671,6 +1679,12 @@ object-position: 50.51% 50%;
     padding-left: 21px;
     margin-bottom: 75px;
   }
+// &__title{
+//   @media (min-width: 1000px) and (max-width: 1850px){
+//     margin-bottom:30px ;
+//   }
+// }
+
   &__subtitle {
     line-height: 141.1%;
   }
@@ -1810,7 +1824,8 @@ object-position: 50.51% 50%;
 
     .one-block {
       background: $stories_gradient,
-        url("images/story\ photo-1.jpg") no-repeat center/100%;
+        url("images/story\ photo-1.jpg") no-repeat center;
+        //background-size: 100%;
       margin-bottom: 50px;
 
       @media (min-width: 1000px) and (max-width: 1850px) {
@@ -1832,8 +1847,9 @@ object-position: 50.51% 50%;
 
     .two-block{
       background: $stories_gradient,
-        url("images/story\ photo-2.jpg") no-repeat center/ 100% 100%;
+        url("images/story\ photo-2.jpg") no-repeat center;
       margin-bottom: 49px;
+      //background-size: 100% 100%;
 
       @media (min-width: 1000px) and (max-width: 1850px) {
         background: $stories_gradient,
@@ -1853,12 +1869,12 @@ object-position: 50.51% 50%;
 
     .three-block {
       background: $stories_gradient,
-        url("images/story\ photo-3.jpg") no-repeat center/100%  100%;
-
+        url("images/story\ photo-3.jpg") no-repeat center;
+       // background-size: 100% 100%;
 
       @media (min-width: 1000px) and (max-width: 1850px) {
         background: $stories_gradient,
-          url("images/story\ photo-3Pad.jpg") no-repeat 48%;
+          url("images//story photo-3Pad.png") no-repeat 48%;
       }
 
       @media (min-width: 360px) and (max-width: 999px) {
@@ -1876,19 +1892,22 @@ bottom: 61px;
     .one-block,
     .two-block,
     .three-block {
-      //background-size: 103%;
+      background-size: 100% 100%;
+      //transition: background-size 0.5s ease;
 
       @media (min-width: 360px) and (max-width: 999px) {
         background-size: cover;
+        
       }
     }
     .one-block:hover,
     .two-block:hover,
     .three-block:hover {
       background-size: 153%;
+      //transition: background-size 0.5s ease;
 
       @media (min-width: 360px) and (max-width: 999px) {
-        background-size: cover;
+        background-size: 100%;
       }
     }
   }
