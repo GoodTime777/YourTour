@@ -478,7 +478,7 @@ padding: 7px 20.5px 7px 19.5px;
   }
   @media (min-width: 360px) and (max-width: 999px) {
     max-width: 318px;
-    margin: 0 auto 75px auto;
+    margin: 0 auto 76px auto;
   }
   &__title {
     margin-bottom: 35px;
@@ -719,7 +719,7 @@ padding-left: 17px;
 
           @media (min-width: 360px) and (max-width: 999px){
             background: $card_gradient,
-            url("images/background-card-5-pad.jpg") no-repeat center; // / 100% 100%;
+            url("images/mobile-background-card-5.jpg") no-repeat center; // / 100% 100%;
           background-size: 100%;
           }
         }
@@ -785,10 +785,22 @@ padding-left: 17px;
   text-align: center;
   margin-bottom: 135px;
   @media (min-width: 360px) and (max-width: 999px) {
-    margin-bottom: 75px;
+    margin-bottom: 77px;
+    padding-left: 21px;
+    padding-right: 21px;
   }
   &__title {
     margin-bottom: 30px;
+    @media (min-width: 360px) and (max-width: 999px){
+      //line-height: 142%;
+      letter-spacing: 0.7px;
+      margin-bottom: 20px;
+    }
+  }
+  &__subtitle{
+    @media (min-width: 360px) and (max-width: 999px){
+      margin-bottom: 40px;
+    }
   }
 
   &__box {
@@ -816,9 +828,9 @@ padding-left: 17px;
         padding: 59px 60px 60px 60px;
       }
       @media (min-width: 360px) and (max-width: 999px) {
-        border-radius: 20px;
+        border-radius: 30px;
         gap: 30px 0px;
-        padding: 20px;
+        padding: 20px 20px 40px 20px;
       }
 
       label,
@@ -854,7 +866,7 @@ padding-left: 17px;
         @media (min-width: 360px) and (max-width: 999px) {
           width: 278px;
           font-size: $fz_16;
-          padding: 11.5px 10px;
+          padding: 10.7px 9.5px 8px 9px;
         }
       }
       input:focus {
@@ -891,9 +903,10 @@ padding-left: 17px;
         @media (min-width: 360px) and (max-width: 999px) {
           width: 278px;
           font-size: $fz_16;
-          padding: 12px 10px;
-          background: url("images/arrow-dropdown.svg") no-repeat 246px/26px 26px,
+          padding: 12px 10px 9px 9.5px;
+          background: url("images/arrow-dropdown.svg") no-repeat 241px/26px 26px,
             $select_gradient;
+            margin-bottom: 1.5px;
         }
 
         option {
@@ -920,6 +933,16 @@ padding-left: 17px;
       input[type="date"] {
         // margin-top: 10px;
         // padding: 17.5px 20px 18px 20px;
+        @media (min-width: 360px) and (max-width: 999px){
+        width: 280px;
+            padding: 8px 9px 8px 9px;
+            margin-bottom: 0px;
+          
+            border-color:red !important;
+          
+          
+        }
+      
       }
 
       select:focus {
@@ -964,6 +987,15 @@ padding-left: 17px;
           label {
             margin-bottom: 7.5px;
           }
+
+        }
+
+        @media (min-width: 360px) and (max-width: 999px){
+margin-bottom: 1px;
+
+        input{
+          padding-top: 10.1px;
+        }
         }
       }
 
@@ -971,6 +1003,13 @@ padding-left: 17px;
         @media (min-width: 1000px) and (max-width: 1850px) {
           label {
             margin-bottom: 7.5px;
+          }
+        }
+        @media (min-width: 360px) and (max-width: 999px){
+margin-bottom: 1.4px;
+
+          input{
+             padding-top: 10px;
           }
         }
       }
@@ -981,16 +1020,43 @@ padding-left: 17px;
             margin-bottom: 7.8px;
           }
         }
+
+        @media (min-width: 360px) and (max-width: 999px){
+          input{
+            width: 280.5px;
+            padding: 10px 9px 8px 9px;
+           
+          }
+        }
+      }
+
+      .date-from{
+        @media (min-width: 360px) and (max-width: 999px){
+          margin-bottom: 1px;
+        }
+      }
+
+      .date-to{
+        @media (min-width: 360px) and (max-width: 999px){
+          margin-bottom: 1px;
+        }
       }
 
       .input-application {
-        padding-top: 19px;
+        //padding-top: 19px;
         border: 1px solid $beige_200;
+
+        @media (min-width: 360px) and (max-width: 999px){
+        }
       }
 
       &-comment {
         width: 100%;
         margin-bottom: -4.8px;
+
+        @media (min-width: 360px) and (max-width: 999px){
+          margin-bottom: -2.1px;
+        }
 
         label{
  @media (min-width: 1000px) and (max-width: 1850px) {
@@ -1023,6 +1089,7 @@ padding-left: 17px;
       &-agreement {
         input {
           padding: 0;
+          margin-top: -1px;
         }
 
         &-radiobox {
@@ -1033,6 +1100,10 @@ padding-left: 17px;
 
           @media (min-width: 1000px) and (max-width: 1850px) {
             margin-top: 2.8px;
+          }
+
+          @media (min-width: 360px) and (max-width: 999px){
+            margin-bottom: 30px;
           }
 
           &-question {
@@ -1046,6 +1117,7 @@ padding-left: 17px;
 
             @media (min-width: 360px) and (max-width: 999px) {
               font-size: $fz_16;
+              margin-top: 1px;
             }
           }
           &-yes {
@@ -1057,6 +1129,7 @@ padding-left: 17px;
 
             @media (min-width: 360px) and (max-width: 999px) {
               @include flex($gap: 10px, $justify-content: start);
+              margin-right: 30px;
             }
           }
           &-no {
@@ -1065,6 +1138,7 @@ padding-left: 17px;
               @include flex($gap: 10px, $justify-content: start);
             }
           }
+         
           label {
             margin-bottom: 0;
           }
@@ -1084,6 +1158,7 @@ padding-left: 17px;
           @media (min-width: 360px) and (max-width: 999px) {
             gap: 10px;
             align-items: start;
+            margin-bottom: 30px;
           }
 
           label {
@@ -1234,6 +1309,9 @@ padding-left: 17px;
             @media (min-width: 360px) and (max-width: 999px) {
               width: 134px;
               font-size: $fz_16;
+              padding-top: 13px;
+            padding-bottom: 10px;
+            border-radius: 10px;
             }
           }
         }
@@ -1277,11 +1355,16 @@ padding-left: 17px;
   }
 
   @media (min-width: 360px) and (max-width: 999px) {
-    margin-bottom: 75px;
+    margin-bottom: 76px;
+    
   }
 
   &__title {
     margin-bottom: 30.5px;
+    @media (min-width: 360px) and (max-width: 999px){
+      letter-spacing: 0.7px;
+      margin-bottom: 21px;
+    }
   }
 
   &__subtitle {
@@ -1328,6 +1411,12 @@ padding-left: 17px;
 
     &__content-one {
       font-weight: $fw_bold;
+      //line-height: 141%;
+      @media (min-width: 360px) and (max-width: 999px) {
+        margin-bottom: 38.5px;//40
+        line-height: 144.5%;
+      letter-spacing:0.01px ;
+}
     }
 
     .mari {
@@ -1336,8 +1425,12 @@ padding-left: 17px;
         margin-bottom: 378px;
       }
       @media (min-width: 360px) and (max-width: 999px) {
-        margin-bottom: 56px;
-      }
+        
+        
+        //margin-bottom: 45px;
+      //   line-height: 141%;
+      // letter-spacing:0.02px ;
+}
     }
 
     .pavel {
@@ -1346,11 +1439,22 @@ padding-left: 17px;
       @media (min-width: 1000px) and (max-width: 1850px) {
         margin-top: -1px;
         margin-bottom: 70px;
+
       }
 
       @media (min-width: 360px) and (max-width: 999px) {
-        margin-bottom: 56px;
+      //   margin-bottom: 38px !important;
+      //  line-height: 142% !important;
+// img{
+//   margin-top: -1px;
+// }
+      
       }
+
+      // img{
+      //   @media (min-width: 360px) and (max-width: 999px){
+      //   margin-top: -1px;
+      // }}
     }
 
     &__content-two {
@@ -1428,7 +1532,11 @@ padding-left: 17px;
       }
 
       &__content-one {
-        font-weight: $fw_bold;
+        // font-weight: $fw_bold;
+        // @media (min-width: 360px) and (max-width: 999px){
+        //   line-height: 144.5%;
+        // }
+       
       }
 
       .mari,
@@ -1437,29 +1545,45 @@ padding-left: 17px;
         // @media (min-width: 1000px) and (max-width:1850px) {
         //   margin-bottom: 378px;
         // }
-        @media (min-width: 360px) and (max-width: 999px) {
-          margin-bottom: 56px;
-        }
+        // @media (min-width: 360px) and (max-width: 999px) {
+        //   img{
+        //     margin-top: -1px;
+        //   }
+        //  // margin-bottom: 56px;
+        // }
       }
 
       &__content-two {
         @include flex($justify-content: space-between);
+     
         &-text {
+          margin-top: -2px;
           &-title {
-            margin-bottom: 8px;
+            margin-top: 5px;
+            margin-bottom: 0px;
+            letter-spacing: 0.7px;
           }
           &-subtext {
             @media (min-width: 360px) and (max-width: 999px) {
               @include fontText($font-size: $fz_16, $color: $gray_300);
+              letter-spacing: -0.2px;
+              margin-bottom:-16px;
+              margin-top: 9px;
             }
           }
         }
-        &-foto {
+      
+         &-foto {
           img {
             width: 75px;
             height: 75px;
+            border-radius: 50%;
           }
         }
+       
+      }
+      .foto-Pavel{
+        margin-top: 1px;
       }
     }
   }
@@ -1476,7 +1600,13 @@ padding-left: 17px;
   }
 
   @media (min-width: 360px) and (max-width: 999px) {
-    margin-bottom: 75px;
+    margin-bottom: 76px;
+  }
+
+  &__title{
+    @media (min-width: 360px) and (max-width: 999px){
+      letter-spacing: 0.7px;
+    }
   }
 
   &__container {
@@ -1529,6 +1659,9 @@ padding-left: 17px;
 
         @media (min-width: 360px) and (max-width: 999px) {
           gap: 18px;
+          img{
+            height: 110px;
+          }
         }
       }
 
@@ -1538,8 +1671,11 @@ padding-left: 17px;
 
           @media (min-width: 1000px) and (max-width: 1850px) {
             width: 314.63px;
-
             object-fit: fill;
+          }
+
+          @media (min-width: 360px) and (max-width: 999px){
+
           }
         }
       }
@@ -1573,6 +1709,9 @@ padding-left: 17px;
         position: relative;
         @media (min-width: 360px) and (max-width: 999px) {
           gap: 10px;
+          img{
+            height: 110px !important;
+          }
         }
       }
 
@@ -1614,6 +1753,9 @@ padding-left: 17px;
       &-three {
         @media (min-width: 360px) and (max-width: 999px) {
           gap: 10px;
+          img{
+            height: 110px;
+          }
         }
       }
 
