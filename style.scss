@@ -246,7 +246,7 @@ body {
       justify-content: space-between;
       gap: 0px;
       padding: 32px 20.5px 32.5px 20px;
-     // margin-bottom: 52px;
+      // margin-bottom: 52px;
     }
 
     &-logo {
@@ -297,8 +297,8 @@ body {
         margin-top: -2px;
       }
 
-      @media (min-width: 360px) and (max-width: 999px){
-padding-top:2px;
+      @media (min-width: 360px) and (max-width: 999px) {
+        padding-top: 2px;
       }
       &-link {
         cursor: pointer;
@@ -365,7 +365,6 @@ padding-top:2px;
       gap: 40px;
       padding-top: 0;
       margin-top: 50.8px;
-      
     }
 
     &-title {
@@ -373,7 +372,7 @@ padding-top:2px;
         $font-size: $fz_h1,
         $line-height: 109%,
         $letter-spacing: 2px
-      ); 
+      );
 
       @media (min-width: 1000px) and (max-width: 1850px) {
         line-height: 109%; //109%;
@@ -417,10 +416,9 @@ padding-top:2px;
         //padding: 5px 0 5.5px 0;
       }
 
-      @media (min-width: 360px) and (max-width: 999px){
+      @media (min-width: 360px) and (max-width: 999px) {
         padding-top: 5px;
         //margin-bottom: 6px;
-
       }
 
       &-link {
@@ -443,7 +441,7 @@ padding-top:2px;
 
         @media (min-width: 360px) and (max-width: 999px) {
           font-size: $fz_16;
-padding: 7px 20.5px 7px 19.5px;
+          padding: 7px 20.5px 7px 19.5px;
         }
       }
 
@@ -518,10 +516,10 @@ padding: 7px 20.5px 7px 19.5px;
       &-link {
         display: inline-block;
         //margin-bottom: 6px;
-         @media (min-width: 360px) and (max-width: 999px){
+        @media (min-width: 360px) and (max-width: 999px) {
           line-height: 142%;
           letter-spacing: 0px;
-         // margin-bottom: 0px;
+          // margin-bottom: 0px;
         }
       }
 
@@ -529,8 +527,7 @@ padding: 7px 20.5px 7px 19.5px;
         height: 2px;
         background-color: $black;
 
-        @media (min-width: 360px) and (max-width: 999px){
-          
+        @media (min-width: 360px) and (max-width: 999px) {
         }
       }
 
@@ -545,8 +542,8 @@ padding: 7px 20.5px 7px 19.5px;
         display: inline-block;
         color: $orange_200;
 
-        @media (min-width: 360px) and (max-width: 999px){
-         //bottom: 0px;
+        @media (min-width: 360px) and (max-width: 999px) {
+          //bottom: 0px;
         }
       }
       .underline.active::before {
@@ -555,7 +552,7 @@ padding: 7px 20.5px 7px 19.5px;
         opacity: 1;
         background-color: $orange_200;
 
-        @media (min-width: 360px) and (max-width: 999px){
+        @media (min-width: 360px) and (max-width: 999px) {
           bottom: 1px;
         }
       }
@@ -622,8 +619,8 @@ padding: 7px 20.5px 7px 19.5px;
             }
           }
 
-          .detailed a::after{
-padding-left: 17px;
+          .detailed a::after {
+            padding-left: 17px;
           }
         }
 
@@ -653,9 +650,9 @@ padding-left: 17px;
             background-size: 100%;
           }
 
-          @media (min-width: 360px) and (max-width: 999px){
+          @media (min-width: 360px) and (max-width: 999px) {
             background: $card_gradient,
-            url("images/card\ tour\ photo-1.jpg") no-repeat 100%;
+              url("images/card\ tour\ photo-1.jpg") no-repeat 100%;
             background-size: 100%;
           }
         }
@@ -717,10 +714,10 @@ padding-left: 17px;
             background-size: 100%;
           }
 
-          @media (min-width: 360px) and (max-width: 999px){
+          @media (min-width: 360px) and (max-width: 999px) {
             background: $card_gradient,
-            url("images/mobile-background-card-5.jpg") no-repeat center; // / 100% 100%;
-          background-size: 100%;
+              url("images/mobile-background-card-5.jpg") no-repeat center; // / 100% 100%;
+            background-size: 100%;
           }
         }
 
@@ -791,14 +788,14 @@ padding-left: 17px;
   }
   &__title {
     margin-bottom: 30px;
-    @media (min-width: 360px) and (max-width: 999px){
+    @media (min-width: 360px) and (max-width: 999px) {
       //line-height: 142%;
       letter-spacing: 0.7px;
       margin-bottom: 20px;
     }
   }
-  &__subtitle{
-    @media (min-width: 360px) and (max-width: 999px){
+  &__subtitle {
+    @media (min-width: 360px) and (max-width: 999px) {
       margin-bottom: 40px;
     }
   }
@@ -906,7 +903,7 @@ padding-left: 17px;
           padding: 12px 10px 9px 9.5px;
           background: url("images/arrow-dropdown.svg") no-repeat 241px/26px 26px,
             $select_gradient;
-            margin-bottom: 1.5px;
+          margin-bottom: 1.5px;
         }
 
         option {
@@ -933,16 +930,13 @@ padding-left: 17px;
       input[type="date"] {
         // margin-top: 10px;
         // padding: 17.5px 20px 18px 20px;
-        @media (min-width: 360px) and (max-width: 999px){
-        width: 280px;
-            padding: 8px 9px 8px 9px;
-            margin-bottom: 0px;
-          
-            border-color:red !important;
-          
-          
+        @media (min-width: 360px) and (max-width: 999px) {
+          width: 280px;
+          padding: 8px 9px 8px 9px;
+          margin-bottom: 0px;
+
+          border-color: red !important;
         }
-      
       }
 
       select:focus {
@@ -987,15 +981,14 @@ padding-left: 17px;
           label {
             margin-bottom: 7.5px;
           }
-
         }
 
-        @media (min-width: 360px) and (max-width: 999px){
-margin-bottom: 1px;
+        @media (min-width: 360px) and (max-width: 999px) {
+          margin-bottom: 1px;
 
-        input{
-          padding-top: 10.1px;
-        }
+          input {
+            padding-top: 10.1px;
+          }
         }
       }
 
@@ -1005,11 +998,11 @@ margin-bottom: 1px;
             margin-bottom: 7.5px;
           }
         }
-        @media (min-width: 360px) and (max-width: 999px){
-margin-bottom: 1.4px;
+        @media (min-width: 360px) and (max-width: 999px) {
+          margin-bottom: 1.4px;
 
-          input{
-             padding-top: 10px;
+          input {
+            padding-top: 10px;
           }
         }
       }
@@ -1021,23 +1014,22 @@ margin-bottom: 1.4px;
           }
         }
 
-        @media (min-width: 360px) and (max-width: 999px){
-          input{
+        @media (min-width: 360px) and (max-width: 999px) {
+          input {
             width: 280.5px;
             padding: 10px 9px 8px 9px;
-           
           }
         }
       }
 
-      .date-from{
-        @media (min-width: 360px) and (max-width: 999px){
+      .date-from {
+        @media (min-width: 360px) and (max-width: 999px) {
           margin-bottom: 1px;
         }
       }
 
-      .date-to{
-        @media (min-width: 360px) and (max-width: 999px){
+      .date-to {
+        @media (min-width: 360px) and (max-width: 999px) {
           margin-bottom: 1px;
         }
       }
@@ -1046,7 +1038,7 @@ margin-bottom: 1.4px;
         //padding-top: 19px;
         border: 1px solid $beige_200;
 
-        @media (min-width: 360px) and (max-width: 999px){
+        @media (min-width: 360px) and (max-width: 999px) {
         }
       }
 
@@ -1054,12 +1046,12 @@ margin-bottom: 1.4px;
         width: 100%;
         margin-bottom: -4.8px;
 
-        @media (min-width: 360px) and (max-width: 999px){
+        @media (min-width: 360px) and (max-width: 999px) {
           margin-bottom: -2.1px;
         }
 
-        label{
- @media (min-width: 1000px) and (max-width: 1850px) {
+        label {
+          @media (min-width: 1000px) and (max-width: 1850px) {
             margin-bottom: 7.5px;
           }
         }
@@ -1102,7 +1094,7 @@ margin-bottom: 1.4px;
             margin-top: 2.8px;
           }
 
-          @media (min-width: 360px) and (max-width: 999px){
+          @media (min-width: 360px) and (max-width: 999px) {
             margin-bottom: 30px;
           }
 
@@ -1138,7 +1130,7 @@ margin-bottom: 1.4px;
               @include flex($gap: 10px, $justify-content: start);
             }
           }
-         
+
           label {
             margin-bottom: 0;
           }
@@ -1310,8 +1302,8 @@ margin-bottom: 1.4px;
               width: 134px;
               font-size: $fz_16;
               padding-top: 13px;
-            padding-bottom: 10px;
-            border-radius: 10px;
+              padding-bottom: 10px;
+              border-radius: 10px;
             }
           }
         }
@@ -1356,12 +1348,11 @@ margin-bottom: 1.4px;
 
   @media (min-width: 360px) and (max-width: 999px) {
     margin-bottom: 76px;
-    
   }
 
   &__title {
     margin-bottom: 30.5px;
-    @media (min-width: 360px) and (max-width: 999px){
+    @media (min-width: 360px) and (max-width: 999px) {
       letter-spacing: 0.7px;
       margin-bottom: 21px;
     }
@@ -1413,10 +1404,10 @@ margin-bottom: 1.4px;
       font-weight: $fw_bold;
       //line-height: 141%;
       @media (min-width: 360px) and (max-width: 999px) {
-        margin-bottom: 38.5px;//40
+        margin-bottom: 38.5px; //40
         line-height: 144.5%;
-      letter-spacing:0.01px ;
-}
+        letter-spacing: 0.01px;
+      }
     }
 
     .mari {
@@ -1425,12 +1416,10 @@ margin-bottom: 1.4px;
         margin-bottom: 378px;
       }
       @media (min-width: 360px) and (max-width: 999px) {
-        
-        
         //margin-bottom: 45px;
-      //   line-height: 141%;
-      // letter-spacing:0.02px ;
-}
+        //   line-height: 141%;
+        // letter-spacing:0.02px ;
+      }
     }
 
     .pavel {
@@ -1439,16 +1428,14 @@ margin-bottom: 1.4px;
       @media (min-width: 1000px) and (max-width: 1850px) {
         margin-top: -1px;
         margin-bottom: 70px;
-
       }
 
       @media (min-width: 360px) and (max-width: 999px) {
-      //   margin-bottom: 38px !important;
-      //  line-height: 142% !important;
-// img{
-//   margin-top: -1px;
-// }
-      
+        //   margin-bottom: 38px !important;
+        //  line-height: 142% !important;
+        // img{
+        //   margin-top: -1px;
+        // }
       }
 
       // img{
@@ -1536,7 +1523,6 @@ margin-bottom: 1.4px;
         // @media (min-width: 360px) and (max-width: 999px){
         //   line-height: 144.5%;
         // }
-       
       }
 
       .mari,
@@ -1555,7 +1541,7 @@ margin-bottom: 1.4px;
 
       &__content-two {
         @include flex($justify-content: space-between);
-     
+
         &-text {
           margin-top: -2px;
           &-title {
@@ -1567,22 +1553,21 @@ margin-bottom: 1.4px;
             @media (min-width: 360px) and (max-width: 999px) {
               @include fontText($font-size: $fz_16, $color: $gray_300);
               letter-spacing: -0.2px;
-              margin-bottom:-16px;
+              margin-bottom: -16px;
               margin-top: 9px;
             }
           }
         }
-      
-         &-foto {
+
+        &-foto {
           img {
             width: 75px;
             height: 75px;
             border-radius: 50%;
           }
         }
-       
       }
-      .foto-Pavel{
+      .foto-Pavel {
         margin-top: 1px;
       }
     }
@@ -1603,13 +1588,13 @@ margin-bottom: 1.4px;
     margin-bottom: 76px;
   }
 
-  &__title{
-    @media (min-width: 360px) and (max-width: 999px){
+  &__title {
+    @media (min-width: 360px) and (max-width: 999px) {
       letter-spacing: 0.7px;
     }
   }
 
-  &__subtitle{
+  &__subtitle {
     line-height: 143%;
     margin-bottom: 49px;
   }
@@ -1668,7 +1653,7 @@ margin-bottom: 1.4px;
 
         @media (min-width: 360px) and (max-width: 999px) {
           gap: 18px;
-          img{
+          img {
             height: 110px;
           }
         }
@@ -1683,8 +1668,8 @@ margin-bottom: 1.4px;
             object-fit: fill;
           }
 
-          @media (min-width: 360px) and (max-width: 999px){
-object-fit: fill;
+          @media (min-width: 360px) and (max-width: 999px) {
+            object-fit: fill;
           }
         }
       }
@@ -1711,9 +1696,9 @@ object-fit: fill;
             width: 314.63px;
             object-fit: fill;
           }
-          @media (min-width: 360px) and (max-width: 999px){
+          @media (min-width: 360px) and (max-width: 999px) {
             object-fit: fill;
-                      }
+          }
         }
       }
 
@@ -1721,7 +1706,7 @@ object-fit: fill;
         position: relative;
         @media (min-width: 360px) and (max-width: 999px) {
           gap: 10px;
-          img{
+          img {
             height: 110px !important;
             width: 99.33px !important;
           }
@@ -1732,17 +1717,13 @@ object-fit: fill;
         img {
           height: 301px;
           width: 349.16px;
-  @media (min-width: 360px) and (max-width: 999px) {
-          
+          @media (min-width: 360px) and (max-width: 999px) {
             object-position: 51.1% 50%;
-          
+          }
 
+          //
+          // object-fit: cover;
         }
-      
-        // 
-         // object-fit: cover;
-        }
-
       }
       &-two li:nth-child(2) {
         img {
@@ -1762,12 +1743,12 @@ object-fit: fill;
             object-fit: contain;
           }
           @media (min-width: 360px) and (max-width: 999px) {
-           object-fit: cover;
-              //object-fit: fill;
-              object-position: 51.1% 51%;
-            
-          // 
-           // object-fit: cover;
+            object-fit: cover;
+            //object-fit: fill;
+            object-position: 51.1% 51%;
+
+            //
+            // object-fit: cover;
           }
         }
       }
@@ -1784,7 +1765,7 @@ object-fit: fill;
       &-three {
         @media (min-width: 360px) and (max-width: 999px) {
           gap: 10px;
-          img{
+          img {
             height: 110px;
           }
         }
@@ -1796,10 +1777,9 @@ object-fit: fill;
         overflow: hidden;
         img {
           @media (min-width: 1000px) and (max-width: 1850px) {
-                       object-position: 57.5% 50%;
-          
+            object-position: 57.5% 50%;
           }
-          @media (min-width: 360px) and (max-width: 999px){
+          @media (min-width: 360px) and (max-width: 999px) {
             object-fit: cover;
             object-position: 50% 50.5%;
           }
@@ -1810,10 +1790,9 @@ object-fit: fill;
           @media (min-width: 1000px) and (max-width: 1850px) {
             object-position: 50.51% 50%;
           }
-          @media (min-width: 360px) and (max-width: 999px){
+          @media (min-width: 360px) and (max-width: 999px) {
             object-position: 49% 50.5%;
           }
-
         }
       }
       &-three li:nth-child(3) {
@@ -1837,16 +1816,27 @@ object-fit: fill;
           display: none;
         }
       }
-      .padd{
-        @media (min-width: 1000px) and (max-width: 1850px){
+      .padd {
+        @media (min-width: 1000px) and (max-width: 1850px) {
           display: block;
         }
-        @media (min-width: 360px) and (max-width: 999px){
+        @media (min-width: 360px) and (max-width: 999px) {
           display: none;
-
         }
       }
-    
+      .mob-img {
+        display: none;
+        @media (min-width: 1000px) and (max-width: 1850px) {
+          display: none;
+        }
+        @media (min-width: 360px) and (max-width: 999px) {
+          display: block;
+
+          img {
+            object-position: 49% 50.5%;
+          }
+        }
+      }
     }
     .line-one {
       @media (min-width: 360px) and (max-width: 999px) {
@@ -1879,7 +1869,7 @@ object-fit: fill;
         }
 
         @media (min-width: 360px) and (max-width: 999px) {
-         // max-width: 99px;
+          // max-width: 99px;
           height: 110px;
         }
       }
@@ -2003,8 +1993,8 @@ object-fit: fill;
         &-title {
           margin-bottom: 37px;
 
-          @media (min-width: 1000px) and (max-width: 1850px){
-           margin-bottom: 36px; 
+          @media (min-width: 1000px) and (max-width: 1850px) {
+            margin-bottom: 36px;
           }
 
           @media (min-width: 360px) and (max-width: 999px) {
@@ -2016,12 +2006,11 @@ object-fit: fill;
           @include fontText();
           margin-bottom: 27px;
 
-          @media (min-width: 1000px) and (max-width: 1850px){
-
+          @media (min-width: 1000px) and (max-width: 1850px) {
           }
 
           @media (min-width: 360px) and (max-width: 999px) {
-            @include fontText( $font-size: $fz_16);//$line-height:121.9%,
+            @include fontText($font-size: $fz_16); //$line-height:121.9%,
             margin-bottom: 20px;
           }
         }
@@ -2067,9 +2056,9 @@ object-fit: fill;
         right: 61px;
         bottom: 59px;
 
-        @media (min-width: 1000px) and (max-width: 1850px){
-            right: 61.5px;
-            bottom: 59.5px;
+        @media (min-width: 1000px) and (max-width: 1850px) {
+          right: 61.5px;
+          bottom: 59.5px;
         }
 
         @media (min-width: 360px) and (max-width: 999px) {
@@ -2173,17 +2162,17 @@ object-fit: fill;
       }
     }
 
-     .two-block &-block-content-title{
-      @media (min-width: 1000px) and (max-width: 1850px){
-margin-bottom: 37px;
+    .two-block &-block-content-title {
+      @media (min-width: 1000px) and (max-width: 1850px) {
+        margin-bottom: 37px;
       }
-     }
+    }
 
-     .two-block &-block-content-text{
-      @media (min-width: 1000px) and (max-width: 1850px){
-//margin-bottom: 26.5px;
+    .two-block &-block-content-text {
+      @media (min-width: 1000px) and (max-width: 1850px) {
+        //margin-bottom: 26.5px;
       }
-     }
+    }
 
     .three-block {
       background: $stories_gradient,
@@ -2207,10 +2196,10 @@ margin-bottom: 37px;
         //margin-bottom: 222px;
       }
     }
-    .three-block &-block-content-title{
-      @media (min-width: 1000px) and (max-width: 1850px){
+    .three-block &-block-content-title {
+      @media (min-width: 1000px) and (max-width: 1850px) {
         margin-bottom: 37px;
-              }
+      }
     }
 
     .three-block &-block-network {
