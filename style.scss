@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
-
 //variables
 $blackForGradient: rgba(0, 0, 0, 0.5);
 $white: #ffffff;
@@ -205,19 +204,19 @@ body {
   margin: 0 auto;
 }
 .header {
-  width:100vw; //1920px; //100vw;
+  width: 100vw; //1920px; //100vw;
   position: relative;
   padding-top: 90px;
   @include font();
   top: 0;
-  
   background: url("images/header-background.jpg") no-repeat 0% 51.2% / 100%
     99.65%; //cover
   margin: 0px auto 134px auto;
   padding-bottom: 119px;
 
   @media (min-width: 1000px) and (max-width: 1850px) {
-    background: url("images/pad-header-background.jpg") no-repeat 50% 0%/111.8% 100%;
+    background: url("images/pad-header-background.jpg") no-repeat 50% 0%/111.8%
+      100%;
   }
   @media (min-width: 360px) and (max-width: 999px) {
     background: url("images/pad-header-background.jpg") no-repeat 50% / cover;
@@ -241,14 +240,13 @@ body {
 
     @media (min-width: 1000px) and (max-width: 1850px) {
       gap: 82px;
-     
     }
 
     @media (min-width: 360px) and (max-width: 999px) {
-      justify-content: center;
-      gap: 63px;
-      padding: 32.5px 0;
-      margin-bottom: 52px;
+      justify-content: space-between;
+      gap: 0px;
+      padding: 32px 20.5px 32.5px 20px;
+     // margin-bottom: 52px;
     }
 
     &-logo {
@@ -256,7 +254,7 @@ body {
       &-icon {
         display: block;
 
-        @media (min-width: 1000px) and (max-width: 1850px){
+        @media (min-width: 1000px) and (max-width: 1850px) {
           margin-top: -1px;
         }
 
@@ -295,20 +293,22 @@ body {
     }
 
     &-phone {
-       @media (min-width: 1000px) and (max-width: 1850px){
-          margin-top: -2px;
-        }
+      @media (min-width: 1000px) and (max-width: 1850px) {
+        margin-top: -2px;
+      }
+
+      @media (min-width: 360px) and (max-width: 999px){
+padding-top:2px;
+      }
       &-link {
         cursor: pointer;
         font-size: $fz_20;
         @include font($font-weight: $fw_regular);
 
-       
-
         @media (min-width: 360px) and (max-width: 999px) {
           font-size: $fz_16;
           line-height: 142%;
-          padding-top: 2px;
+          //padding-top:2px;
         }
       }
     }
@@ -358,15 +358,14 @@ body {
     @media (min-width: 1000px) and (max-width: 1850px) {
       max-width: 914px;
       padding-top: 118px;
-      //padding-left: 2px;
-
-    // h1{  letter-spacing: 2.1px !important;}
     }
+
     @media (min-width: 360px) and (max-width: 999px) {
-      //width: 100%;
       max-width: 310px;
       gap: 40px;
       padding-top: 0;
+      margin-top: 50.8px;
+      
     }
 
     &-title {
@@ -374,16 +373,20 @@ body {
         $font-size: $fz_h1,
         $line-height: 109%,
         $letter-spacing: 2px
-      ); // $ls_2 2.15px
+      ); 
 
-      @media (min-width: 1000px) and (max-width: 1850px){
-        margin-left: 0.5px;
-        margin-top: -0.2px;
+      @media (min-width: 1000px) and (max-width: 1850px) {
+        line-height: 109%; //109%;
+        letter-spacing: 2px; //2px;
+        margin-left: 1.2px;
+        margin-top: -0.9px;
+        margin-bottom: 1px;
       }
 
       @media (min-width: 360px) and (max-width: 999px) {
         font-size: $fz_h1_mobile;
         line-height: 112%;
+        letter-spacing: 0.55px;
       }
     }
 
@@ -394,21 +397,30 @@ body {
 
       @media (min-width: 1000px) and (max-width: 1850px) {
         max-width: 405px;
-        padding-left: 1.5px;
-       // letter-spacing: 0px ;
+        padding-left: 1.85px;
+        letter-spacing: 0.011px;
       }
       @media (min-width: 360px) and (max-width: 999px) {
         max-width: 310px;
         font-size: $fz_16;
+        line-height: 143%;
       }
     }
 
     &-btn {
-      padding: 4px 0 6px 0;
+      //padding: 4px 0 6px 0;
+      padding-top: 4px;
+      margin-bottom: 6px;
 
-      @media (min-width: 1000px) and (max-width: 1850px){
+      @media (min-width: 1000px) and (max-width: 1850px) {
         //margin-top: 2px;
         //padding: 5px 0 5.5px 0;
+      }
+
+      @media (min-width: 360px) and (max-width: 999px){
+        padding-top: 5px;
+        //margin-bottom: 6px;
+
       }
 
       &-link {
@@ -425,12 +437,13 @@ body {
         //padding: 6px 19px 7px 19px;
         transition: 0.3s ease;
 
-        @media (min-width: 1000px) and (max-width: 1850px){
+        @media (min-width: 1000px) and (max-width: 1850px) {
           padding: 7px 20px;
         }
 
         @media (min-width: 360px) and (max-width: 999px) {
           font-size: $fz_16;
+padding: 7px 20.5px 7px 19.5px;
         }
       }
 
@@ -469,8 +482,10 @@ body {
   }
   &__title {
     margin-bottom: 35px;
+
     @media (min-width: 360px) and (max-width: 999px) {
       margin-bottom: 30px;
+      letter-spacing: 0.7px;
     }
   }
   &__tabs {
@@ -482,31 +497,41 @@ body {
 
     @media (min-width: 360px) and (max-width: 999px) {
       @include fontText($font-size: $fz_16, $color: $black, $line-height: 142%);
-      margin-bottom: 50px;
+      margin-bottom: 49px;
     }
 
     &-links {
       text-align: center;
       @include flex($gap: 30px);
 
-      @media (min-width: 1000px) and (max-width: 1850px){
-letter-spacing: 0px;
-       gap: 30.32px;
+      @media (min-width: 1000px) and (max-width: 1850px) {
+        letter-spacing: 0px;
+        gap: 30.32px;
       }
 
       @media (min-width: 360px) and (max-width: 999px) {
-        @include flex($gap: 10px);
+        @include flex($gap: 10.3px);
         flex-wrap: wrap;
+        //letter-spacing: 10px;
       }
 
       &-link {
         display: inline-block;
-        padding-bottom: 6px;
+        //margin-bottom: 6px;
+         @media (min-width: 360px) and (max-width: 999px){
+          line-height: 142%;
+          letter-spacing: 0px;
+         // margin-bottom: 0px;
+        }
       }
 
       .underline::before {
         height: 2px;
         background-color: $black;
+
+        @media (min-width: 360px) and (max-width: 999px){
+          
+        }
       }
 
       .underline:hover::before {
@@ -519,12 +544,20 @@ letter-spacing: 0px;
       .underline.active {
         display: inline-block;
         color: $orange_200;
+
+        @media (min-width: 360px) and (max-width: 999px){
+         //bottom: 0px;
+        }
       }
       .underline.active::before {
         bottom: 0px;
         height: 2px;
         opacity: 1;
         background-color: $orange_200;
+
+        @media (min-width: 360px) and (max-width: 999px){
+          bottom: 1px;
+        }
       }
     }
   }
@@ -532,7 +565,7 @@ letter-spacing: 0px;
   &__container {
     //max-width: 1170px;
 
-    @media (min-width: 1000px) and (max-width: 1850px){
+    @media (min-width: 1000px) and (max-width: 1850px) {
       max-width: 918px;
     }
 
@@ -561,8 +594,10 @@ letter-spacing: 0px;
             width: 450px;
           }
           @media (min-width: 360px) and (max-width: 999px) {
-            padding: 25px;
-            width: 100%;
+            padding: 26px 25px 25px 25px;
+            width: 318px;
+            height: 318px;
+            //width: 100%;
             border-radius: 20px;
             // transition: none;
           }
@@ -571,6 +606,7 @@ letter-spacing: 0px;
             margin-bottom: 16px;
             @media (min-width: 360px) and (max-width: 999px) {
               margin-bottom: 13px;
+              letter-spacing: 1px;
             }
           }
           &-price {
@@ -582,8 +618,12 @@ letter-spacing: 0px;
             }
             @media (min-width: 360px) and (max-width: 999px) {
               font-size: $fz_16;
-              margin-bottom: 178px;
+              margin-bottom: 174px;
             }
+          }
+
+          .detailed a::after{
+padding-left: 17px;
           }
         }
 
@@ -609,7 +649,13 @@ letter-spacing: 0px;
 
           @media (min-width: 1000px) and (max-width: 1850px) {
             background: $card_gradient,
-              url("images/card\ tour\ photo-1.jpg") no-repeat 100%;//100%  106%; // / cover
+              url("images/card\ tour\ photo-1.jpg") no-repeat 100%; //100%  106%; // / cover
+            background-size: 100%;
+          }
+
+          @media (min-width: 360px) and (max-width: 999px){
+            background: $card_gradient,
+            url("images/card\ tour\ photo-1.jpg") no-repeat 100%;
             background-size: 100%;
           }
         }
@@ -622,7 +668,7 @@ letter-spacing: 0px;
           @media (min-width: 1000px) and (max-width: 1850px) {
             background: $card_gradient,
               url("images/background-card-2-pad.jpg") no-repeat 100%; // / cover
-            background-size:100%;
+            background-size: 100%;
           }
 
           @media (min-width: 360px) and (max-width: 999px) {
@@ -669,6 +715,12 @@ letter-spacing: 0px;
             background: $card_gradient,
               url("images/background-card-5-pad.jpg") no-repeat center; // / 100% 100%;
             background-size: 100%;
+          }
+
+          @media (min-width: 360px) and (max-width: 999px){
+            background: $card_gradient,
+            url("images/background-card-5-pad.jpg") no-repeat center; // / 100% 100%;
+          background-size: 100%;
           }
         }
 
@@ -734,6 +786,9 @@ letter-spacing: 0px;
   margin-bottom: 135px;
   @media (min-width: 360px) and (max-width: 999px) {
     margin-bottom: 75px;
+  }
+  &__title {
+    margin-bottom: 30px;
   }
 
   &__box {
@@ -826,10 +881,12 @@ letter-spacing: 0px;
 
         @media (min-width: 1000px) and (max-width: 1850px) {
           width: 389px;
-          background: url("images/arrow-dropdown.svg") no-repeat 341.8px/26px 26px,
+          background: url("images/arrow-dropdown.svg") no-repeat 341.8px/26px
+              26px,
             $select_gradient;
-            padding: 19px 19px 19px 19.5px;
-            letter-spacing: 0px;
+          padding: 19px 19px 19px 19.5px;
+          letter-spacing: 0px;
+          margin-bottom: -0.01px;
         }
         @media (min-width: 360px) and (max-width: 999px) {
           width: 278px;
@@ -895,21 +952,51 @@ letter-spacing: 0px;
       }
       &-name {
         margin-bottom: 1px;
+
+        @media (min-width: 1000px) and (max-width: 1850px) {
+          margin-bottom: 0;
+        }
       }
       &-email {
         margin-bottom: -5px;
+
+        @media (min-width: 1000px) and (max-width: 1850px) {
+          label {
+            margin-bottom: 7.5px;
+          }
+        }
       }
+
+      &-tel {
+        @media (min-width: 1000px) and (max-width: 1850px) {
+          label {
+            margin-bottom: 7.5px;
+          }
+        }
+      }
+
+      &-date {
+        @media (min-width: 1000px) and (max-width: 1850px) {
+          label {
+            margin-bottom: 7.8px;
+          }
+        }
+      }
+
       .input-application {
-        padding-top: 19px !important;
+        padding-top: 19px;
+        border: 1px solid $beige_200;
       }
 
       &-comment {
         width: 100%;
         margin-bottom: -4.8px;
 
-        // label{
-
-        // }
+        label{
+ @media (min-width: 1000px) and (max-width: 1850px) {
+            margin-bottom: 7.5px;
+          }
+        }
 
         textarea {
           @include fontText($color: $black);
@@ -944,7 +1031,7 @@ letter-spacing: 0px;
           flex-wrap: wrap;
           margin-bottom: 33px;
 
-          @media (min-width: 1000px) and (max-width: 1850px){
+          @media (min-width: 1000px) and (max-width: 1850px) {
             margin-top: 2.8px;
           }
 
@@ -953,7 +1040,7 @@ letter-spacing: 0px;
             @include fontText($color: $black);
             margin-bottom: 8px;
 
-            @media (min-width: 1000px) and (max-width: 1850px){
+            @media (min-width: 1000px) and (max-width: 1850px) {
               margin-bottom: 7.5px;
             }
 
@@ -965,8 +1052,7 @@ letter-spacing: 0px;
             @include flex($gap: 11px, $justify-content: start);
             margin-right: 31px;
 
-            @media (min-width: 1000px) and (max-width: 1850px){
-
+            @media (min-width: 1000px) and (max-width: 1850px) {
             }
 
             @media (min-width: 360px) and (max-width: 999px) {
@@ -990,9 +1076,9 @@ letter-spacing: 0px;
           gap: 19px;
           margin-bottom: 34px;
 
-          @media (min-width: 1000px) and (max-width: 1850px){
-gap: 11px;
-margin-bottom: 32.5px;
+          @media (min-width: 1000px) and (max-width: 1850px) {
+            gap: 11px;
+            margin-bottom: 32.5px;
           }
 
           @media (min-width: 360px) and (max-width: 999px) {
@@ -1008,8 +1094,8 @@ margin-bottom: 32.5px;
             );
             margin-bottom: 0;
 
-            @media (min-width: 1000px) and (max-width: 1850px){
-              margin-top: 0.5px;
+            @media (min-width: 1000px) and (max-width: 1850px) {
+              //margin-top: 0.5px;
             }
 
             @media (min-width: 360px) and (max-width: 999px) {
@@ -1140,9 +1226,9 @@ margin-bottom: 32.5px;
             border-radius: 10px;
             transition: background 0.1s ease-in-out 0.1s;
 
-            @media (min-width: 1000px) and (max-width: 1850px){
-            //   padding-top: 14.8px;
-            // padding-bottom: 15.2px;
+            @media (min-width: 1000px) and (max-width: 1850px) {
+              //   padding-top: 14.8px;
+              // padding-bottom: 15.2px;
             }
 
             @media (min-width: 360px) and (max-width: 999px) {
@@ -1186,7 +1272,7 @@ margin-bottom: 32.5px;
 .reviews {
   margin-bottom: 113.5px;
 
-  @media (min-width: 1000px) and (max-width: 1850px){
+  @media (min-width: 1000px) and (max-width: 1850px) {
     margin-bottom: 114px;
   }
 
@@ -1194,7 +1280,7 @@ margin-bottom: 32.5px;
     margin-bottom: 75px;
   }
 
-  &__title{
+  &__title {
     margin-bottom: 30.5px;
   }
 
@@ -1257,7 +1343,7 @@ margin-bottom: 32.5px;
     .pavel {
       margin-bottom: 69px;
 
-      @media (min-width: 1000px) and (max-width: 1850px){
+      @media (min-width: 1000px) and (max-width: 1850px) {
         margin-top: -1px;
         margin-bottom: 70px;
       }
@@ -1273,7 +1359,7 @@ margin-bottom: 32.5px;
         &-title {
           margin-bottom: 9px;
 
-          @media (min-width: 1000px) and (max-width: 1850px){
+          @media (min-width: 1000px) and (max-width: 1850px) {
             margin-bottom: 8px;
           }
         }
@@ -1413,7 +1499,7 @@ margin-bottom: 32.5px;
       @media (min-width: 1000px) and (max-width: 1850px) {
         max-width: 984px;
         //justify-content: center;
-        gap: 20px ;
+        gap: 20px;
       }
 
       &-one,
@@ -1435,12 +1521,11 @@ margin-bottom: 32.5px;
         }
       }
       &-one {
-
-        @media (min-width: 1000px) and (max-width: 1850px){
-        img{
-          height: 300px;
+        @media (min-width: 1000px) and (max-width: 1850px) {
+          img {
+            height: 300px;
+          }
         }
-      }
 
         @media (min-width: 360px) and (max-width: 999px) {
           gap: 18px;
@@ -1451,10 +1536,10 @@ margin-bottom: 32.5px;
         img {
           width: 444px;
 
-          @media (min-width: 1000px) and (max-width: 1850px){
-width: 314.63px;
+          @media (min-width: 1000px) and (max-width: 1850px) {
+            width: 314.63px;
 
-object-fit: fill;
+            object-fit: fill;
           }
         }
       }
@@ -1467,7 +1552,7 @@ object-fit: fill;
         img {
           width: 441.5px;
 
-          @media (min-width: 1000px) and (max-width: 1850px){
+          @media (min-width: 1000px) and (max-width: 1850px) {
             object-fit: contain;
             width: 314.63px;
           }
@@ -1477,9 +1562,9 @@ object-fit: fill;
         img {
           width: 443px;
 
-          @media (min-width: 1000px) and (max-width: 1850px){
-width: 314.63px;
-object-fit: fill;
+          @media (min-width: 1000px) and (max-width: 1850px) {
+            width: 314.63px;
+            object-fit: fill;
           }
         }
       }
@@ -1510,9 +1595,9 @@ object-fit: fill;
       &-two li:nth-child(4) {
         img {
           width: 347.32px;
-          
-          @media (min-width: 1000px) and (max-width: 1850px){
-object-fit:contain ;
+
+          @media (min-width: 1000px) and (max-width: 1850px) {
+            object-fit: contain;
           }
         }
       }
@@ -1520,9 +1605,9 @@ object-fit:contain ;
         img {
           width: 348.87px;
 
-          @media (min-width: 1000px) and (max-width: 1850px){
+          @media (min-width: 1000px) and (max-width: 1850px) {
             width: 231px;
-                      }
+          }
         }
       }
 
@@ -1535,37 +1620,31 @@ object-fit:contain ;
       &-three li:nth-child(1) {
         // width: 314.63px;
         // height: 301px;
-         overflow: hidden;
+        overflow: hidden;
         img {
-       
+          @media (min-width: 1000px) and (max-width: 1850px) {
+            //  width:98%;
+            // object-fit: fill;
 
-          @media (min-width: 1000px) and (max-width: 1850px){
-          //  width:98%;
-         // object-fit: fill;
-          
-              object-position: 57.5% 50%;
-          //  height: 94%;
-           
+            object-position: 57.5% 50%;
+            //  height: 94%;
 
-            
- //width: 314.63px;
+            //width: 314.63px;
 
- //object-fit: fill;
+            //object-fit: fill;
           }
         }
       }
       &-three li:nth-child(2) {
         img {
-          @media (min-width: 1000px) and (max-width: 1850px){
-object-position: 50.51% 50%;
+          @media (min-width: 1000px) and (max-width: 1850px) {
+            object-position: 50.51% 50%;
           }
         }
       }
       &-three li:nth-child(3) {
         img {
-       
-
-          @media (min-width: 1000px) and (max-width: 1850px){
+          @media (min-width: 1000px) and (max-width: 1850px) {
             object-position: 49.55% 50%;
           }
         }
@@ -1595,7 +1674,7 @@ object-position: 50.51% 50%;
 
         @media (min-width: 1000px) and (max-width: 1850px) {
           //max-width: 315px;
-         // height: 300px;
+          // height: 300px;
         }
 
         @media (min-width: 360px) and (max-width: 999px) {
@@ -1674,16 +1753,20 @@ object-position: 50.51% 50%;
   margin-bottom: 134px;
   margin-top: -1.5px; //!
 
+  @media (min-width: 1000px) and (max-width: 1850px) {
+    margin-bottom: 135px;
+  }
+
   @media (min-width: 360px) and (max-width: 999px) {
     padding-right: 21px;
     padding-left: 21px;
     margin-bottom: 75px;
   }
-// &__title{
-//   @media (min-width: 1000px) and (max-width: 1850px){
-//     margin-bottom:30px ;
-//   }
-// }
+  // &__title{
+  //   @media (min-width: 1000px) and (max-width: 1850px){
+  //     margin-bottom:30px ;
+  //   }
+  // }
 
   &__subtitle {
     line-height: 141.1%;
@@ -1709,6 +1792,11 @@ object-position: 50.51% 50%;
       border-radius: 50px;
       cursor: pointer;
 
+      @media (min-width: 1000px) and (max-width: 1850px) {
+        // padding: 60px 60px 63px 60px;
+        padding-bottom: 62px;
+      }
+
       @media (min-width: 360px) and (max-width: 999px) {
         padding: 30px;
         border-radius: 20px;
@@ -1719,6 +1807,10 @@ object-position: 50.51% 50%;
         color: $white;
         margin-bottom: 227px;
 
+        // @media (min-width: 1000px) and (max-width: 1850px){
+        //   margin-bottom: 240px;
+        // }
+
         @media (min-width: 360px) and (max-width: 999px) {
           width: auto;
           margin-bottom: 155px;
@@ -1726,6 +1818,11 @@ object-position: 50.51% 50%;
 
         &-title {
           margin-bottom: 37px;
+
+          @media (min-width: 1000px) and (max-width: 1850px){
+           margin-bottom: 36px; 
+          }
+
           @media (min-width: 360px) and (max-width: 999px) {
             max-width: 150px;
             margin-bottom: 20px;
@@ -1735,8 +1832,12 @@ object-position: 50.51% 50%;
           @include fontText();
           margin-bottom: 27px;
 
+          @media (min-width: 1000px) and (max-width: 1850px){
+
+          }
+
           @media (min-width: 360px) and (max-width: 999px) {
-            @include fontText($font-size: $fz_16);
+            @include fontText( $font-size: $fz_16);//$line-height:121.9%,
             margin-bottom: 20px;
           }
         }
@@ -1772,7 +1873,6 @@ object-position: 50.51% 50%;
 
       &-detailed {
         display: inline-block;
-       
       }
 
       &-network {
@@ -1782,6 +1882,11 @@ object-position: 50.51% 50%;
         color: $white;
         right: 61px;
         bottom: 59px;
+
+        @media (min-width: 1000px) and (max-width: 1850px){
+            right: 61.5px;
+            bottom: 59.5px;
+        }
 
         @media (min-width: 360px) and (max-width: 999px) {
           display: none;
@@ -1817,6 +1922,10 @@ object-position: 50.51% 50%;
     .one-block &-block-content {
       margin-bottom: 105px;
 
+      @media (min-width: 1000px) and (max-width: 1850px) {
+        margin-bottom: 105px;
+      }
+
       @media (min-width: 360px) and (max-width: 999px) {
         margin-bottom: 64.5px;
       }
@@ -1825,7 +1934,7 @@ object-position: 50.51% 50%;
     .one-block {
       background: $stories_gradient,
         url("images/story\ photo-1.jpg") no-repeat center;
-        //background-size: 100%;
+      //background-size: 100%;
       margin-bottom: 50px;
 
       @media (min-width: 1000px) and (max-width: 1850px) {
@@ -1838,14 +1947,23 @@ object-position: 50.51% 50%;
           url("images/story\ photo-1Mobile.png") no-repeat center;
         margin-bottom: 20px;
       }
+
+      .detailed {
+        @media (min-width: 1000px) and (max-width: 1850px) {
+          padding-top: 9px;
+        }
+      }
     }
 
-    .two-block &-block-network{
+    .two-block &-block-network {
       bottom: 61px;
+
+      @media (min-width: 1000px) and (max-width: 1850px) {
+        bottom: 60px;
+      }
     }
 
-
-    .two-block{
+    .two-block {
       background: $stories_gradient,
         url("images/story\ photo-2.jpg") no-repeat center;
       margin-bottom: 49px;
@@ -1854,6 +1972,7 @@ object-position: 50.51% 50%;
       @media (min-width: 1000px) and (max-width: 1850px) {
         background: $stories_gradient,
           url("images/story\ photo-2Pad.jpg") no-repeat center;
+        margin-bottom: 50px;
       }
 
       @media (min-width: 360px) and (max-width: 999px) {
@@ -1862,19 +1981,35 @@ object-position: 50.51% 50%;
         margin-bottom: 20px;
       }
 
-      .detailed{
-        margin-top: -8px;
+      .detailed {
+        margin-top: 8px;
+        @media (min-width: 1000px) and (max-width: 1850px) {
+          margin-top: -8px;
+        }
       }
     }
+
+     .two-block &-block-content-title{
+      @media (min-width: 1000px) and (max-width: 1850px){
+margin-bottom: 37px;
+      }
+     }
+
+     .two-block &-block-content-text{
+      @media (min-width: 1000px) and (max-width: 1850px){
+//margin-bottom: 26.5px;
+      }
+     }
 
     .three-block {
       background: $stories_gradient,
         url("images/story\ photo-3.jpg") no-repeat center;
-       // background-size: 100% 100%;
+      // background-size: 100% 100%;
 
       @media (min-width: 1000px) and (max-width: 1850px) {
         background: $stories_gradient,
-          url("images//story photo-3Pad.png") no-repeat 48%;
+          url("images//story photo-3Pad.jpg") no-repeat 48%;
+        // padding-top: 59px;
       }
 
       @media (min-width: 360px) and (max-width: 999px) {
@@ -1882,12 +2017,24 @@ object-position: 50.51% 50%;
           url("images/story\ photo-3Mobile.png") no-repeat center;
       }
     }
-    .three-block &-block-content{
-margin-bottom: 218.5px;
+    .three-block &-block-content {
+      margin-bottom: 218.5px;
+      @media (min-width: 1000px) and (max-width: 1850px) {
+        //margin-bottom: 222px;
+      }
+    }
+    .three-block &-block-content-title{
+      @media (min-width: 1000px) and (max-width: 1850px){
+        margin-bottom: 37px;
+              }
     }
 
-    .three-block &-block-network{
-bottom: 61px;
+    .three-block &-block-network {
+      bottom: 61px;
+      @media (min-width: 1000px) and (max-width: 1850px) {
+        bottom: 59.5px;
+        right: 61.5px;
+      }
     }
     .one-block,
     .two-block,
@@ -1897,7 +2044,6 @@ bottom: 61px;
 
       @media (min-width: 360px) and (max-width: 999px) {
         background-size: cover;
-        
       }
     }
     .one-block:hover,
@@ -1924,6 +2070,11 @@ bottom: 61px;
     max-width: 771px;
     @include flex($gap: 30px);
 
+    @media (min-width: 1000px) and (max-width: 1850px) {
+      gap: 30.5px;
+      //margin-left: -0.85px;
+    }
+
     @media (min-width: 360px) and (max-width: 999px) {
       max-width: 360px;
       flex-wrap: wrap;
@@ -1934,6 +2085,10 @@ bottom: 61px;
       min-height: 370px;
       border-radius: 50px;
       background: url("images/footer  photo.jpg") no-repeat center/cover;
+      @media (min-width: 1000px) and (max-width: 1850px) {
+        //    min-width: 370.5px;
+        margin-left: -0.8px;
+      }
 
       @media (min-width: 360px) and (max-width: 999px) {
         min-width: 130px;
@@ -1991,7 +2146,7 @@ bottom: 61px;
   &__container {
     width: 1168px;
     @include flex($justify-content: space-between);
-    padding:30px 0 30px 0;//31px 6px 29px 0;//30px 0;
+    padding: 30px 0 30px 0; //31px 6px 29px 0;//30px 0;
 
     @media (min-width: 1000px) and (max-width: 1850px) {
       width: 918px;
@@ -2012,9 +2167,8 @@ bottom: 61px;
 
     &-network {
       display: flex;
-      gap: 25px;//25
+      gap: 25px; //25
       align-items: center;
-    
 
       @media (min-width: 360px) and (max-width: 999px) {
         justify-content: center;
@@ -2030,8 +2184,7 @@ bottom: 61px;
         &-link {
           @include fontText($color: $black);
           display: flex;
-          gap: 10.5px;//10
-
+          gap: 10.5px; //10
 
           @media (min-width: 360px) and (max-width: 999px) {
             font-size: $fz_16;
@@ -2043,7 +2196,7 @@ bottom: 61px;
             height: 26px;
             margin-top: 1px;
             @media (min-width: 1000px) and (max-width: 1850px) {
-              margin-top: 2px;
+              //margin-top: 2px;
             }
             @media (min-width: 360px) and (max-width: 999px) {
               width: 22px;
