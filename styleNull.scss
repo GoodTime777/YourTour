@@ -33,16 +33,13 @@
   body {
     height: 100%;
     width: 100%;
-    
-    line-height: 1;
-    
-    //overflow-x: hidden;
+    line-height: 1;//?    
     -ms-text-size-adjust: 100%;
     -moz-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
   }
   body{
-    //overflow-x: hidden;
+    overflow-x: hidden;
     margin: 0 auto;
   }
   input,
@@ -75,9 +72,9 @@
   ul li {
     list-style: none;
   }
-  img {
-    vertical-align: top;
-  }
+  // img {
+  //   vertical-align: top;
+  // }
   p{
     font-weight: 400;
   }

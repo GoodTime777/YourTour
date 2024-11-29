@@ -14,13 +14,13 @@
     />
     <link rel="icon" href="images/favicon/favicon 32х32.svg" />
     <link rel="stylesheet" href="styleNull.css" />
-    <link rel="stylesheet" href="style.css" />    
+    <link rel="stylesheet" href="style.css" />
     <title>YourTour</title>
     <meta name="description" content="Путешествия идеальные." />
   </head>
   <body>
     <header class="header" id="header">
-      <nav class="header__navigation ">
+      <nav class="header__navigation">
         <div class="header__navigation-logo">
           <a href="#header" class="header__navigation-logo-icon icon-white"
             ><img src="images/YourTour.svg" alt="logo"
@@ -553,8 +553,7 @@
               id="name"
               placeholder="Введите Ваше имя"
               name="user_name"
-             
-             autocomplete="off"
+              autocomplete="off"
             />
           </div>
           <div class="application__box-form-select">
@@ -594,9 +593,7 @@
           <div class="application__box-form-date date-from">
             <label for="date_from">Дата от</label>
             <input
-              
               class="input-application"
-                          
               id="date_from"
               placeholder="ДД.ММ.ГГГГ"
               onfocus="(this.type='date')"
@@ -608,14 +605,13 @@
           </div>
           <div class="application__box-form-date date-to">
             <label for="date_to">Дата до</label>
-            <input              
-              class="input-application"                          
+            <input
+              class="input-application"
               id="date_to"
               placeholder="ДД.ММ.ГГГГ"
               onfocus="(this.type='date')"
               onblur="(this.type='date')"
               name="user_date_to"
-
               max="2028-12-31"
               required
             />
@@ -633,43 +629,50 @@
               <p class="application__box-form-agreement-radiobox-question">
                 Вам есть 18 лет?
               </p>
-              <div class="application__box-form-agreement-radiobox-yes">
+              <div class="application__box-form-agreement-radiobox-answer">
+
+              <div class="application__box-form-agreement-radiobox-answer-yes">
                 <input
                   required
                   id="radio-yes"
                   type="radio"
                   name="age"
-                  class="custom-radio"
+                  class="custom custom-radio"
                 />
                 <label for="radio-yes" class="yes">Да</label>
               </div>
-              <div class="application__box-form-agreement-radiobox-no">
+              <div class="application__box-form-agreement-radiobox-answer-no">
                 <input
                   required
                   id="radio-no"
                   type="radio"
                   name="age"
-                  class="custom-radio"
+                  class="custom custom-radio"
                 />
                 <label for="radio-no" class="no"> Нет</label>
+              </div>  
               </div>
+
+              
+              
             </div>
             <div class="application__box-form-agreement-contract">
               <input
                 required
                 id="checkbox"
                 type="checkbox"
-                class="custom-checkbox"
+                class="custom custom-checkbox"
               />
               <label for="checkbox"
                 >Нажимая кнопку, я принимаю условия
-                <a
+                
+            <a
                   class="contract underline"
                   href="#"
                   download="/doc/Договор.txt"
                   >Лицензионного договора</a
-                >
-              </label>
+                >   </label>
+             
             </div>
             <div class="application__box-form-agreement-buttons">
               <button
@@ -698,10 +701,12 @@
       <p class="reviews__subtitle subtitle">
         Идейные соображения высшего порядка,<br />
         а также рамки и место обучения кадров
-      </p>
-      <div class="reviews__swiper swiper mySwiper">
+      </p>  
+      <div class="block-transparent-for-scroll"></div>
+      <div class="reviews__swiper swiper mySwiper touch">
+      
         <div class="swiper-wrapper">
-          <div class="swiper-slide">
+          <div class="swiper-slide swiper-slide-mobile">
             <p class="swiper-slide__content-one mari">
               Идейные соображения высшего порядка, а также рамки и место
               обучения кадров обеспечивает широкому кругу (специалистов) участие
@@ -722,7 +727,53 @@
             </div>
             <!-- </div> -->
           </div>
-          <div class="swiper-slide">
+          <div class="swiper-slide swiper-slide-mobile ">
+            <p class="swiper-slide__content-one pavel">
+              Равным образом постоянный количественный рост и сфера нашей
+              активности играет важную роль в формировании системы обучения
+              кадров, соответствует насущным потребностям. <br /><br />
+              Значимость этих проблем настолько очевидна, что дальнейшее
+              развитие различных форм деятельности обеспечивает широкому кругу
+              (специалистов) участие в формировании новых предложений.
+              Повседневная практика показывает, что реализация намеченных
+              плановых заданий в значительной степени обуславливает создание
+              модели развития.
+            </p>
+            <div class="swiper-slide__content-two">
+              <div class="text">
+                <h3 class="swiper-slide__content-two-text-title">Павел</h3>
+                <p class="swiper-slide__content-two-text-subtext">
+                  Тур: Путешествие в горы
+                </p>
+              </div>
+              <div class="swiper-slide__content-two-foto fotoPavel">
+                <img src="images/fotoMan.jpg" alt="foto" />
+              </div>
+            </div>
+            <!-- </div> -->
+          </div>
+          <div class="swiper-slide swiper-slide-desk">
+            <p class="swiper-slide__content-one mari">
+              Идейные соображения высшего порядка, а также рамки и место
+              обучения кадров обеспечивает широкому кругу (специалистов) участие
+              в формировании новых предложений. Идейные соображения высшего
+              порядка, а также начало повседневной работы по формированию
+              позиции позволяет оценить значение модели развития.
+            </p>
+            <div class="swiper-slide__content-two">
+              <div class="swiper-slide__content-two-text">
+                <h3 class="swiper-slide__content-two-text-title">Мария</h3>
+                <p class="swiper-slide__content-two-text-subtext">
+                  Тур: Вдали от дома
+                </p>
+              </div>
+              <div class="swiper-slide__content-two-foto">
+                <img src="images/fotoWoman.jpg" alt="foto" />
+              </div>
+            </div>
+            <!-- </div> -->
+          </div>
+          <div class="swiper-slide swiper-slide-desk">
             <p class="swiper-slide__content-one pavel">
               Равным образом постоянный количественный рост и сфера нашей
               активности играет важную роль в формировании системы обучения
@@ -747,7 +798,7 @@
             </div>
             <!-- </div> -->
           </div>
-          <div class="swiper-slide">
+          <div class="swiper-slide swiper-slide-desk">
             <p class="swiper-slide__content-one mari">
               Идейные соображения высшего порядка, а также рамки и место
               обучения кадров обеспечивает широкому кругу (специалистов) участие
@@ -768,7 +819,7 @@
             </div>
             <!-- </div> -->
           </div>
-          <div class="swiper-slide">
+          <div class="swiper-slide swiper-slide-desk">
             <p class="swiper-slide__content-one pavel">
               Равным образом постоянный количественный рост и сфера нашей
               активности играет важную роль в формировании системы обучения
@@ -793,7 +844,7 @@
             </div>
             <!-- </div> -->
           </div>
-          <div class="swiper-slide">
+          <div class="swiper-slide swiper-slide-desk">
             <p class="swiper-slide__content-one mari">
               Идейные соображения высшего порядка, а также рамки и место
               обучения кадров обеспечивает широкому кругу (специалистов) участие
@@ -814,7 +865,7 @@
             </div>
             <!-- </div> -->
           </div>
-          <div class="swiper-slide">
+          <div class="swiper-slide swiper-slide-desk">
             <p class="swiper-slide__content-one pavel">
               Равным образом постоянный количественный рост и сфера нашей
               активности играет важную роль в формировании системы обучения
@@ -839,107 +890,11 @@
             </div>
             <!-- </div> -->
           </div>
-          <div class="swiper-slide">
-            <p class="swiper-slide__content-one mari">
-              Идейные соображения высшего порядка, а также рамки и место
-              обучения кадров обеспечивает широкому кругу (специалистов) участие
-              в формировании новых предложений. Идейные соображения высшего
-              порядка, а также начало повседневной работы по формированию
-              позиции позволяет оценить значение модели развития.
-            </p>
-            <div class="swiper-slide__content-two">
-              <div class="swiper-slide__content-two-text">
-                <h3 class="swiper-slide__content-two-text-title">Мария</h3>
-                <p class="swiper-slide__content-two-text-subtext">
-                  Тур: Вдали от дома
-                </p>
-              </div>
-              <div class="swiper-slide__content-two-foto">
-                <img src="images/fotoWoman.jpg" alt="foto" />
-              </div>
-            </div>
-            <!-- </div> -->
-          </div>
-          <div class="swiper-slide">
-            <p class="swiper-slide__content-one pavel">
-              Равным образом постоянный количественный рост и сфера нашей
-              активности играет важную роль в формировании системы обучения
-              кадров, соответствует насущным потребностям. <br /><br />
-              Значимость этих проблем настолько очевидна, что дальнейшее
-              развитие различных форм деятельности обеспечивает широкому кругу
-              (специалистов) участие в формировании новых предложений.
-              Повседневная практика показывает, что реализация намеченных
-              плановых заданий в значительной степени обуславливает создание
-              модели развития.
-            </p>
-            <div class="swiper-slide__content-two">
-              <div class="text">
-                <h3 class="swiper-slide__content-two-text-title">Павел</h3>
-                <p class="swiper-slide__content-two-text-subtext">
-                  Тур: Путешествие в горы
-                </p>
-              </div>
-              <div class="swiper-slide__content-two-foto">
-                <img src="images/fotoMan.jpg" alt="foto" />
-              </div>
-            </div>
-            <!-- </div> -->
-          </div>
+          
         </div>
 
         <div class="swiper-pagination"></div>
-      </div>
-      <div class="reviews__mobile">
-
-        <div class="swiper-slide-mobile">
-          <p class="swiper-slide__content-one mari">
-            Идейные соображения высшего порядка, а также рамки и место
-            обучения кадров обеспечивает широкому кругу (специалистов) участие
-            в формировании новых предложений. Идейные соображения высшего
-            порядка, а также начало повседневной работы по формированию
-            позиции позволяет оценить значение модели развития.
-          </p>
-          <div class="swiper-slide-mobile__content-two">
-            <div class="swiper-slide-mobile__content-two-text">
-              <h3 class="swiper-slide-mobile__content-two-text-title">Мария</h3>
-              <p class="swiper-slide-mobile__content-two-text-subtext">
-                Тур: Вдали от дома
-              </p>
-            </div>
-            <div class="swiper-slide-mobile__content-two-foto">
-              <img src="images/fotoWoman.jpg" alt="foto" />
-            </div>
-          </div>
-          <!-- </div> -->
-        </div>
-        <div class="swiper-slide-mobile">
-          <p class="swiper-slide__content-one pavel">
-            Равным образом постоянный количественный рост и сфера нашей
-            активности играет важную роль в формировании системы обучения
-            кадров, соответствует насущным потребностям. <br /><br />
-            Значимость этих проблем настолько очевидна, что дальнейшее
-            развитие различных форм деятельности обеспечивает широкому кругу
-            (специалистов) участие в формировании новых предложений.
-            Повседневная практика показывает, что реализация намеченных
-            плановых заданий в значительной степени обуславливает создание
-            модели развития.
-          </p>
-          <div class="swiper-slide-mobile__content-two">
-            <div class="swiper-slide-mobile__content-two-text">
-              <h3 class="swiper-slide-mobile__content-two-text-title">Павел</h3>
-              <p class="swiper-slide-mobile__content-two-text-subtext">
-                Тур: Путешествие в горы
-              </p>
-            </div>
-            <div class="swiper-slide-mobile__content-two-foto foto-Pavel">
-              <img src="images/fotoMan.jpg" alt="foto" />
-            </div>
-          </div>
-          <!-- </div> -->
-        </div>
-          </div>
-
-      </div>
+      </div>      
     </section>
     <section class="gallery">
       <h2 class="gallery__title">Фотографии путешествий</h2>
@@ -961,8 +916,8 @@
             </li>
             <li>
               <img src="images/travel photo-4.jpg" alt="foto" />
-            </li>           
-          </ul>      
+            </li>
+          </ul>
         </div>
         <div class="gallery__container-content line-two">
           <ul class="gallery__container-content-two">
@@ -982,20 +937,14 @@
               <img src="images/travel photo-13.jpg" alt="foto" class="desk" />
             </li> -->
             <li>
-              <img src="images/background-card-4.jpg" alt="foto" class="pad" />
+              <img src="images/background-card-4-desk.jpg" alt="foto" class="pad" />
             </li>
-            <!-- <li>
-              <img src="images/travel photo-8Pad.png" alt="foto" class="pad" />
-            </li> 
-            <li>
-              <img src="images/travel photo-13Pad.png" alt="foto" class="pad" />
-            </li>           -->
-          </ul>        
+         
+          </ul>
         </div>
         <div class="gallery__container-content line-three">
           <ul class="gallery__container-content-three">
-
-            <li class="deletePad ">
+            <li class="deletePad">
               <img src="images/travel photo-9.jpg" alt="foto" />
             </li>
             <li class="padd deleteMobile">
@@ -1012,7 +961,7 @@
             </li>
             <li class="deletePad">
               <img src="images/travel photo-12.jpg" alt="foto" />
-            </li>         
+            </li>
           </ul>
         </div>
       </div>
@@ -1145,41 +1094,39 @@
         <p class="footer__container-text">Наши социальные сети</p>
         <div class="footer__container-network">
           <div class="footer__container-network-container">
-            
             <a
               href="#"
               class="footer__container-network-container-link instagram underline"
-            ><img
-              src="images/inst.svg"
-              class="footer__container-network-container-link-icon inst"
-              alt="inst"
-            />
+              ><img
+                src="images/inst.svg"
+                class="footer__container-network-container-link-icon inst"
+                alt="inst"
+              />
               instagram</a
             >
           </div>
           <div class="footer__container-network-container">
-           
             <a
               href="#"
               class="footer__container-network-container-link facebook underline"
-            > <img
-              src="images/fb.svg"
-              class="footer__container-network-container-link-icon fb"
-              alt="fb"
-            />
+            >
+              <img
+                src="images/fb.svg"
+                class="footer__container-network-container-link-icon fb"
+                alt="fb"
+              />
               facebook</a
             >
           </div>
           <div class="footer__container-network-container">
-            
             <a
               href="#"
               class="footer__container-network-container-link vkontakte underline"
-            ><img
-              src="images/vk.svg"
-              class="footer__container-network-container-link-icon vk"
-              alt="vk"
-            />
+              ><img
+                src="images/vk.svg"
+                class="footer__container-network-container-link-icon vk"
+                alt="vk"
+              />
               vkontakte</a
             >
           </div>

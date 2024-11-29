@@ -42,6 +42,7 @@ body {
 }
 
 body {
+  overflow-x: hidden;
   margin: 0 auto;
 }
 
@@ -80,10 +81,6 @@ a:hover {
 
 ul li {
   list-style: none;
-}
-
-img {
-  vertical-align: top;
 }
 
 p {

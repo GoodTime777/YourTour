@@ -10,7 +10,9 @@ const swiper = new Swiper(".mySwiper", {
   },
   breakpoints: {
     320: {
-      spaceBetween: 18,
+      spaceBetween: 0,
+      loop: false,
+      mousewheel: false,
     },
     1024: {
       spaceBetween: 18,
@@ -20,10 +22,6 @@ const swiper = new Swiper(".mySwiper", {
     },
   },
 });
-
- if (window.innerWidth < 1024){
-//задать высоту для swiper (~1060)
- }
 
 function changeDirection() {
   window.innerWidth < 1024

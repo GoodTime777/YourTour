@@ -17,7 +17,7 @@ $orange_100: #f8e6be;
 $orange_200: #efa501;
 
 //variables-fonts
-$mainFont: "Roboto", sans-serif; // 'Roboto regular'
+$mainFont: "Roboto", sans-serif;
 $fz_h1: 96px;
 $fz_h2: 59px;
 $fz_h3: 35px;
@@ -199,69 +199,79 @@ h3 {
 body {
   font-family: $mainFont;
   background-color: $beige_100;
-  // margin-top: 90px;
-  overflow-x: hidden;
   margin: 0 auto;
 }
+
 .header {
-  width: 100vw; //1920px; //100vw;
+  width: 100vw;
   position: relative;
-  padding-top: 90px;
   @include font();
-  top: 0;
+  //top: 0;
   background: url("images/header-background.jpg") no-repeat 0% 51.2% / 100%
-    99.65%; //cover
-  margin: 0px auto 134px auto;
+    99.65%;
+  margin: 0px auto 133px auto;
+  padding-top: 88px;
   padding-bottom: 119px;
 
   @media (min-width: 1000px) and (max-width: 1850px) {
-    background: url("images/pad-header-background.jpg") no-repeat 50% 0%/111.8%
+    background: url("images/pad-header-background.jpg") no-repeat 50% 0%/111.9%
       100%;
+    padding-bottom: 117.8px;
+    margin-bottom: 135px;
   }
+
   @media (min-width: 360px) and (max-width: 999px) {
-    background: url("images/pad-header-background.jpg") no-repeat 50% / cover;
-    padding-bottom: 52px;
-    padding-left: 21px;
-    padding-right: 21px;
-    margin-bottom: 75px;
+    background: url("images/pad-header-background.jpg") no-repeat 50.5% / cover;
+    padding-bottom: 51px;
+    padding-left: 21px; //21
+    padding-right: 20px; //21
+    margin-bottom: 76px;
   }
 
   &__navigation {
-    // overflow-x: hidden;
     position: absolute;
     top: 0px;
     left: 0;
     right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    @include flex($gap: 181px);
-    padding: 29px 0px;
+    // margin-left: auto;
+    // margin-right: auto;
+    @include flex($gap: 181.08px);
+    padding: 28.88px 0px;
     z-index: 100;
 
     @media (min-width: 1000px) and (max-width: 1850px) {
+      padding: 26.5px 0px;
       gap: 82px;
     }
 
     @media (min-width: 360px) and (max-width: 999px) {
-      justify-content: space-between;
-      gap: 0px;
-      padding: 32px 20.5px 32.5px 20px;
-      // margin-bottom: 52px;
+      width: 320px;
+      justify-content: start;
+      //align-items: ;
+      gap: 31.5px;
+      padding: 32.5px 0px;
+      margin: 0 auto;
     }
 
     &-logo {
       cursor: pointer;
+
       &-icon {
         display: block;
 
         @media (min-width: 1000px) and (max-width: 1850px) {
+          margin-top: 1px;
+        }
+
+        @media (min-width: 360px) and (max-width: 999px) {
           margin-top: -1px;
         }
 
         img {
-          width: 182px;
           @media (min-width: 360px) and (max-width: 999px) {
             width: 133px;
+            margin-left: -1px;
+            margin-top: 1px;
           }
         }
       }
@@ -269,25 +279,17 @@ body {
 
     &-menu {
       &-list {
-        // font-size: 20px;
-        // line-height: 142%;
-        // font-weight: 400;
-        // letter-spacing: 0;
-        @include fontText($font-size: $fz_20);
+        @include fontText($letter-spacing: 0.11px);
         font-weight: $fw_regular;
-        @include flex($gap: 51px);
+        @include flex($gap: 50px);
 
         @media (min-width: 1000px) and (max-width: 1850px) {
+          letter-spacing: 0px;
           gap: 30.7px;
         }
+
         @media (min-width: 360px) and (max-width: 999px) {
           display: none;
-        }
-
-        &-item {
-          &-link {
-            padding-bottom: 2px;
-          }
         }
       }
     }
@@ -298,17 +300,18 @@ body {
       }
 
       @media (min-width: 360px) and (max-width: 999px) {
-        padding-top: 2px;
+        margin-top: 0px;
+        //padding-top: 2px;
       }
+
       &-link {
-        cursor: pointer;
         font-size: $fz_20;
         @include font($font-weight: $fw_regular);
+        cursor: pointer;
 
         @media (min-width: 360px) and (max-width: 999px) {
           font-size: $fz_16;
           line-height: 142%;
-          //padding-top:2px;
         }
       }
     }
@@ -341,84 +344,95 @@ body {
     a {
       color: $black;
     }
+
     .underline::before {
       background-color: $black;
     }
   }
 
   &__content {
-    max-width: 768px;
     text-align: center;
     display: grid;
     grid-template-columns: 1fr;
-    gap: 50px;
-    margin: 0 auto;
-    padding-top: 119px;
+    gap: 50.5px;
+    margin: 121px auto 0 auto;
 
     @media (min-width: 1000px) and (max-width: 1850px) {
       max-width: 914px;
-      padding-top: 118px;
+      //padding-left: 0.5px;
+      //padding-top: 118px;
+      //margin: 118.5px 55px 0 55px;
+      margin: 118.5px auto 0 auto;
     }
 
     @media (min-width: 360px) and (max-width: 999px) {
       max-width: 310px;
       gap: 40px;
-      padding-top: 0;
-      margin-top: 50.8px;
+      //margin-right: 3px;
+      margin: 0 auto;
+      //padding-top: 0;
+      margin-top: 53px;
     }
 
     &-title {
+      max-width: 768px;
       @include fontText(
         $font-size: $fz_h1,
         $line-height: 109%,
         $letter-spacing: 2px
       );
+      margin: 0 auto 0 577.3px;
+      padding-right: 2px;
 
       @media (min-width: 1000px) and (max-width: 1850px) {
-        line-height: 109%; //109%;
-        letter-spacing: 2px; //2px;
-        margin-left: 1.2px;
-        margin-top: -0.9px;
-        margin-bottom: 1px;
+        line-height: 109.9999999999%;
+        padding-left: 3px;
+        margin: 0 auto 1px auto;
       }
 
       @media (min-width: 360px) and (max-width: 999px) {
-        font-size: $fz_h1_mobile;
-        line-height: 112%;
-        letter-spacing: 0.55px;
+        @include fontText(
+          $font-size: $fz_h1_mobile,
+          $line-height: 112%,
+          $letter-spacing: 0.7px
+        );
+        margin: 0 auto;
       }
     }
 
     &-subtitle {
-      @include fontText();
       max-width: 562px;
+      @include fontText();
       margin: 0 auto;
 
       @media (min-width: 1000px) and (max-width: 1850px) {
         max-width: 405px;
-        padding-left: 1.85px;
-        letter-spacing: 0.011px;
+        padding-left: 1.85px; //margin
+        letter-spacing: 0.015px;
+        //@include fontText($letter-spacing: 0.011px);
       }
+
       @media (min-width: 360px) and (max-width: 999px) {
         max-width: 310px;
-        font-size: $fz_16;
-        line-height: 143%;
+        @include fontText(
+          $letter-spacing: 0.011px,
+          $font-size: $fz_16,
+          $line-height: 143%
+        );
+        padding-left: 0;
+        margin-left: -1px;
       }
     }
 
     &-btn {
-      //padding: 4px 0 6px 0;
       padding-top: 4px;
       margin-bottom: 6px;
 
-      @media (min-width: 1000px) and (max-width: 1850px) {
-        //margin-top: 2px;
-        //padding: 5px 0 5.5px 0;
-      }
-
       @media (min-width: 360px) and (max-width: 999px) {
+        margin-top: 1px;
+        margin-right: 1px;
         padding-top: 5px;
-        //margin-bottom: 6px;
+        //margin-bottom: 4px;
       }
 
       &-link {
@@ -427,11 +441,10 @@ body {
           $letter-spacing: -0.1px,
           $color: $black
         );
-        //$ls_-1
         font-weight: $fw_regular;
         border-radius: 10px;
         background-color: $white;
-        padding: 8px 20px 7.5px 20px;
+        padding: 7.5px 20px 6.5px 20px;
         //padding: 6px 19px 7px 19px;
         transition: 0.3s ease;
 
@@ -441,7 +454,9 @@ body {
 
         @media (min-width: 360px) and (max-width: 999px) {
           font-size: $fz_16;
-          padding: 7px 20.5px 7px 19.5px;
+          padding: 6.5px 20.5px 7.5px 19.5px;
+          letter-spacing: -0.11px;
+          line-height: 131%;
         }
       }
 
@@ -458,8 +473,9 @@ body {
       &-link:active {
         color: $black;
         background-color: $orange_100;
+
         @media (min-width: 360px) and (max-width: 999px) {
-          color: $black;
+          // color: $black;
           background-color: $white;
         }
       }
@@ -469,33 +485,50 @@ body {
 //////*************
 .card {
   max-width: 1170px;
-  margin: 0 auto 135px auto;
+  margin: 0 auto 135.425px auto;
 
   @media (min-width: 1000px) and (max-width: 1850px) {
     max-width: 918px;
+//margin-bottom: 136px;
+
   }
+
   @media (min-width: 360px) and (max-width: 999px) {
     max-width: 318px;
-    margin: 0 auto 76px auto;
+    margin: 0 auto 75.8px auto;
+   
   }
+
   &__title {
     margin-bottom: 35px;
+
+    @media (min-width: 1000px) and (max-width: 1850px) {
+      margin-bottom: 35px;
+    }
 
     @media (min-width: 360px) and (max-width: 999px) {
       margin-bottom: 30px;
       letter-spacing: 0.7px;
+      margin-top: -0.05px;
     }
   }
+
   &__tabs {
     @include fontText($font-size: $fz_23, $color: $black, $line-height: 122%);
     font-weight: $fw_bold;
-    letter-spacing: 0px;
-    margin-bottom: 100px;
-    @include flex();
+    //@include flex();
+    margin-bottom: 106px;
+
+    @media (min-width: 1000px) and (max-width: 1850px) {
+      margin-left: -1.55px;
+      margin-bottom: 106px;
+      // letter-spacing: 0.15px;
+    }
 
     @media (min-width: 360px) and (max-width: 999px) {
-      @include fontText($font-size: $fz_16, $color: $black, $line-height: 142%);
+      @include fontText($font-size: $fz_16, $color: $black);
       margin-bottom: 49px;
+      margin-left: -1px;
     }
 
     &-links {
@@ -508,31 +541,28 @@ body {
       }
 
       @media (min-width: 360px) and (max-width: 999px) {
-        @include flex($gap: 10.3px);
+        gap: 10.3px;
         flex-wrap: wrap;
-        //letter-spacing: 10px;
       }
 
       &-link {
         display: inline-block;
-        //margin-bottom: 6px;
+
         @media (min-width: 360px) and (max-width: 999px) {
           line-height: 142%;
           letter-spacing: 0px;
-          // margin-bottom: 0px;
         }
       }
 
       .underline::before {
         height: 2px;
         background-color: $black;
-
-        @media (min-width: 360px) and (max-width: 999px) {
-        }
       }
 
       .underline:hover::before {
         opacity: 1;
+        bottom: -5px;
+
         @media (min-width: 360px) and (max-width: 999px) {
           opacity: 0;
         }
@@ -541,16 +571,18 @@ body {
       .underline.active {
         display: inline-block;
         color: $orange_200;
-
-        @media (min-width: 360px) and (max-width: 999px) {
-          //bottom: 0px;
-        }
       }
+
       .underline.active::before {
-        bottom: 0px;
+        width: 100.05%;
+        bottom: -6px;
         height: 2px;
         opacity: 1;
         background-color: $orange_200;
+
+        @media (min-width: 1000px) and (max-width: 1850px) {
+          bottom: -6px;
+        }
 
         @media (min-width: 360px) and (max-width: 999px) {
           bottom: 1px;
@@ -560,14 +592,13 @@ body {
   }
 
   &__container {
-    //max-width: 1170px;
-
     @media (min-width: 1000px) and (max-width: 1850px) {
       max-width: 918px;
     }
 
     &-content {
       display: none;
+
       &-items {
         @include flex($gap: 30px);
         flex-wrap: wrap;
@@ -575,68 +606,9 @@ body {
         @media (min-width: 1000px) and (max-width: 1850px) {
           gap: 18px;
         }
+
         @media (min-width: 360px) and (max-width: 999px) {
           gap: 18px;
-        }
-
-        &-item {
-          width: 370px;
-          height: 531px;
-          color: $white;
-          border-radius: 50px;
-          padding: 50px;
-          cursor: pointer;
-
-          @media (min-width: 1000px) and (max-width: 1850px) {
-            width: 450px;
-          }
-          @media (min-width: 360px) and (max-width: 999px) {
-            padding: 26px 25px 25px 25px;
-            width: 318px;
-            height: 318px;
-            //width: 100%;
-            border-radius: 20px;
-            // transition: none;
-          }
-
-          &-title {
-            margin-bottom: 16px;
-            @media (min-width: 360px) and (max-width: 999px) {
-              margin-bottom: 13px;
-              letter-spacing: 1px;
-            }
-          }
-          &-price {
-            @include fontText($font-size: $fz_17, $letter-spacing: -0.1px);
-            margin-bottom: 270px;
-
-            @media (min-width: 1000px) and (max-width: 1850px) {
-              margin-bottom: 313px;
-            }
-            @media (min-width: 360px) and (max-width: 999px) {
-              font-size: $fz_16;
-              margin-bottom: 174px;
-            }
-          }
-
-          .detailed a::after {
-            padding-left: 17px;
-          }
-        }
-
-        &-item:hover {
-          .detailed {
-            background-color: $green_400;
-            @media (min-width: 360px) and (max-width: 999px) {
-              background-color: transparent;
-            }
-          }
-          .detailed:active {
-            background-color: $orange_200;
-            @media (min-width: 360px) and (max-width: 999px) {
-              background-color: transparent;
-            }
-          }
         }
 
         .card-one {
@@ -650,11 +622,11 @@ body {
             background-size: 100%;
           }
 
-          @media (min-width: 360px) and (max-width: 999px) {
-            background: $card_gradient,
-              url("images/card\ tour\ photo-1.jpg") no-repeat 100%;
-            background-size: 100%;
-          }
+          // @media (min-width: 360px) and (max-width: 999px) {
+          //   // background: $card_gradient,
+          //   //   url("images/card\ tour\ photo-1.jpg") no-repeat 100%;
+          //   // background-size: 100%;
+          // }
         }
 
         .card-two {
@@ -693,12 +665,18 @@ body {
 
         .card-four {
           background: $card_gradient,
-            url("images/background-card-4-pad.jpg") no-repeat center;
-          background-size: 100%;
+            url("images/background-card-4.jpg") no-repeat center;
+          background-size: 100% 100%;
 
           @media (min-width: 1000px) and (max-width: 1850px) {
             background: $card_gradient,
-              url("images/background-card-4.jpg") no-repeat center;
+              url("images/background-card-4-pad.jpg") no-repeat center;
+            background-size: 100%;
+          }
+
+          @media (min-width: 360px) and (max-width: 999px) {
+            background: $card_gradient,
+              url("images/background-card-4-pad.jpg") no-repeat center;
             background-size: 100%;
           }
         }
@@ -710,7 +688,7 @@ body {
 
           @media (min-width: 1000px) and (max-width: 1850px) {
             background: $card_gradient,
-              url("images/background-card-5-pad.jpg") no-repeat center; // / 100% 100%;
+              url("images/background-card-5-pad.jpg") no-repeat center;
             background-size: 100%;
           }
 
@@ -738,34 +716,85 @@ body {
           }
         }
 
-        .card-one,
-        .card-two,
-        .card-three,
-        .card-four,
-        .card-five,
-        .card-six {
+        &-item {
+          width: 370px;
+          height: 531px;
+          color: $white;
+          border-radius: 50px;
+          padding: 50px 50px 50px 50px;
+          cursor: pointer;
           transition: background-size 0.5s ease-in-out;
 
-          // @media (min-width: 360px) and (max-width:999px) {
-          //   transition: none;
-          // }
-        }
+          @media (min-width: 1000px) and (max-width: 1850px) {
+            width: 450px;
+            //padding:50px 50px 52px 50px;
+          }
 
-        .card-one:hover,
-        .card-four:hover,
-        .card-five:hover {
-          background-size: 120%;
           @media (min-width: 360px) and (max-width: 999px) {
-            background-size: 100%;
+            padding: 26px 25px 25px 25px;
+            width: 318px;
+            height: 318px;
+            border-radius: 20px;
+          }
+
+          &-title {
+            margin-bottom: 16px;
+
+            @media (min-width: 1000px) and (max-width: 1850px) {
+              margin-bottom: 16px;
+            }
+
+            @media (min-width: 360px) and (max-width: 999px) {
+              margin-bottom: 14px;
+              letter-spacing: 1px;
+            }
+          }
+
+          &-price {
+            @include fontText($font-size: $fz_17, $letter-spacing: -0.1px);
+            margin-bottom: 270px;
+
+            @media (min-width: 1000px) and (max-width: 1850px) {
+              margin-bottom: 313px;
+            }
+
+            @media (min-width: 360px) and (max-width: 999px) {
+              font-size: $fz_16;
+              margin-bottom: 174px;
+            }
+          }
+
+          .detailed a::after {
+            padding-left: 16.5px;
+            top: -1px;
+
+            @media (min-width: 360px) and (max-width: 999px) {
+              top: 1px;
+            }
           }
         }
 
-        .card-two:hover,
-        .card-three:hover,
-        .card-six:hover {
+        &-item:hover {
           background-size: 120%;
+
           @media (min-width: 360px) and (max-width: 999px) {
             background-size: 100%;
+          }
+
+          .detailed {
+            background-color: $green_400;
+
+            @media (min-width: 360px) and (max-width: 999px) {
+              background-color: transparent;
+            }
+          }
+
+          .detailed:active {
+            background-color: $orange_200;
+
+            @media (min-width: 360px) and (max-width: 999px) {
+              background-color: transparent;
+            }
           }
         }
       }
@@ -781,22 +810,41 @@ body {
 .application {
   text-align: center;
   margin-bottom: 135px;
+
   @media (min-width: 360px) and (max-width: 999px) {
-    margin-bottom: 77px;
     padding-left: 21px;
     padding-right: 21px;
+    margin-bottom: 76px;
   }
+
   &__title {
     margin-bottom: 30px;
+    margin-top: -0.8px;
+
+    @media (min-width: 1000px) and (max-width: 1850px) {
+      margin-bottom: 29.5px;
+    }
+
     @media (min-width: 360px) and (max-width: 999px) {
-      //line-height: 142%;
       letter-spacing: 0.7px;
       margin-bottom: 20px;
+      margin-top: 0px;
+      padding-top: 0.5px;
+      padding-left: 1px;
     }
   }
+
   &__subtitle {
+    margin-bottom: 99px;
+    line-height: 144%;
+
+    @media (min-width: 1000px) and (max-width: 1850px) {
+      margin-bottom: 100px;
+    }
+
     @media (min-width: 360px) and (max-width: 999px) {
       margin-bottom: 40px;
+      line-height: 142%;
     }
   }
 
@@ -807,6 +855,7 @@ body {
     @media (min-width: 1000px) and (max-width: 1850px) {
       max-width: 918px;
     }
+
     @media (min-width: 360px) and (max-width: 999px) {
       max-width: 318px;
     }
@@ -815,99 +864,121 @@ body {
       text-align: left;
       display: flex;
       flex-wrap: wrap;
-      gap: 33px 30px;
-      padding: 69px 70px 70px 70px;
+      gap: 33px 30px; //33 30//31.8
+      padding: 70px 70px 70px 70px;
       background-color: $white;
       border-radius: 50px;
+      line-height: 142%;
+      letter-spacing: 0px;
 
       @media (min-width: 1000px) and (max-width: 1850px) {
-        gap: 32.5px 20px;
+        gap: 32.1px 20px;
         padding: 59px 60px 60px 60px;
       }
+
       @media (min-width: 360px) and (max-width: 999px) {
         border-radius: 30px;
         gap: 30px 0px;
-        padding: 20px 20px 40px 20px;
+        padding: 21.5px 20px 40px 20px;//20
       }
 
       label,
       input,
       select {
         display: block;
-      }
-      label {
         @include fontText($color: $black);
-        margin-bottom: 7.3px;
-        //margin-left: 1px;
-        pointer-events: none;
 
         @media (min-width: 360px) and (max-width: 999px) {
           font-size: $fz_16;
         }
       }
 
-      input {
+      label {
+        margin-bottom: 8px;
+        pointer-events: none;
+
+        @media (min-width: 1000px) and (max-width: 1850px){
+         margin-bottom: 7.5px; 
+        }
+
+        @media (min-width: 360px) and (max-width: 999px){
+          margin-bottom: 7px;
+        }
+      }
+
+      input,
+      select {
         width: 500px;
-        @include fontText($color: $black);
         background-color: $beige_100;
-        border-radius: 10px;
         border: 1px solid $beige_200;
-        //box-shadow: 0px 0px 0px 1px $white inset;
-        padding: 18.5px 19px 19px 19px;
+        border-radius: 10px;
+        padding: 18px 20px 19px 18.9px;
+        //padding: 18.5px 19px 19px 19px;
         cursor: pointer;
 
         @media (min-width: 1000px) and (max-width: 1850px) {
           width: 389px;
-          padding: 18.7px 19px 19px 19px;
+          padding-top: 18.8px;
+          padding-bottom: 19.8px;
         }
+
         @media (min-width: 360px) and (max-width: 999px) {
           width: 278px;
-          font-size: $fz_16;
           padding: 10.7px 9.5px 8px 9px;
         }
       }
-      input:focus {
+
+      input:focus,
+      select:focus {
         background-color: $beige_200;
-        color: $black;
-        border: 1px solid $gray_300;
-        //padding: 19px;
-        //margin: -1px -1px;
+        border-color: $gray_300;
       }
+
       ::placeholder {
         color: $gray_300;
       }
 
+      input:hover,
+      textarea:hover {
+        background-color: $beige_200;
+
+        @media (min-width: 360px) and (max-width: 999px) {
+          background-color: $beige_100;
+        }
+      }
+
       select {
-        width: 500px;
-        border-radius: 10px;
-        border: 1px solid $beige_200;
-        @include fontText($color: $black);
+        // width: 500px;
+        // border-radius: 10px;
+        // border: 1px solid $beige_200;
         appearance: none;
-        padding: 19px;
-        background: url("images/arrow-dropdown.svg") no-repeat 454px/26px 26px,
+        //padding: 20px;
+        //padding: 19px;
+        background: url("images/arrow-dropdown.svg") no-repeat 453px/26px 26px,
           $select_gradient;
-        cursor: pointer;
+        // cursor: pointer;
 
         @media (min-width: 1000px) and (max-width: 1850px) {
           width: 389px;
           background: url("images/arrow-dropdown.svg") no-repeat 341.8px/26px
               26px,
             $select_gradient;
-          padding: 19px 19px 19px 19.5px;
+          padding: 19px 19px 19px 19.5px; //?19.5
           letter-spacing: 0px;
-          margin-bottom: -0.01px;
+          // margin-bottom: -0.01px;
         }
+
         @media (min-width: 360px) and (max-width: 999px) {
           width: 278px;
-          font-size: $fz_16;
           padding: 12px 10px 9px 9.5px;
           background: url("images/arrow-dropdown.svg") no-repeat 241px/26px 26px,
             $select_gradient;
-          margin-bottom: 1.5px;
+          margin-bottom: 2px;
         }
 
         option {
           @include fontText($color: $black);
+          cursor: pointer;
 
           @media (min-width: 360px) and (max-width: 999px) {
             font-size: $fz_16;
@@ -915,39 +986,23 @@ body {
         }
       }
 
-      input:hover,
-      textarea:hover {
-        background-color: $beige_200;
-        @media (min-width: 360px) and (max-width: 999px) {
-          background-color: $beige_100;
-        }
-      }
-
       select:required:invalid {
         color: $gray_300;
-      }
-
-      input[type="date"] {
-        // margin-top: 10px;
-        // padding: 17.5px 20px 18px 20px;
-        @media (min-width: 360px) and (max-width: 999px) {
-          width: 280px;
-          padding: 8px 9px 8px 9px;
-          margin-bottom: 0px;
-
-          border-color: red !important;
-        }
+        padding-right: 0;
+        //padding-left: 19.5px;
       }
 
       select:focus {
         color: $black;
-        border-color: $gray_300;
-        background: url("images/arrow-dropdown.svg") no-repeat 456px/26px 26px,
+        //border-color: $gray_300;
+        background: url("images/arrow-dropdown.svg") no-repeat 453px/26px 26px,
           $select_gradient_hover;
+
         @media (min-width: 1000px) and (max-width: 1850px) {
           background: url("images/arrow-dropdown.svg") no-repeat 346px/26px 26px,
             $select_gradient_hover;
         }
+
         @media (min-width: 360px) and (max-width: 999px) {
           background: url("images/arrow-dropdown.svg") no-repeat 246px/26px 26px,
             $select_gradient;
@@ -955,7 +1010,7 @@ body {
       }
 
       select:hover {
-        background: url("images/arrow-dropdown.svg") no-repeat 456px/26px 26px,
+        background: url("images/arrow-dropdown.svg") no-repeat 453px/26px 26px,
           $select_gradient_hover;
 
         @media (min-width: 1000px) and (max-width: 1850px) {
@@ -967,111 +1022,108 @@ body {
             $select_gradient;
         }
       }
-      &-name {
-        margin-bottom: 1px;
 
-        @media (min-width: 1000px) and (max-width: 1850px) {
-          margin-bottom: 0;
-        }
-      }
-      &-email {
-        margin-bottom: -5px;
-
-        @media (min-width: 1000px) and (max-width: 1850px) {
-          label {
-            margin-bottom: 7.5px;
-          }
-        }
-
+      &-email{
         @media (min-width: 360px) and (max-width: 999px) {
           margin-bottom: 1px;
-
-          input {
-            padding-top: 10.1px;
-          }
         }
-      }
 
-      &-tel {
-        @media (min-width: 1000px) and (max-width: 1850px) {
-          label {
-            margin-bottom: 7.5px;
-          }
-        }
-        @media (min-width: 360px) and (max-width: 999px) {
-          margin-bottom: 1.4px;
-
-          input {
+        input{
+          @media (min-width: 360px) and (max-width: 999px){
             padding-top: 10px;
           }
         }
       }
 
+&-tel{
+  @media (min-width: 360px) and (max-width: 999px){
+    margin-bottom: 1.3px;
+  }
+}
+
       &-date {
-        @media (min-width: 1000px) and (max-width: 1850px) {
-          label {
+        margin-bottom: 0px;
+
+        @media (min-width: 360px) and (max-width: 999px) {
+          margin-bottom: 1.2px;
+        }
+
+        label {
+          @media (min-width: 1000px) and (max-width: 1850px) {
             margin-bottom: 7.8px;
           }
         }
 
-        @media (min-width: 360px) and (max-width: 999px) {
-          input {
-            width: 280.5px;
+        input {
+          //padding: 18px 20px 19px 18.9px;
+
+          @media (min-width: 1000px) and (max-width: 1850px) {
+            //padding-top: 18.7px;
+            color: red; //временно
+          }
+
+          @media (min-width: 360px) and (max-width: 999px) {
+            width: 280px;
             padding: 10px 9px 8px 9px;
+            margin-bottom: 0px;
           }
         }
-      }
 
-      .date-from {
-        @media (min-width: 360px) and (max-width: 999px) {
-          margin-bottom: 1px;
+        input[type="date"] {
+          padding-top: 17px !important;
         }
       }
 
-      .date-to {
-        @media (min-width: 360px) and (max-width: 999px) {
-          margin-bottom: 1px;
-        }
-      }
-
-      .input-application {
-        //padding-top: 19px;
-        border: 1px solid $beige_200;
-
-        @media (min-width: 360px) and (max-width: 999px) {
+      .date-from{
+        @media (min-width: 360px) and (max-width: 999px){
+          margin-bottom: 2px;
         }
       }
 
       &-comment {
         width: 100%;
-        margin-bottom: -4.8px;
+        //margin-bottom: -4.8px;
+
+        @media (min-width: 1000px) and (max-width: 1850px){
+          margin-top: -0.8px;
+          margin-bottom: -1px;
+        }
 
         @media (min-width: 360px) and (max-width: 999px) {
-          margin-bottom: -2.1px;
+          margin-bottom: -1px;
         }
 
         label {
+          margin-bottom: 8px; //7px;
+
           @media (min-width: 1000px) and (max-width: 1850px) {
             margin-bottom: 7.5px;
+          }
+
+          @media (min-width: 360px) and (max-width: 999px){
+margin-bottom: 7px;
           }
         }
 
         textarea {
-          @include fontText($color: $black);
-          background-color: $beige_100;
-          border-radius: 10px;
           height: 152px;
           width: 100%;
+          @include fontText($color: $black);
+          background-color: $beige_100;
+          border: 1px solid $beige_200;
+          border-radius: 10px;
           padding: 10px;
           resize: none;
-          // margin-top: 8px;
           cursor: pointer;
+
+         
 
           @media (min-width: 360px) and (max-width: 999px) {
             font-size: $fz_16;
             height: 132px;
           }
         }
+
         textarea:focus {
           box-shadow: 0px 0px 0px 1px $gray_300 inset;
           color: $black;
@@ -1081,66 +1133,70 @@ body {
       &-agreement {
         input {
           padding: 0;
-          margin-top: -1px;
+          //margin-top: -1px;
         }
 
         &-radiobox {
-          width: fit-content;
+          // width: fit-content;
           display: flex;
-          flex-wrap: wrap;
-          margin-bottom: 33px;
+          flex-direction: column;
+          // flex-wrap: wrap;
+          margin-bottom: 24px;
 
           @media (min-width: 1000px) and (max-width: 1850px) {
             margin-top: 2.8px;
+            margin-bottom: 25px;
           }
 
           @media (min-width: 360px) and (max-width: 999px) {
-            margin-bottom: 30px;
+            margin-bottom: 22.5px;
           }
 
           &-question {
-            width: 100%;
-            @include fontText($color: $black);
-            margin-bottom: 8px;
+            //width: 100%;
+            @include fontText($line-height: 71%, $color: $black);
+            margin-bottom: 15.5px;
 
             @media (min-width: 1000px) and (max-width: 1850px) {
-              margin-bottom: 7.5px;
+              //margin-bottom: 14.5px;
             }
 
             @media (min-width: 360px) and (max-width: 999px) {
               font-size: $fz_16;
-              margin-top: 1px;
+              margin-bottom: 15px;
+              //margin-top: 1px;
+              //margin-right: 30px;
+              
             }
           }
-          &-yes {
-            @include flex($gap: 11px, $justify-content: start);
-            margin-right: 31px;
+          &-answer {
+            display: flex;
+            gap: 31px;
+            &-yes,
+            &-no {
+              display: flex;
+              gap: 11px;
+              //@include flex($gap: 11px, $justify-content: start);
+              //  margin-right: 31px;
 
-            @media (min-width: 1000px) and (max-width: 1850px) {
-            }
+              @media (min-width: 360px) and (max-width: 999px) {
+              //  @include flex($gap: 10px, $justify-content: start);
+                //margin-right: 30px;
+              gap: 9.5px;
+              }
 
-            @media (min-width: 360px) and (max-width: 999px) {
-              @include flex($gap: 10px, $justify-content: start);
-              margin-right: 30px;
-            }
-          }
-          &-no {
-            @include flex($gap: 11px, $justify-content: start);
-            @media (min-width: 360px) and (max-width: 999px) {
-              @include flex($gap: 10px, $justify-content: start);
             }
           }
 
           label {
-            margin-bottom: 0;
+            margin-top: -0.5px;
           }
         }
 
         &-contract {
-          display: flex;
-          align-items: center;
-          gap: 19px;
-          margin-bottom: 34px;
+          //font-size: $fz_17;
+          @include flex($gap: 19px);
+          margin-bottom: 33px;
 
           @media (min-width: 1000px) and (max-width: 1850px) {
             gap: 11px;
@@ -1148,9 +1204,11 @@ body {
           }
 
           @media (min-width: 360px) and (max-width: 999px) {
-            gap: 10px;
+            //display: inline;
+             gap: 10px;
             align-items: start;
-            margin-bottom: 30px;
+            margin-bottom: 28.5px;
+            //line-height: 141%;
           }
 
           label {
@@ -1161,26 +1219,38 @@ body {
             );
             margin-bottom: 0;
 
-            @media (min-width: 1000px) and (max-width: 1850px) {
-              //margin-top: 0.5px;
-            }
-
             @media (min-width: 360px) and (max-width: 999px) {
               flex-shrink: 2;
-              @include fontText(
-                $font-size: $fz_16,
-                $letter-spacing: 0,
-                $color: $gray_300
-              );
+              font-size: $fz_16;
+              letter-spacing:0px;
+              line-height: 142%;
+            }
+          }
+          a {
+            color: $black;
+            font-size: 17px;
+            line-height: 142%;
+            letter-spacing: -0.2px;
+            margin-top: 0.5px;
+            //margin-left: -15px;
+            cursor: pointer;
+
+            @media (min-width: 1000px) and (max-width: 1850px){
+             
+              margin-top: 0px;
+            }
+
+            @media (min-width: 360px) and (max-width: 999px){
+              //margin-left: 0;
+             letter-spacing: -0.6px;
+             line-height: 141%;
             }
           }
 
-          .contract {
-            color: $black !important;
+          a:active {
+            color: $green_400;
           }
-          .contract:active {
-            color: $green_400 !important;
-          }
+
           .underline::before {
             background-color: $black;
           }
@@ -1188,11 +1258,13 @@ body {
             background-color: $green_400;
           }
         }
+
         .custom-checkbox {
           @media (min-width: 360px) and (max-width: 999px) {
             flex-shrink: 0;
           }
         }
+
         .custom-radio,
         .custom-checkbox {
           appearance: none;
@@ -1202,11 +1274,13 @@ body {
           background: $white;
           border-radius: 4px;
           border: 2px solid $black;
+
           @media (min-width: 360px) and (max-width: 999px) {
             width: 20px;
             height: 20px;
           }
         }
+
         .custom-radio {
           border-radius: 50%;
         }
@@ -1282,9 +1356,12 @@ body {
         &-buttons {
           display: flex;
           gap: 30px;
+
           @media (min-width: 360px) and (max-width: 999px) {
             gap: 10px;
+           // margin-bottom: -1px;
           }
+
           &-btn {
             @include fontText();
             width: 235px;
@@ -1293,75 +1370,95 @@ body {
             border-radius: 10px;
             transition: background 0.1s ease-in-out 0.1s;
 
-            @media (min-width: 1000px) and (max-width: 1850px) {
-              //   padding-top: 14.8px;
-              // padding-bottom: 15.2px;
-            }
-
             @media (min-width: 360px) and (max-width: 999px) {
               width: 134px;
               font-size: $fz_16;
               padding-top: 13px;
-              padding-bottom: 10px;
-              border-radius: 10px;
+              padding-bottom: 11px;
+              //border-radius: 10px;
             }
+          }
+
+          .submit {
+            background-color: $green_400;
+          }
+
+          .submit:hover {
+            background-color: $green_300;
+
+            @media (min-width: 360px) and (max-width: 999px) {
+              background-color: $green_400;
+            }
+          }
+
+          .submit:active {
+            background-color: $green_200;
+          }
+
+          .reset {
+            background-color: $green_100;
+            color: $green_400;
+          }
+
+          .reset:hover {
+            background-color: $gray_100;
+
+            @media (min-width: 360px) and (max-width: 999px) {
+              background-color: $green_100;
+            }
+          }
+
+          .reset:active {
+            background-color: $gray_200;
           }
         }
       }
     }
-  }
-  .submit {
-    background-color: $green_400;
-  }
-  .submit:hover {
-    background-color: $green_300;
-    @media (min-width: 360px) and (max-width: 999px) {
-      background-color: $green_400;
-    }
-  }
-  .submit:active {
-    background-color: $green_200;
-  }
-  .reset {
-    background-color: $green_100;
-    color: $green_400;
-  }
-  .reset:hover {
-    background-color: $gray_100;
-    @media (min-width: 360px) and (max-width: 999px) {
-      background-color: $green_100;
-    }
-  }
-  .reset:active {
-    background-color: $gray_200;
   }
 }
 
 //////**************
 
 .reviews {
-  margin-bottom: 113.5px;
+  margin-bottom:96.5px;
+  position: relative;
 
   @media (min-width: 1000px) and (max-width: 1850px) {
-    margin-bottom: 114px;
+    margin-bottom: 96px;
   }
 
   @media (min-width: 360px) and (max-width: 999px) {
-    margin-bottom: 76px;
+    margin-bottom: 56px;
   }
 
   &__title {
-    margin-bottom: 30.5px;
+    margin-bottom: 29.5px; //30//30.5
+
     @media (min-width: 360px) and (max-width: 999px) {
       letter-spacing: 0.7px;
-      margin-bottom: 21px;
+      margin-bottom: 20px;
     }
   }
 
   &__subtitle {
-    margin-top: -1px;
+    // margin-top: -1px;
   }
+
+  .block-transparent-for-scroll {
+    display: none;
+    @media (min-width: 360px) and (max-width: 999px) {
+      display: block;
+      position: absolute;
+      z-index: 50;
+      opacity: 0;
+     // background: #efa501;
+      width: 100vw;
+      height: 84%;
+    }
+  }
+
   &__swiper {
+    position: relative;
     width: 1170px;
     height: 100%;
     padding-bottom: 20px;
@@ -1369,21 +1466,28 @@ body {
     @media (min-width: 1000px) and (max-width: 1850px) {
       width: 918px;
     }
+
     @media (min-width: 360px) and (max-width: 999px) {
-      display: none;
-      // width: 318px;
-      // max-height: 1059px;
+      width: 318px;
+      max-height: 1059px;
     }
   }
 
-  .swiper-slide {
+  .swiper-wrapper {
+    @media (min-width: 360px) and (max-width: 999px) {
+      transform: none !important;
+    }
+  }
+
+  .swiper-slide,
+  .swiper-slide-mobile {
     max-width: 570px;
     height: 673px;
     font-size: $fz_23;
     line-height: 122%;
     border-radius: 50px;
     background-color: $beige_200;
-    padding: 38px 40px 40px 40px;
+    padding: 39px 40px 40px 40px;
     cursor: pointer;
 
     @media (min-width: 1000px) and (max-width: 1850px) {
@@ -1392,66 +1496,82 @@ body {
       padding: 38.5px 40px 40px 40px;
     }
     @media (min-width: 360px) and (max-width: 999px) {
+      //display: none;
+      
       max-width: 318px;
       height: auto;
       font-size: $fz_16;
       line-height: 142%;
       border-radius: 20px;
-      padding: 20px;
+      padding: 20px 20px 13px 20px;
+      
     }
 
     &__content-one {
       font-weight: $fw_bold;
       //line-height: 141%;
       @media (min-width: 360px) and (max-width: 999px) {
-        margin-bottom: 38.5px; //40
+        margin-bottom: 36.5px; //40
         line-height: 144.5%;
         letter-spacing: 0.01px;
       }
     }
 
     .mari {
-      margin-bottom: 265px;
+      margin-bottom: 261px;
       @media (min-width: 1000px) and (max-width: 1850px) {
-        margin-bottom: 378px;
+        margin-bottom: 373px;
       }
       @media (min-width: 360px) and (max-width: 999px) {
         //margin-bottom: 45px;
         //   line-height: 141%;
         // letter-spacing:0.02px ;
+ margin-bottom: 35px;
+
+        img {
+          margin-top: -1px;
+        }
+       
       }
     }
 
     .pavel {
-      margin-bottom: 69px;
+      margin-bottom: 64px;
 
-      @media (min-width: 1000px) and (max-width: 1850px) {
-        margin-top: -1px;
-        margin-bottom: 70px;
-      }
+    
 
       @media (min-width: 360px) and (max-width: 999px) {
         //   margin-bottom: 38px !important;
         //  line-height: 142% !important;
-        // img{
-        //   margin-top: -1px;
-        // }
+
+        margin-bottom: 35px;
       }
 
-      // img{
-      //   @media (min-width: 360px) and (max-width: 999px){
-      //   margin-top: -1px;
-      // }}
+      img {
+        @media (min-width: 1000px) and (max-width: 1850px){
+         margin-top: 3px;
+        }
+
+        @media (min-width: 360px) and (max-width: 999px) {
+          margin-top: -1px;
+        }
+      }
     }
 
     &__content-two {
       @include flex($justify-content: space-between);
       &-text {
+       // margin-top: -2px;
         &-title {
-          margin-bottom: 9px;
+          //margin-bottom: 9px;
+          margin-bottom: 8px;
 
           @media (min-width: 1000px) and (max-width: 1850px) {
             margin-bottom: 8px;
+          }
+
+          @media (min-width: 360px) and (max-width: 999px){
+            letter-spacing: 1px;
           }
         }
         &-subtext {
@@ -1463,16 +1583,38 @@ body {
 
           @media (min-width: 360px) and (max-width: 999px) {
             @include fontText($font-size: $fz_16, $color: $gray_300);
+            letter-spacing: -0.2px;
+            margin-bottom: -16px;
+            margin-top: 9px;
           }
         }
       }
       &-foto {
+         padding-top: 4.5px;//5
+        @media (min-width: 360px) and (max-width: 999px){
+         
+        }
+
         img {
           width: 75px;
           height: 75px;
           border-radius: 50%;
+         // margin-top: 2px;
         }
       }
+      .foto-Pavel {
+        // padding-top: 3px;
+      }
+    }
+  }
+
+  .swiper-slide-active{
+    margin-bottom: 18px;
+  }
+
+  .swiper-slide-desk {
+    @media (min-width: 360px) and (max-width: 999px) {
+      display: none;
     }
   }
 
@@ -1485,92 +1627,6 @@ body {
   }
   .swiper-pagination-bullet-active {
     background-color: $black;
-  }
-
-  &__mobile {
-    display: none;
-    @media (min-width: 360px) and (max-width: 999px) {
-      display: grid !important;
-      gap: 18px !important;
-      justify-content: center !important;
-    }
-
-    .swiper-slide-mobile {
-      //   max-width: 570px;
-      //   height: 673px;
-      //   font-size: $fz_23;
-      //   line-height: 122%;
-      //   border-radius: 50px;
-      background-color: $beige_200;
-      //   padding: 40px;
-      // cursor: pointer;
-
-      // @media (min-width: 1000px) and (max-width:1850px) {
-      //   max-width: 450px;
-      //   height: 841px;
-      // }
-      @media (min-width: 360px) and (max-width: 999px) {
-        max-width: 318px;
-        height: auto;
-        font-size: $fz_16;
-        line-height: 142%;
-        border-radius: 20px;
-        padding: 20px;
-      }
-
-      &__content-one {
-        // font-weight: $fw_bold;
-        // @media (min-width: 360px) and (max-width: 999px){
-        //   line-height: 144.5%;
-        // }
-      }
-
-      .mari,
-      .pavel {
-        // margin-bottom: 266px;
-        // @media (min-width: 1000px) and (max-width:1850px) {
-        //   margin-bottom: 378px;
-        // }
-        // @media (min-width: 360px) and (max-width: 999px) {
-        //   img{
-        //     margin-top: -1px;
-        //   }
-        //  // margin-bottom: 56px;
-        // }
-      }
-
-      &__content-two {
-        @include flex($justify-content: space-between);
-
-        &-text {
-          margin-top: -2px;
-          &-title {
-            margin-top: 5px;
-            margin-bottom: 0px;
-            letter-spacing: 0.7px;
-          }
-          &-subtext {
-            @media (min-width: 360px) and (max-width: 999px) {
-              @include fontText($font-size: $fz_16, $color: $gray_300);
-              letter-spacing: -0.2px;
-              margin-bottom: -16px;
-              margin-top: 9px;
-            }
-          }
-        }
-
-        &-foto {
-          img {
-            width: 75px;
-            height: 75px;
-            border-radius: 50%;
-          }
-        }
-      }
-      .foto-Pavel {
-        margin-top: 1px;
-      }
-    }
   }
 }
 
@@ -1585,7 +1641,7 @@ body {
   }
 
   @media (min-width: 360px) and (max-width: 999px) {
-    margin-bottom: 76px;
+    margin-bottom: 77.5px;
   }
 
   &__title {
@@ -1596,30 +1652,26 @@ body {
 
   &__subtitle {
     line-height: 143%;
-    margin-bottom: 49px;
+    margin-bottom: 99px; //100
+
+    @media (min-width: 360px) and (max-width: 999px) {
+      margin-bottom: 49px; //50
+    }
   }
 
   &__container {
-    @include flex($gap: 30px, $align-items: center);
-    //flex-direction: column;
-    flex-wrap: wrap;
-    @media (min-width: 1000px) and (max-width: 1850px) {
-      //gap: 30px;
-    }
+    @include flex($gap: 27px);
+    flex-direction: column;
+
     @media (min-width: 360px) and (max-width: 999px) {
       gap: 18px;
     }
 
     &-content {
-      //position: relative;
       max-width: 1860px;
-      display: flex;
-      gap: 30px;
 
       @media (min-width: 1000px) and (max-width: 1850px) {
         max-width: 984px;
-        //justify-content: center;
-        gap: 20px;
       }
 
       @media (min-width: 360px) and (max-width: 999px) {
@@ -1632,6 +1684,7 @@ body {
         position: relative;
         display: flex;
         gap: 30px;
+
         @media (min-width: 1000px) and (max-width: 1850px) {
           gap: 20px;
         }
@@ -1639,22 +1692,25 @@ body {
         img {
           border-radius: 50px;
           object-fit: cover;
+
           @media (min-width: 360px) and (max-width: 999px) {
+            height: 110px;
             border-radius: 20px;
           }
         }
       }
-      &-one {
-        @media (min-width: 1000px) and (max-width: 1850px) {
-          img {
-            height: 300px;
-          }
-        }
 
+      &-one {
         @media (min-width: 360px) and (max-width: 999px) {
           gap: 18px;
-          img {
-            height: 110px;
+        }
+
+        img {
+          @media (min-width: 1000px) and (max-width: 1850px) {
+            height: 300px;
+          }
+          @media (min-width: 360px) and (max-width: 999px) {
+            max-width: 150px;
           }
         }
       }
@@ -1670,6 +1726,7 @@ body {
 
           @media (min-width: 360px) and (max-width: 999px) {
             object-fit: fill;
+            //150px
           }
         }
       }
@@ -1703,78 +1760,88 @@ body {
       }
 
       &-two {
-        position: relative;
-        @media (min-width: 360px) and (max-width: 999px) {
-          gap: 10px;
-          img {
-            height: 110px !important;
-            width: 99.33px !important;
+        img {
+          height: 301px;
+
+          @media (min-width: 1000px) and (max-width: 1850px) {
+            max-width: 231px;
+          }
+
+          @media (min-width: 360px) and (max-width: 999px) {
+            height: 110px;
           }
         }
       }
 
       &-two li:nth-child(1) {
         img {
-          height: 301px;
           width: 349.16px;
+
           @media (min-width: 360px) and (max-width: 999px) {
             object-position: 51.1% 50%;
+            width: 99.33px;
           }
-
-          //
-          // object-fit: cover;
         }
       }
-      &-two li:nth-child(2) {
-        img {
-          width: 347.32px;
-        }
-      }
-      &-two li:nth-child(3) {
-        img {
-          width: 347.32px;
-        }
-      }
+      &-two li:nth-child(2),
+      &-two li:nth-child(3),
       &-two li:nth-child(4) {
         img {
           width: 347.32px;
+        }
+      }
 
+      &-two li:nth-child(4) {
+        img {
           @media (min-width: 1000px) and (max-width: 1850px) {
             object-fit: contain;
           }
           @media (min-width: 360px) and (max-width: 999px) {
-            object-fit: cover;
-            //object-fit: fill;
+            width: 99.33px;
+            //object-fit: cover;
             object-position: 51.1% 51%;
-
-            //
-            // object-fit: cover;
           }
         }
       }
       &-two li:nth-child(5) {
         img {
           width: 348.87px;
+        
 
           @media (min-width: 1000px) and (max-width: 1850px) {
             width: 231px;
           }
+
+          @media (min-width: 360px) and (max-width: 999px) {
+            width: 99.33px;
+          }
+        }
+      }
+
+      &-two,
+      &-three {
+        @media (min-width: 360px) and (max-width: 999px) {
+          gap: 10px;
         }
       }
 
       &-three {
-        @media (min-width: 360px) and (max-width: 999px) {
-          gap: 10px;
-          img {
-            height: 110px;
+        img {
+          max-width: 442.5px;
+
+          @media (min-width: 1000px) and (max-width: 1850px) {
+            width: 314.63px;
+            height: 301px;
+          }
+          @media (min-width: 360px) and (max-width: 999px) {
+            max-width: 154px;
           }
         }
       }
 
       &-three li:nth-child(1) {
-        // width: 314.63px;
-        // height: 301px;
-        overflow: hidden;
+        //overflow: hidden;
+
         img {
           @media (min-width: 1000px) and (max-width: 1850px) {
             object-position: 57.5% 50%;
@@ -1803,118 +1870,39 @@ body {
         }
       }
 
-      .deletePad {
+      .deletePad,
+      .mob-img {
         @media (min-width: 1000px) and (max-width: 1850px) {
           display: none;
         }
+      }
+
+      .deletePad,
+      .deleteMobile,
+      .padd {
         @media (min-width: 360px) and (max-width: 999px) {
           display: none;
         }
       }
-      .deleteMobile {
-        @media (min-width: 360px) and (max-width: 999px) {
-          display: none;
-        }
+
+      .padd,
+      .mob-img {
+        display: none;
       }
+
       .padd {
         @media (min-width: 1000px) and (max-width: 1850px) {
           display: block;
         }
-        @media (min-width: 360px) and (max-width: 999px) {
-          display: none;
-        }
       }
+
       .mob-img {
-        display: none;
-        @media (min-width: 1000px) and (max-width: 1850px) {
-          display: none;
-        }
         @media (min-width: 360px) and (max-width: 999px) {
           display: block;
 
           img {
             object-position: 49% 50.5%;
           }
-        }
-      }
-    }
-    .line-one {
-      @media (min-width: 360px) and (max-width: 999px) {
-        gap: 18px;
-      }
-
-      img {
-        max-width: 444px;
-
-        @media (min-width: 1000px) and (max-width: 1850px) {
-          //max-width: 315px;
-          // height: 300px;
-        }
-
-        @media (min-width: 360px) and (max-width: 999px) {
-          max-width: 150px;
-        }
-      }
-    }
-    .line-two {
-      @media (min-width: 360px) and (max-width: 999px) {
-        gap: 10px;
-      }
-
-      img {
-        height: 301px; //301
-
-        @media (min-width: 1000px) and (max-width: 1850px) {
-          max-width: 231px;
-        }
-
-        @media (min-width: 360px) and (max-width: 999px) {
-          // max-width: 99px;
-          height: 110px;
-        }
-      }
-
-      // img.pad {
-      //   display: none;
-
-      //   @media (min-width: 1000px) and (max-width: 1850px) {
-      //     display: inline;
-      //     // display: inline;
-      //     // margin-left: -20px;
-      //   }
-      //   @media (min-width: 360px) and (max-width: 999px) {
-      //     display: inline;
-      //     // width: 99px;
-      //     // margin-left: -10px;
-      //   }
-      // }
-
-      //  img.desk {
-      // //   margin-right: -30px;
-
-      //   @media (min-width: 1000px) and (max-width: 1850px) {
-      //     display: none;
-      //   }
-      //   @media (min-width: 360px) and (max-width: 999px) {
-      //     display: none;
-      //   }
-      // }
-    }
-
-    .line-three {
-      @media (min-width: 360px) and (max-width: 999px) {
-        gap: 10px;
-      }
-
-      img {
-        max-width: 442.5px;
-
-        @media (min-width: 1000px) and (max-width: 1850px) {
-          width: 314.63px;
-          height: 301px;
-        }
-        @media (min-width: 360px) and (max-width: 999px) {
-          max-width: 154px;
         }
       }
     }
@@ -1936,11 +1924,12 @@ body {
     padding-left: 21px;
     margin-bottom: 75px;
   }
-  // &__title{
-  //   @media (min-width: 1000px) and (max-width: 1850px){
-  //     margin-bottom:30px ;
-  //   }
-  // }
+
+  &__title {
+    @media (min-width: 360px) and (max-width: 999px) {
+      letter-spacing: 0.6px;
+    }
+  }
 
   &__subtitle {
     line-height: 141.1%;
@@ -1967,12 +1956,11 @@ body {
       cursor: pointer;
 
       @media (min-width: 1000px) and (max-width: 1850px) {
-        // padding: 60px 60px 63px 60px;
         padding-bottom: 62px;
       }
 
       @media (min-width: 360px) and (max-width: 999px) {
-        padding: 30px;
+        padding: 30.5px 30px 34px 30px;
         border-radius: 20px;
       }
 
@@ -1981,37 +1969,35 @@ body {
         color: $white;
         margin-bottom: 227px;
 
-        // @media (min-width: 1000px) and (max-width: 1850px){
-        //   margin-bottom: 240px;
-        // }
-
         @media (min-width: 360px) and (max-width: 999px) {
           width: auto;
-          margin-bottom: 155px;
+          margin-bottom: 140px;
         }
 
         &-title {
           margin-bottom: 37px;
 
           @media (min-width: 1000px) and (max-width: 1850px) {
-            margin-bottom: 36px;
+            margin-bottom: 37px;
           }
 
           @media (min-width: 360px) and (max-width: 999px) {
+            letter-spacing: 1px;
+            line-height: 121%; //122
             max-width: 150px;
-            margin-bottom: 20px;
+            margin-bottom: 20px; //19.5
           }
         }
         &-text {
           @include fontText();
           margin-bottom: 27px;
 
-          @media (min-width: 1000px) and (max-width: 1850px) {
-          }
-
           @media (min-width: 360px) and (max-width: 999px) {
-            @include fontText($font-size: $fz_16); //$line-height:121.9%,
-            margin-bottom: 20px;
+            @include fontText(
+              $line-height: 144%,
+              $font-size: $fz_16
+            ); //$line-height:121.9%,
+            margin-bottom: 22px; //23
           }
         }
         &-list {
@@ -2022,7 +2008,8 @@ body {
 
             @media (min-width: 360px) and (max-width: 999px) {
               font-size: $fz_16;
-              margin-left: 25px;
+              margin-left: 24px;
+              line-height: 144%;
             }
           }
           &-item::before {
@@ -2038,7 +2025,8 @@ body {
 
             @media (min-width: 360px) and (max-width: 999px) {
               border: 2px solid $white;
-              top: 10px;
+              top: 9px;
+              left: -14.5px;
             }
           }
         }
@@ -2046,6 +2034,12 @@ body {
 
       &-detailed {
         display: inline-block;
+      }
+      .detailed a::after {
+        @media (min-width: 360px) and (max-width: 999px) {
+          padding-left: 17px;
+          top: 1px;
+        }
       }
 
       &-network {
@@ -2072,7 +2066,7 @@ body {
           color: $orange_200;
         }
         .underline:active::before {
-          background-color: $orange_200 !important;
+          background-color: $orange_200 !important; //?
         }
       }
     }
@@ -2095,12 +2089,15 @@ body {
     .one-block &-block-content {
       margin-bottom: 105px;
 
-      @media (min-width: 1000px) and (max-width: 1850px) {
-        margin-bottom: 105px;
-      }
-
       @media (min-width: 360px) and (max-width: 999px) {
-        margin-bottom: 64.5px;
+        margin-bottom: 59px;
+      }
+    }
+
+    .one-block &-block-content-text {
+      @media (min-width: 360px) and (max-width: 999px) {
+        margin-bottom: 23px; //
+        // line-height: 144%;
       }
     }
 
@@ -2124,6 +2121,17 @@ body {
       .detailed {
         @media (min-width: 1000px) and (max-width: 1850px) {
           padding-top: 9px;
+        }
+
+        @media (min-width: 360px) and (max-width: 999px) {
+          margin-top: 0.5px;
+        }
+      }
+
+      .detailed a::after {
+        @media (min-width: 360px) and (max-width: 999px) {
+          padding-left: 17px;
+          top: 1px;
         }
       }
     }
@@ -2159,18 +2167,21 @@ body {
         @media (min-width: 1000px) and (max-width: 1850px) {
           margin-top: -8px;
         }
+        @media (min-width: 360px) and (max-width: 999px) {
+          margin-top: 11px;
+        }
       }
     }
-
-    .two-block &-block-content-title {
-      @media (min-width: 1000px) and (max-width: 1850px) {
-        margin-bottom: 37px;
+    .two-block &-block-content {
+      @media (min-width: 360px) and (max-width: 999px) {
+        margin-top: -0.5px;
+        margin-bottom: 141px;
       }
     }
 
     .two-block &-block-content-text {
-      @media (min-width: 1000px) and (max-width: 1850px) {
-        //margin-bottom: 26.5px;
+      @media (min-width: 360px) and (max-width: 999px) {
+        margin-bottom: 25px;
       }
     }
 
@@ -2192,13 +2203,16 @@ body {
     }
     .three-block &-block-content {
       margin-bottom: 218.5px;
-      @media (min-width: 1000px) and (max-width: 1850px) {
-        //margin-bottom: 222px;
+
+      @media (min-width: 360px) and (max-width: 999px) {
+        margin-bottom: 151.5px;
       }
     }
-    .three-block &-block-content-title {
-      @media (min-width: 1000px) and (max-width: 1850px) {
-        margin-bottom: 37px;
+
+    .three-block &-block-content-text {
+      @media (min-width: 360px) and (max-width: 999px) {
+        margin-top: -0.5px;
+        //margin-bottom: 20.5px;
       }
     }
 
@@ -2239,31 +2253,33 @@ body {
   @media (min-width: 360px) and (max-width: 999px) {
     margin-bottom: 75px;
   }
+
   &__block {
     max-width: 771px;
     @include flex($gap: 30px);
 
     @media (min-width: 1000px) and (max-width: 1850px) {
       gap: 30.5px;
-      //margin-left: -0.85px;
     }
 
     @media (min-width: 360px) and (max-width: 999px) {
       max-width: 360px;
       flex-wrap: wrap;
+      gap: 31.13px;
     }
 
     &-background {
       min-width: 370px;
       min-height: 370px;
       border-radius: 50px;
-      background: url("images/footer  photo.jpg") no-repeat center/cover;
+      background: url("images/footer  photo.jpg") no-repeat center/100% 100%;
+
       @media (min-width: 1000px) and (max-width: 1850px) {
-        //    min-width: 370.5px;
         margin-left: -0.8px;
       }
 
       @media (min-width: 360px) and (max-width: 999px) {
+        //background-size: 100% 100%;
         min-width: 130px;
         min-height: 133px;
         border-radius: 20px;
@@ -2277,6 +2293,12 @@ body {
 
       &-title {
         margin-bottom: 20.5px;
+
+        @media (min-width: 360px) and (max-width: 999px) {
+          letter-spacing: 0.9px;
+          margin-bottom: 21px;
+          //margin-top: -0.5px;
+        }
       }
 
       &-text {
@@ -2324,6 +2346,7 @@ body {
     @media (min-width: 1000px) and (max-width: 1850px) {
       width: 918px;
     }
+
     @media (min-width: 360px) and (max-width: 999px) {
       display: inline-block;
       padding: 21px 21.5px;
@@ -2334,54 +2357,41 @@ body {
 
       @media (min-width: 360px) and (max-width: 999px) {
         font-size: $fz_16;
-        margin-bottom: 7px;
+        margin-bottom: 8px;
       }
     }
 
     &-network {
       display: flex;
-      gap: 25px; //25
+      gap: 25px;
       align-items: center;
 
       @media (min-width: 360px) and (max-width: 999px) {
         justify-content: center;
-        gap: 15px;
+        gap: 13px;
       }
-      &-container {
-        // display: flex;
-        // gap: 10px;//10
-        // @media (min-width: 360px) and (max-width: 999px) {
-        //   gap: 5px;
-        //}
 
+      &-container {
         &-link {
           @include fontText($color: $black);
           display: flex;
-          gap: 10.5px; //10
+          gap: 10.5px;
 
           @media (min-width: 360px) and (max-width: 999px) {
             font-size: $fz_16;
-            gap: 5px;
+            gap: 2px; //1.8
           }
 
           &-icon {
             width: 26px;
             height: 26px;
             margin-top: 1px;
-            @media (min-width: 1000px) and (max-width: 1850px) {
-              //margin-top: 2px;
-            }
+
             @media (min-width: 360px) and (max-width: 999px) {
-              width: 22px;
-              height: 22px;
-              margin-top: 0px;
+              margin-top: -2px;
             }
           }
-          .fb {
-            @media (min-width: 1000px) and (max-width: 1850px) {
-              margin-top: 1px;
-            }
-          }
+          // .inst .fb  .vk
         }
       }
     }
