@@ -199,6 +199,7 @@ h3 {
 body {
   font-family: $mainFont;
   background-color: $beige_100;
+  overflow-x: hidden;
   margin: 0 auto;
 }
 
@@ -494,7 +495,7 @@ body {
   }
 
   @media (min-width: 360px) and (max-width: 999px) {
-   // max-width: 318px;
+    // max-width: 318px;
     margin: 0 auto 75.8px auto;
   }
 
@@ -597,7 +598,8 @@ body {
       max-width: 918px;
     }
     @media (min-width: 360px) and (max-width: 999px) {
-       max-width: 318px;}
+      max-width: 318px;
+    }
 
     &-content {
       display: none;
@@ -1626,7 +1628,6 @@ body {
 //////***************
 
 .gallery {
- 
   margin: 0 auto 132.5px auto;
 
   @media (min-width: 1000px) and (max-width: 1850px) {
@@ -1652,7 +1653,7 @@ body {
     }
   }
 
-  &__container { 
+  &__container {
     //max-width: 1860px;
     @include flex($gap: 27px);
     flex-direction: column;
@@ -1973,7 +1974,6 @@ body {
     }
 
     @media (min-width: 360px) and (max-width: 999px) {
-
       letter-spacing: 0.6px;
     }
   }
@@ -1982,10 +1982,8 @@ body {
     line-height: 141%;
     margin-bottom: 99px;
 
-  
-
     @media (min-width: 360px) and (max-width: 999px) {
-            line-height: 142%;
+      line-height: 142%;
       margin-bottom: 49px;
     }
   }
@@ -2009,7 +2007,6 @@ body {
       padding: 60px 60px 60px 60px;
       border-radius: 50px;
       cursor: pointer;
-
 
       @media (min-width: 360px) and (max-width: 999px) {
         //  padding: 30.5px 30px 34px 30px;
@@ -2053,7 +2050,7 @@ body {
               $line-height: 142%,
               //144
               $font-size: $fz_16
-            ); 
+            );
           }
         }
         &-list {
@@ -2102,14 +2099,13 @@ body {
         position: absolute;
         bottom: 62px;
 
-        @media (min-width: 360px) and (max-width: 999px){
+        @media (min-width: 360px) and (max-width: 999px) {
           bottom: 35px;
         }
       }
 
       .detailed a::after {
         top: 0.5px;
-      
 
         @media (min-width: 360px) and (max-width: 999px) {
           padding-left: 17px;
@@ -2179,14 +2175,14 @@ body {
     }
 
     .one-block &-block-content {
-      margin-bottom: 142px; 
+      margin-bottom: 142px;
 
       @media (min-width: 360px) and (max-width: 999px) {
         margin-bottom: 88.5px;
-    }  
-  } 
+      }
+    }
 
-   .two-block {
+    .two-block {
       background: $stories_gradient,
         url("images/story\ photo-2.jpg") no-repeat center;
       margin-bottom: 50px;
@@ -2202,8 +2198,6 @@ body {
           url("images/story\ photo-2Mobile.png") no-repeat center;
         margin-bottom: 20px;
       }
-
-   
     }
 
     .two-block &-block-content,
@@ -2219,7 +2213,7 @@ body {
     .three-block &-block-content-title {
       margin-bottom: 37px;
 
-      @media (min-width: 360px) and (max-width: 999px){
+      @media (min-width: 360px) and (max-width: 999px) {
         margin-bottom: 22px;
       }
     }
@@ -2238,14 +2232,13 @@ body {
           url("images/story\ photo-3Mobile.png") no-repeat center;
       }
 
-
-      .detailed{
-        @media (min-width: 360px) and (max-width: 999px){
+      .detailed {
+        @media (min-width: 360px) and (max-width: 999px) {
           bottom: 34px;
         }
       }
     }
-    .three-block &-block-content{
+    .three-block &-block-content {
       @media (min-width: 360px) and (max-width: 999px) {
         margin-bottom: 180px;
       }
@@ -2277,7 +2270,7 @@ body {
         background-size: 100%;
       }
     }
-}
+  }
 }
 //////*****************
 .communication {
@@ -2327,12 +2320,12 @@ body {
 
       &-title {
         margin-bottom: 21px;
-       // margin-top: -1px;
+        // margin-top: -1px;
 
-       @media (min-width: 1000px) and (max-width: 1850px){
-        margin-top: 0;
-        margin-bottom: 20.5px;
-       }
+        @media (min-width: 1000px) and (max-width: 1850px) {
+          margin-top: 0;
+          margin-bottom: 20.5px;
+        }
 
         @media (min-width: 360px) and (max-width: 999px) {
           letter-spacing: 0.9px;
@@ -2417,7 +2410,7 @@ body {
           display: flex;
           gap: 10.8px;
 
-          @media (min-width: 1000px) and (max-width: 1850px){
+          @media (min-width: 1000px) and (max-width: 1850px) {
             gap: 10.5px;
           }
 
@@ -2435,7 +2428,7 @@ body {
               margin-top: -2px;
             }
           }
-          .inst{
+          .inst {
             margin-left: -1.3px;
           }
           // .inst .fb  .vk

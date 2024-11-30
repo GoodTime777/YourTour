@@ -33,15 +33,17 @@
   body {
     height: 100%;
     width: 100%;
-    overflow-x:hidden;
+    //overflow-x:hidden;
     // line-height: 1;//?    
     -ms-text-size-adjust: 100%;
     -moz-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
   }
   body{
-    overflow-x: hidden;
-    margin: 0 auto;
+    // font-family: $mainFont;
+    // background-color: $beige_100;
+    // overflow-x: hidden;
+    // margin: 0 auto;
   }
   input,
   button,
