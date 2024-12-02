@@ -180,6 +180,9 @@ body {
     margin: 0 auto;
   }
 }
+.header__navigation .logo-black {
+  display: none;
+}
 .header__navigation-logo {
   cursor: pointer;
 }
@@ -262,6 +265,12 @@ body {
     padding-left: 20px;
     padding-right: 20px;
   }
+}
+.header__navigation.navigation-scroll .logo-white {
+  display: none;
+}
+.header__navigation.navigation-scroll .logo-black {
+  display: block;
 }
 .header__navigation.navigation-scroll a {
   color: #1b1f2b;

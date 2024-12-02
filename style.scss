@@ -249,6 +249,9 @@ body {
       padding: 32.5px 0px 32.5px 1px;
       margin: 0 auto;
     }
+    .logo-black{
+      display: none;
+    }
 
     &-logo {
       cursor: pointer;
@@ -331,6 +334,13 @@ body {
       justify-content: center;
       padding-left: 20px;
       padding-right: 20px;
+    }
+
+    .logo-white{
+      display: none;
+    }
+    .logo-black{
+      display: block;
     }
 
     a {
