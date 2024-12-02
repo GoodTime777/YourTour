@@ -204,7 +204,7 @@ body {
 }
 
 .header {
-  width: 100vw;
+  width: 100%;
   position: relative;
   @include font();
   //top: 0;
@@ -222,10 +222,8 @@ body {
   }
 
   @media (min-width: 360px) and (max-width: 999px) {
-    background: url("images/pad-header-background.jpg") no-repeat 50.5% / cover;
+    background: url("images/pad-header-background.jpg") no-repeat 50% / cover;
     padding-bottom: 51px;
-    padding-left: 21px; //21
-    padding-right: 20px; //21
     margin-bottom: 76px;
   }
 
@@ -234,8 +232,6 @@ body {
     top: 0px;
     left: 0;
     right: 0;
-    // margin-left: auto;
-    // margin-right: auto;
     @include flex($gap: 181.08px);
     padding: 28.88px 0px;
     z-index: 100;
@@ -250,7 +246,7 @@ body {
       justify-content: start;
       //align-items: ;
       gap: 31.5px;
-      padding: 32.5px 0px;
+      padding: 32.5px 0px 32.5px 1px;
       margin: 0 auto;
     }
 
@@ -280,12 +276,13 @@ body {
 
     &-menu {
       &-list {
-        @include fontText($letter-spacing: 0.11px);
+        @include fontText($letter-spacing: 0.11px, $line-height: 138%);
         font-weight: $fw_regular;
         @include flex($gap: 50px);
 
         @media (min-width: 1000px) and (max-width: 1850px) {
-          letter-spacing: 0px;
+          letter-spacing: 0;
+          // line-height: 142%;
           gap: 30.7px;
         }
 
@@ -296,13 +293,14 @@ body {
     }
 
     &-phone {
+      line-height: 138%;
       @media (min-width: 1000px) and (max-width: 1850px) {
-        margin-top: -2px;
+        //line-height: 142%;
+        //margin-top: -2px;
       }
 
       @media (min-width: 360px) and (max-width: 999px) {
-        margin-top: 0px;
-        //padding-top: 2px;
+        margin-top: -1px;
       }
 
       &-link {
@@ -319,7 +317,7 @@ body {
   }
 
   &__navigation.navigation-scroll {
-    display: none; //временно
+    //display: none; //временно
     position: fixed;
     width: 100%;
     top: 0px;
@@ -328,19 +326,12 @@ body {
     backdrop-filter: blur(5px);
     z-index: 9999;
     transition: top 0.5s linear;
-    // @media (min-width: 1000px) and (max-width:1850px) {
-    //   width: 100vw;
-    // }
 
-    //   @media (min-width: 360px) and (max-width:999px) {
-    //     width: 100vw;
-    //     top: -88.5px;
-    //     justify-content: center;
-    //     gap: 63px;
-    //     margin-bottom: 0;
-    //     padding-left: 20px;
-    //     padding-right: 20px;
-    //   }
+    @media (min-width: 360px) and (max-width: 999px) {
+      justify-content: center;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
 
     a {
       color: $black;
@@ -356,6 +347,7 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     gap: 50.5px;
+
     margin: 121px auto 0 auto;
 
     @media (min-width: 1000px) and (max-width: 1850px) {
@@ -370,9 +362,11 @@ body {
       max-width: 310px;
       gap: 40px;
       //margin-right: 3px;
-      margin: 0 auto;
+      margin: 53px auto 0 auto;
       //padding-top: 0;
-      margin-top: 53px;
+      // margin-top: 53px;
+      padding-left: 21px;
+      padding-right: 20px; //21
     }
 
     &-title {
@@ -382,8 +376,11 @@ body {
         $line-height: 109%,
         $letter-spacing: 2px
       );
-      margin: 0 auto 0 577.3px;
-      padding-right: 2px;
+      // margin-bottom: 577.3px;
+      margin-left: auto;
+      margin-right: auto;
+      //margin: 0 auto 0 577.3px;
+      // padding-right: 2px;
 
       @media (min-width: 1000px) and (max-width: 1850px) {
         line-height: 109.9999999999%;
@@ -541,6 +538,8 @@ body {
       }
 
       @media (min-width: 360px) and (max-width: 999px) {
+        max-width: 318px;
+        margin: 0 auto;
         gap: 10.3px;
         flex-wrap: wrap;
       }
@@ -819,7 +818,7 @@ body {
   @media (min-width: 360px) and (max-width: 999px) {
     padding-left: 21px;
     padding-right: 21px;
-    margin-bottom: 76px;
+    margin-bottom: 77px;
   }
 
   &__title {
@@ -933,11 +932,15 @@ body {
         }
       }
 
-      input:focus,
-      select:focus {
+      input:focus:hover,
+      input:focus {
         background-color: $beige_200;
         border-color: $gray_300;
       }
+      // select:focus:hover,select:focus {
+      //  background-color: $beige_200;
+      //   border-color: $gray_300;
+      // }
 
       ::placeholder {
         color: $gray_300;
@@ -989,6 +992,9 @@ body {
             font-size: $fz_16;
           }
         }
+        // option:checked{
+        //   background-color: $beige_200 !important;
+        // }
       }
 
       select:required:invalid {
@@ -996,21 +1002,29 @@ body {
         padding-right: 0;
         //padding-left: 19.5px;
       }
+      select:required:invalid:focus:hover,
+      select:required:invalid:focus {
+        color: $gray_300;
+        padding-right: 0;
+        //padding-left: 19.5px;
+      }
 
+      select:focus:hover,
       select:focus {
         color: $black;
-        //border-color: $gray_300;
+        border-color: $gray_300;
         background: url("images/arrow-dropdown.svg") no-repeat 453px/26px 26px,
           $select_gradient_hover;
 
         @media (min-width: 1000px) and (max-width: 1850px) {
-          background: url("images/arrow-dropdown.svg") no-repeat 346px/26px 26px,
+          background: url("images/arrow-dropdown.svg") no-repeat 341.8px/26px
+              26px,
             $select_gradient_hover;
         }
 
         @media (min-width: 360px) and (max-width: 999px) {
-          background: url("images/arrow-dropdown.svg") no-repeat 246px/26px 26px,
-            $select_gradient;
+          background: url("images/arrow-dropdown.svg") no-repeat 241px/26px 26px,
+            $select_gradient_hover;
         }
       }
 
@@ -1019,11 +1033,12 @@ body {
           $select_gradient_hover;
 
         @media (min-width: 1000px) and (max-width: 1850px) {
-          background: url("images/arrow-dropdown.svg") no-repeat 346px/26px 26px,
+          background: url("images/arrow-dropdown.svg") no-repeat 341.8px/26px
+              26px,
             $select_gradient_hover;
         }
         @media (min-width: 360px) and (max-width: 999px) {
-          background: url("images/arrow-dropdown.svg") no-repeat 246px/26px 26px,
+          background: url("images/arrow-dropdown.svg") no-repeat 241px/26px 26px,
             $select_gradient;
         }
       }
@@ -1076,6 +1091,12 @@ body {
 
         input[type="date"] {
           padding-top: 17px !important;
+
+          @media (min-width: 360px) and (max-width: 999px) {
+            width: 280px;
+            padding: 7.5px 9px 8px 9px !important;
+            margin-bottom: 0px;
+          }
         }
       }
 
@@ -1152,7 +1173,7 @@ body {
           }
 
           @media (min-width: 360px) and (max-width: 999px) {
-            margin-bottom: 22.5px;
+            margin-bottom: 23px;
           }
 
           &-question {
@@ -1208,8 +1229,8 @@ body {
             //display: inline;
             gap: 10px;
             align-items: start;
-            margin-bottom: 28.5px;
-            //line-height: 141%;
+            margin-bottom: 27.5px;
+            line-height: 141%;
           }
 
           label {
@@ -1540,7 +1561,7 @@ body {
         //   margin-bottom: 38px !important;
         //  line-height: 142% !important;
 
-        margin-bottom: 35px;
+        margin-bottom: 34px;
       }
 
       img {
@@ -1628,18 +1649,17 @@ body {
 //////***************
 
 .gallery {
-  margin: 0 auto 132.5px auto;
-
-  @media (min-width: 1000px) and (max-width: 1850px) {
-    margin-bottom: 133px;
-  }
+  margin: 0 auto 135px auto;
 
   @media (min-width: 360px) and (max-width: 999px) {
-    margin-bottom: 74px;
+    margin: 0 auto 76px auto;
   }
 
   &__title {
     @media (min-width: 360px) and (max-width: 999px) {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 318px;
       letter-spacing: 0.7px;
     }
   }
@@ -1654,21 +1674,15 @@ body {
   }
 
   &__container {
-    //max-width: 1860px;
-    @include flex($gap: 27px);
+    @include flex($gap: 30px);
     flex-direction: column;
 
-    @media (min-width: 1000px) and (max-width: 1850px) {
-      gap: 28px;
-    }
-
     @media (min-width: 360px) and (max-width: 999px) {
-      gap: 15px;
+      gap: 18px;
     }
 
     &-content {
       max-width: 1860px;
-      margin-bottom: -1px;
 
       @media (min-width: 1000px) and (max-width: 1850px) {
         max-width: 984px;
@@ -1681,6 +1695,7 @@ body {
       &-one,
       &-two,
       &-three {
+        height: 301px;
         position: relative;
         display: flex;
         gap: 30px;
@@ -1688,8 +1703,12 @@ body {
         @media (min-width: 1000px) and (max-width: 1850px) {
           gap: 20px;
         }
+        @media (min-width: 360px) and (max-width: 999px) {
+          height: 110px;
+        }
 
         img {
+          height: 301px;
           border-radius: 50px;
           object-fit: cover;
 
@@ -1700,152 +1719,11 @@ body {
         }
       }
 
-      &-one {
-        margin-bottom: 1px;
-        img {
-          height: 301px;
-        }
+      &-one,
+      &-three {
         @media (min-width: 1000px) and (max-width: 1850px) {
-          margin-bottom: 0;
-        }
-        @media (min-width: 360px) and (max-width: 999px) {
-          gap: 18px;
-          // width: 150px ;
-          // height: 110px ;
-        }
-      }
-
-      &-one li:nth-child(1) {
-        img {
-          width: 444px;
-
-          @media (min-width: 1000px) and (max-width: 1850px) {
-            width: 314.63px;
-            object-fit: fill;
-          }
-
-          @media (min-width: 360px) and (max-width: 999px) {
-            object-fit: fill;
-            height: 110px;
-            width: 150px;
-          }
-        }
-      }
-      &-one li:nth-child(2) {
-        img {
-          width: 441.5px;
-        }
-      }
-      &-one li:nth-child(3) {
-        img {
-          width: 441.5px;
-
-          @media (min-width: 1000px) and (max-width: 1850px) {
-            object-fit: contain;
-            width: 314.63px;
-          }
-        }
-      }
-      &-one li:nth-child(4) {
-        img {
-          width: 443px;
-
-          @media (min-width: 1000px) and (max-width: 1850px) {
-            width: 314.63px;
-            object-fit: fill;
-          }
-          // @media (min-width: 360px) and (max-width: 999px) {
-          //   object-fit: fill;
-          // }
-        }
-      }
-      &-one li:nth-child(5) {
-        img {
-          width: 443px;
-
-          @media (min-width: 1000px) and (max-width: 1850px) {
-            width: 314.63px;
-            object-fit: fill;
-          }
-
-          @media (min-width: 360px) and (max-width: 999px) {
-            object-fit: fill;
-            height: 110px;
-            width: 150px;
-          }
-        }
-      }
-
-      &-two {
-        margin-bottom: 1px;
-
-        @media (min-width: 1000px) and (max-width: 1850px) {
-          margin-bottom: 0;
-        }
-
-        img {
-          height: 301px;
-
-          @media (min-width: 1000px) and (max-width: 1850px) {
-            width: 231px; //!important;
-          }
-
-          @media (min-width: 360px) and (max-width: 999px) {
-            height: 110px;
-            width: 99.33px;
-          }
-        }
-      }
-
-      &-two li:nth-child(1) {
-        img {
-          width: 349.16px;
-
-          @media (min-width: 1000px) and (max-width: 1850px) {
-            width: 231px;
-          }
-
-          @media (min-width: 360px) and (max-width: 999px) {
-            object-position: 51.1% 50%;
-            width: 99.33px;
-          }
-        }
-      }
-
-      &-two li:nth-child(2),
-      &-two li:nth-child(3),
-      &-two li:nth-child(4) {
-        img {
-          width: 347.32px;
-
-          @media (min-width: 1000px) and (max-width: 1850px) {
-            width: 231px;
-          }
-        }
-      }
-
-      &-two li:nth-child(4) {
-        img {
-          @media (min-width: 1000px) and (max-width: 1850px) {
-            object-fit: contain;
-          }
-          @media (min-width: 360px) and (max-width: 999px) {
-            width: 99.33px;
-            object-position: 51.1% 51%;
-          }
-        }
-      }
-      &-two li:nth-child(5) {
-        img {
-          width: 348.87px;
-
-          @media (min-width: 1000px) and (max-width: 1850px) {
-            width: 231px;
-          }
-
-          @media (min-width: 360px) and (max-width: 999px) {
-            width: 99.33px;
-            //object-position: 51.1% 51%;
+          img {
+            width: 314.67px;
           }
         }
       }
@@ -1857,53 +1735,95 @@ body {
         }
       }
 
+      &-one {
+        @media (min-width: 360px) and (max-width: 999px) {
+          gap: 18px;
+        }
+
+        img {
+          @media (min-width: 360px) and (max-width: 999px) {
+            width: 150px;
+          }
+        }
+
+        &-first-foto-one {
+          &-img {
+            width: 444px;
+
+            @media (min-width: 1000px) and (max-width: 1850px) {
+              object-fit: fill !important;
+            }
+
+            @media (min-width: 360px) and (max-width: 999px) {
+              object-fit: fill !important;
+            }
+          }
+        }
+
+        &-first-foto-two,
+        &-first-foto-three {
+          &-img {
+            width: 441.5px;
+          }
+        }
+
+        &-first-foto-four {
+          &-img {
+            width: 443px;
+
+            @media (min-width: 1000px) and (max-width: 1850px) {
+              object-fit: fill !important;
+            }
+            @media (min-width: 360px) and (max-width: 999px) {
+              object-fit: fill !important;
+            }
+          }
+        }
+      }
+
+      &-two {
+        img {
+          @media (min-width: 1000px) and (max-width: 1850px) {
+            width: 231px;
+          }
+
+          @media (min-width: 360px) and (max-width: 999px) {
+            width: 99.33px;
+          }
+        }
+        &-second-foto-one {
+          &-img {
+            width: 349.16px;
+          }
+        }
+        &-second-foto-two,
+        &-second-foto-three,
+        &-second-foto-four {
+          &-img {
+            width: 347.32px;
+          }
+        }
+
+        &-second-foto-five {
+          &-img {
+            width: 348.87px;
+          }
+        }
+      }
+
       &-three {
         img {
           max-width: 442.5px;
-          height: 301px;
 
-          @media (min-width: 1000px) and (max-width: 1850px) {
-            width: 314.63px;
-            height: 301px;
-          }
           @media (min-width: 360px) and (max-width: 999px) {
             max-width: 154px;
-            height: 110px;
           }
         }
       }
 
-      &-three li:nth-child(1) {
-        //overflow: hidden;
-
-        img {
-          @media (min-width: 1000px) and (max-width: 1850px) {
-            object-position: 57.5% 50%;
-          }
-          @media (min-width: 360px) and (max-width: 999px) {
-            object-fit: cover;
-            object-position: 50% 50.5%;
-            // height: 110px;
-          }
-        }
-      }
-      &-three li:nth-child(2) {
-        img {
-          @media (min-width: 1000px) and (max-width: 1850px) {
-            object-position: 50.51% 50%;
-          }
-          @media (min-width: 360px) and (max-width: 999px) {
-            object-position: 49% 50.5%;
-            // height: 110px;
-          }
-        }
-      }
-      &-three li:nth-child(3) {
-        img {
-          @media (min-width: 1000px) and (max-width: 1850px) {
-            object-position: 49.55% 50%;
-          }
-        }
+      .padd,
+      .mob-img {
+        display: none;
       }
 
       .deletePad,
@@ -1921,32 +1841,15 @@ body {
         }
       }
 
-      .padd,
-      .mob-img {
-        display: none;
-      }
-
       .padd {
-        display: none;
-
         @media (min-width: 1000px) and (max-width: 1850px) {
           display: block;
-          // width: 231px;
-        }
-      }
-      .padd-five {
-        @media (min-width: 360px) and (max-width: 999px) {
-          display: block;
         }
       }
 
       .mob-img {
         @media (min-width: 360px) and (max-width: 999px) {
           display: block;
-
-          img {
-            object-position: 49% 50.5%;
-          }
         }
       }
     }
@@ -1965,7 +1868,7 @@ body {
   @media (min-width: 360px) and (max-width: 999px) {
     padding-right: 21px;
     padding-left: 21px;
-    margin-bottom: 75px;
+    margin-bottom: 76px;
   }
 
   &__title {
@@ -1974,6 +1877,9 @@ body {
     }
 
     @media (min-width: 360px) and (max-width: 999px) {
+      max-width: 318px;
+      margin-left: auto;
+      margin-right: auto;
       letter-spacing: 0.6px;
     }
   }
@@ -2200,7 +2106,25 @@ body {
       }
     }
 
-    .two-block &-block-content,
+    .two-block &-block-content-text {
+      line-height: 141%;
+      @media (min-width: 360px) and (max-width: 999px) {
+        line-height: 142%;
+      }
+    }
+    .two-block &-block-network {
+      bottom: 59px;
+    }
+    .two-block &-block-content {
+      margin-bottom: 253.5px;
+      @media (min-width: 1000px) and (max-width: 1850px) {
+        margin-bottom: 254.5px;
+      }
+      @media (min-width: 360px) and (max-width: 999px) {
+        margin-bottom: 181px;
+      }
+    }
+
     .three-block &-block-content {
       margin-bottom: 253.5px;
 

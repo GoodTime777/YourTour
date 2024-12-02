@@ -7,8 +7,8 @@ window.addEventListener("scroll", () => {
     nav.classList.add("navigation-scroll");
     nav.style.top = "0px";
    
-  } else if (scroll >= 300 && scroll < 450) {
-    nav.style.top = "-90px";
+  } else if (scroll >= 350 && scroll < 450) {
+    nav.style.top = "-93px";
    
   } else {
     nav.style.top = "0px";
