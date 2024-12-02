@@ -180,9 +180,6 @@ body {
     margin: 0 auto;
   }
 }
-.header__navigation .logo-black {
-  display: none;
-}
 .header__navigation-logo {
   cursor: pointer;
 }
@@ -198,6 +195,9 @@ body {
   .header__navigation-logo-icon {
     margin-top: -1px;
   }
+}
+.header__navigation-logo-icon .logo-black {
+  display: none;
 }
 @media (min-width: 360px) and (max-width: 999px) {
   .header__navigation-logo-icon img {

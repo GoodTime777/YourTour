@@ -249,12 +249,11 @@ body {
       padding: 32.5px 0px 32.5px 1px;
       margin: 0 auto;
     }
-    .logo-black{
-      display: none;
-    }
 
+   
     &-logo {
       cursor: pointer;
+
 
       &-icon {
         display: block;
@@ -266,6 +265,11 @@ body {
         @media (min-width: 360px) and (max-width: 999px) {
           margin-top: -1px;
         }
+        
+         .logo-black{
+      display: none;
+    }
+
 
         img {
           @media (min-width: 360px) and (max-width: 999px) {
@@ -275,6 +279,8 @@ body {
           }
         }
       }
+
+
     }
 
     &-menu {
