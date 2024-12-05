@@ -318,6 +318,10 @@ body {
         }
       }
     }
+
+    .underline::before {
+      bottom: -3px;
+    }
   }
 
   &__navigation.navigation-scroll {
@@ -516,10 +520,10 @@ body {
   //max-width: 1170px;
   margin: 0 auto 135.425px auto;
 
-  @media (min-width: 1000px) and (max-width: 1850px) {
-    margin: 0 auto 135.425px auto;
-    //max-width: 918px;
-  }
+  // @media (min-width: 1000px) and (max-width: 1850px) {
+  //   margin: 0 auto 135.425px auto;
+  //   //max-width: 918px;
+  // }
 
   @media (min-width: 360px) and (max-width: 999px) {
     // max-width: 318px;
@@ -529,9 +533,9 @@ body {
   &__title {
     margin-bottom: 35px;
 
-    @media (min-width: 1000px) and (max-width: 1850px) {
-      margin-bottom: 35px;
-    }
+    // @media (min-width: 1000px) and (max-width: 1850px) {
+    //   margin-bottom: 35px;
+    // }
 
     @media (min-width: 360px) and (max-width: 999px) {
       margin-bottom: 30px;
@@ -590,7 +594,7 @@ body {
 
       .underline:hover::before {
         opacity: 1;
-        bottom: -5px;
+        bottom: -6px;
 
         @media (min-width: 360px) and (max-width: 999px) {
           opacity: 0;
@@ -609,9 +613,9 @@ body {
         opacity: 1;
         background-color: $orange_200;
 
-        @media (min-width: 1000px) and (max-width: 1850px) {
-          bottom: -6px;
-        }
+        // @media (min-width: 1000px) and (max-width: 1850px) {
+        //   //bottom: -6px;
+        // }
 
         @media (min-width: 360px) and (max-width: 999px) {
           bottom: 1px;
@@ -649,8 +653,6 @@ body {
           background: $card_gradient,
             url("images/card\ tour\ photo-1.jpg") no-repeat center; // / cover//center
           background-size: 100%;
-
-       
         }
 
         .card-two {
@@ -690,7 +692,7 @@ body {
         .card-four {
           background: $card_gradient,
             url("images/background-card-4.jpg") no-repeat center;
-          background-size: 100% ;
+          background-size: 100%;
 
           @media (min-width: 1000px) and (max-width: 1850px) {
             background: $card_gradient,
@@ -1238,6 +1240,7 @@ body {
 
         &-contract {
           //font-size: $fz_17;
+          position: relative;
           @include flex($gap: 19px);
           margin-bottom: 33px;
 
@@ -1247,14 +1250,23 @@ body {
           }
 
           @media (min-width: 360px) and (max-width: 999px) {
-            //display: inline;
+            // display: inline;
             gap: 10px;
             align-items: start;
             margin-bottom: 27.5px;
             line-height: 141%;
           }
-
+          input {
+            position: absolute;
+            //visibility: hidden;
+          }
           label {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            z-index: 1;
+          }
+          .checkbox-text {
             @include fontText(
               $font-size: $fz_17,
               $letter-spacing: -0.19px,
@@ -1269,32 +1281,30 @@ body {
               line-height: 142%;
             }
           }
-          a {
+          .checkbox-text a {
             color: $black;
             font-size: 17px;
             line-height: 142%;
             letter-spacing: -0.2px;
             margin-top: 0.5px;
-            //margin-left: -15px;
-            cursor: pointer;
 
             @media (min-width: 1000px) and (max-width: 1850px) {
               margin-top: 0px;
             }
 
             @media (min-width: 360px) and (max-width: 999px) {
-              //margin-left: 0;
               letter-spacing: -0.6px;
               line-height: 141%;
             }
           }
 
-          a:active {
+          .checkbox-text a:active {
             color: $green_400;
           }
 
           .underline::before {
             background-color: $black;
+            bottom: 3.5px;
           }
           .underline:active::before {
             background-color: $green_400;
@@ -1482,9 +1492,9 @@ body {
     }
   }
 
-  &__subtitle {
-    // margin-top: -1px;
-  }
+  // &__subtitle {
+  //   // margin-top: -1px;
+  // }
 
   .block-transparent-for-scroll {
     display: none;
@@ -1880,7 +1890,7 @@ body {
 //////****************
 .stories {
   text-align: center;
-  margin-bottom: 135px;
+  margin-bottom: 134px;
 
   @media (min-width: 1000px) and (max-width: 1850px) {
     margin-bottom: 135px;
@@ -1893,9 +1903,9 @@ body {
   }
 
   &__title {
-    @media (min-width: 1000px) and (max-width: 1850px) {
-      margin-bottom: 30px;
-    }
+    // @media (min-width: 1000px) and (max-width: 1850px) {
+    //   margin-bottom: 30px;
+    // }
 
     @media (min-width: 360px) and (max-width: 999px) {
       max-width: 318px;
@@ -1951,7 +1961,7 @@ body {
         }
 
         &-title {
-          margin-bottom: 38px; //37
+          margin-bottom: 37px; //37
 
           @media (min-width: 1000px) and (max-width: 1850px) {
             margin-bottom: 37px;
@@ -1961,7 +1971,7 @@ body {
             max-width: 162px;
             letter-spacing: 1px; //4%
             line-height: 122%; //122
-            margin-bottom: 22px; //19.5
+            margin-bottom: 23px; //19.5
           }
         }
         &-text {
@@ -2032,7 +2042,7 @@ body {
       }
 
       .detailed a::after {
-        top: 0.5px;
+        top: 0px;
 
         @media (min-width: 360px) and (max-width: 999px) {
           padding-left: 17px;
@@ -2084,24 +2094,21 @@ body {
       }
     }
 
-    
-
     .one-block {
       background: $stories_gradient,
         url("images/story\ photo-1.jpg") no-repeat center;
-    
+
       margin-bottom: 50px;
 
       @media (min-width: 1000px) and (max-width: 1850px) {
         background: $stories_gradient,
           url("images/story\ photo-1Pad.jpg") no-repeat center;
-          
       }
 
       @media (min-width: 360px) and (max-width: 999px) {
         background: $stories_gradient,
           url("images/story\ photo-1Mobile.png") no-repeat center;
-          
+
         margin-bottom: 20px;
       }
     }
@@ -2139,13 +2146,16 @@ body {
       }
     }
     .two-block &-block-network {
-      bottom: 59px;
+      bottom: 58px;
+      @media (min-width: 1000px) and (max-width: 1850px) {
+        bottom: 59px;
+      }
     }
     .two-block &-block-content {
-      margin-bottom: 253.5px;
-      @media (min-width: 1000px) and (max-width: 1850px) {
-        margin-bottom: 254.5px;
-      }
+      margin-bottom: 254.5px;
+      // @media (min-width: 1000px) and (max-width: 1850px) {
+      //   margin-bottom: 254.5px;
+      // }
       @media (min-width: 360px) and (max-width: 999px) {
         margin-bottom: 181px;
       }
@@ -2159,8 +2169,7 @@ body {
       }
     }
 
-    .two-block &-block-content-title,
-    .three-block &-block-content-title {
+    .two-block &-block-content-title {
       margin-bottom: 37px;
 
       @media (min-width: 360px) and (max-width: 999px) {
@@ -2189,8 +2198,24 @@ body {
       }
     }
     .three-block &-block-content {
+      margin-bottom: 254.5px;
+      @media (min-width: 1000px) and (max-width: 1850px) {
+        margin-bottom: 253.5px;
+      }
+
       @media (min-width: 360px) and (max-width: 999px) {
         margin-bottom: 180px;
+      }
+    }
+    .three-block &-block-content-title {
+      margin-bottom: 38px;
+
+      @media (min-width: 1000px) and (max-width: 1850px) {
+        margin-bottom: 37px;
+      }
+
+      @media (min-width: 360px) and (max-width: 999px) {
+        margin-bottom: 21px;
       }
     }
     .three-block &-block-network {
@@ -2205,7 +2230,7 @@ body {
     .two-block,
     .three-block {
       background-size: 100%;
-      transition:background-size 0.5s ease;
+      transition: background-size 0.5s ease;
 
       @media (min-width: 360px) and (max-width: 999px) {
         background-size: cover;
@@ -2221,7 +2246,6 @@ body {
         background-size: 100%;
       }
     }
-   
   }
 }
 //////*****************
@@ -2390,8 +2414,18 @@ body {
 
     .underline::before {
       background-color: $black;
-      width: 74.5%;
+
       right: 0;
+    }
+    .instagram.underline::before {
+      width: 72.5%;
+    }
+
+    .facebook.underline::before {
+      width: 69.5%;
+    }
+    .vkontakte.underline::before {
+      width: 70%;
     }
   }
 }

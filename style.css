@@ -249,6 +249,9 @@ body {
     line-height: 142%;
   }
 }
+.header__navigation .underline::before {
+  bottom: -3px;
+}
 .header__navigation.navigation-scroll {
   position: fixed;
   width: 100%;
@@ -410,11 +413,6 @@ body {
   width: 100%;
   margin: 0 auto 135.425px auto;
 }
-@media (min-width: 1000px) and (max-width: 1850px) {
-  .card {
-    margin: 0 auto 135.425px auto;
-  }
-}
 @media (min-width: 360px) and (max-width: 999px) {
   .card {
     margin: 0 auto 75.8px auto;
@@ -422,11 +420,6 @@ body {
 }
 .card__title {
   margin-bottom: 35px;
-}
-@media (min-width: 1000px) and (max-width: 1850px) {
-  .card__title {
-    margin-bottom: 35px;
-  }
 }
 @media (min-width: 360px) and (max-width: 999px) {
   .card__title {
@@ -495,7 +488,7 @@ body {
 }
 .card__tabs-links .underline:hover::before {
   opacity: 1;
-  bottom: -5px;
+  bottom: -6px;
 }
 @media (min-width: 360px) and (max-width: 999px) {
   .card__tabs-links .underline:hover::before {
@@ -512,11 +505,6 @@ body {
   height: 2px;
   opacity: 1;
   background-color: #efa501;
-}
-@media (min-width: 1000px) and (max-width: 1850px) {
-  .card__tabs-links .underline.active::before {
-    bottom: -6px;
-  }
 }
 @media (min-width: 360px) and (max-width: 999px) {
   .card__tabs-links .underline.active::before {
@@ -1110,6 +1098,7 @@ body {
   margin-top: -0.5px;
 }
 .application__box-form-agreement-contract {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1130,7 +1119,16 @@ body {
     line-height: 141%;
   }
 }
+.application__box-form-agreement-contract input {
+  position: absolute;
+}
 .application__box-form-agreement-contract label {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+.application__box-form-agreement-contract .checkbox-text {
   font-size: 17px;
   letter-spacing: -0.19px;
   line-height: 142%;
@@ -1138,37 +1136,37 @@ body {
   margin-bottom: 0;
 }
 @media (min-width: 360px) and (max-width: 999px) {
-  .application__box-form-agreement-contract label {
+  .application__box-form-agreement-contract .checkbox-text {
     flex-shrink: 2;
     font-size: 16px;
     letter-spacing: 0px;
     line-height: 142%;
   }
 }
-.application__box-form-agreement-contract a {
+.application__box-form-agreement-contract .checkbox-text a {
   color: #1b1f2b;
   font-size: 17px;
   line-height: 142%;
   letter-spacing: -0.2px;
   margin-top: 0.5px;
-  cursor: pointer;
 }
 @media (min-width: 1000px) and (max-width: 1850px) {
-  .application__box-form-agreement-contract a {
+  .application__box-form-agreement-contract .checkbox-text a {
     margin-top: 0px;
   }
 }
 @media (min-width: 360px) and (max-width: 999px) {
-  .application__box-form-agreement-contract a {
+  .application__box-form-agreement-contract .checkbox-text a {
     letter-spacing: -0.6px;
     line-height: 141%;
   }
 }
-.application__box-form-agreement-contract a:active {
+.application__box-form-agreement-contract .checkbox-text a:active {
   color: #286562;
 }
 .application__box-form-agreement-contract .underline::before {
   background-color: #1b1f2b;
+  bottom: 3.5px;
 }
 .application__box-form-agreement-contract .underline:active::before {
   background-color: #286562;
@@ -1725,7 +1723,7 @@ body {
 
 .stories {
   text-align: center;
-  margin-bottom: 135px;
+  margin-bottom: 134px;
 }
 @media (min-width: 1000px) and (max-width: 1850px) {
   .stories {
@@ -1737,11 +1735,6 @@ body {
     padding-right: 21px;
     padding-left: 21px;
     margin-bottom: 76px;
-  }
-}
-@media (min-width: 1000px) and (max-width: 1850px) {
-  .stories__title {
-    margin-bottom: 30px;
   }
 }
 @media (min-width: 360px) and (max-width: 999px) {
@@ -1801,7 +1794,7 @@ body {
   }
 }
 .stories__container-block-content-title {
-  margin-bottom: 38px;
+  margin-bottom: 37px;
 }
 @media (min-width: 1000px) and (max-width: 1850px) {
   .stories__container-block-content-title {
@@ -1813,7 +1806,7 @@ body {
     max-width: 162px;
     letter-spacing: 1px;
     line-height: 122%;
-    margin-bottom: 22px;
+    margin-bottom: 23px;
   }
 }
 .stories__container-block-content-text {
@@ -1887,7 +1880,7 @@ body {
   }
 }
 .stories__container-block .detailed a::after {
-  top: 0.5px;
+  top: 0px;
 }
 @media (min-width: 360px) and (max-width: 999px) {
   .stories__container-block .detailed a::after {
@@ -1990,15 +1983,15 @@ body {
   }
 }
 .two-block .stories__container-block-network {
-  bottom: 59px;
-}
-.two-block .stories__container-block-content {
-  margin-bottom: 253.5px;
+  bottom: 58px;
 }
 @media (min-width: 1000px) and (max-width: 1850px) {
-  .two-block .stories__container-block-content {
-    margin-bottom: 254.5px;
+  .two-block .stories__container-block-network {
+    bottom: 59px;
   }
+}
+.two-block .stories__container-block-content {
+  margin-bottom: 254.5px;
 }
 @media (min-width: 360px) and (max-width: 999px) {
   .two-block .stories__container-block-content {
@@ -2013,11 +2006,11 @@ body {
     margin-bottom: 181px;
   }
 }
-.two-block .stories__container-block-content-title, .three-block .stories__container-block-content-title {
+.two-block .stories__container-block-content-title {
   margin-bottom: 37px;
 }
 @media (min-width: 360px) and (max-width: 999px) {
-  .two-block .stories__container-block-content-title, .three-block .stories__container-block-content-title {
+  .two-block .stories__container-block-content-title {
     margin-bottom: 22px;
   }
 }
@@ -2039,9 +2032,30 @@ body {
     bottom: 34px;
   }
 }
+.three-block .stories__container-block-content {
+  margin-bottom: 254.5px;
+}
+@media (min-width: 1000px) and (max-width: 1850px) {
+  .three-block .stories__container-block-content {
+    margin-bottom: 253.5px;
+  }
+}
 @media (min-width: 360px) and (max-width: 999px) {
   .three-block .stories__container-block-content {
     margin-bottom: 180px;
+  }
+}
+.three-block .stories__container-block-content-title {
+  margin-bottom: 38px;
+}
+@media (min-width: 1000px) and (max-width: 1850px) {
+  .three-block .stories__container-block-content-title {
+    margin-bottom: 37px;
+  }
+}
+@media (min-width: 360px) and (max-width: 999px) {
+  .three-block .stories__container-block-content-title {
+    margin-bottom: 21px;
   }
 }
 .three-block .stories__container-block-network {
@@ -2269,6 +2283,14 @@ body {
 }
 .footer__container .underline::before {
   background-color: #1b1f2b;
-  width: 74.5%;
   right: 0;
+}
+.footer__container .instagram.underline::before {
+  width: 72.5%;
+}
+.footer__container .facebook.underline::before {
+  width: 69.5%;
+}
+.footer__container .vkontakte.underline::before {
+  width: 70%;
 }/*# sourceMappingURL=style.css.map */

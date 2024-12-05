@@ -1,3 +1,5 @@
+// const formContract=document.querySelector('.application__box-form-agreement-contract');
+// const contract=document.querySelector('.contract');
 const formApplication = document.forms.formApplication;
 const inputDateFrom = formApplication.elements.user_date_from;
 const inputDateTo = formApplication.elements.user_date_to;
@@ -60,3 +62,10 @@ formApplication.addEventListener("submit", (e) => {
 
 inputDateFrom.setAttribute("min", new Date().toISOString().split("T")[0]);
 inputDateTo.setAttribute("min", new Date().toISOString().split("T")[0]);
+
+// formContract.addEventListener('mouseover', (e)=>{
+//   console.log(e.target)
+//   if(e.target){
+//     contract.style.cursor='pointer';
+//   }
+// })
