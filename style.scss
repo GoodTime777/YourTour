@@ -647,20 +647,10 @@ body {
 
         .card-one {
           background: $card_gradient,
-            url("images/card\ tour\ photo-1.jpg") no-repeat 50% 50%; // / cover//center
+            url("images/card\ tour\ photo-1.jpg") no-repeat center; // / cover//center
           background-size: 100%;
 
-          @media (min-width: 1000px) and (max-width: 1850px) {
-            background: $card_gradient,
-              url("images/card\ tour\ photo-1.jpg") no-repeat 100%; //100%  106%; // / cover
-            background-size: 100%;
-          }
-
-          // @media (min-width: 360px) and (max-width: 999px) {
-          //   // background: $card_gradient,
-          //   //   url("images/card\ tour\ photo-1.jpg") no-repeat 100%;
-          //   // background-size: 100%;
-          // }
+       
         }
 
         .card-two {
@@ -670,7 +660,7 @@ body {
 
           @media (min-width: 1000px) and (max-width: 1850px) {
             background: $card_gradient,
-              url("images/background-card-2-pad.jpg") no-repeat 100%; // / cover
+              url("images/background-card-2-pad.jpg") no-repeat center; // / cover
             background-size: 100%;
           }
 
@@ -687,7 +677,7 @@ body {
 
           @media (min-width: 1000px) and (max-width: 1850px) {
             background: $card_gradient,
-              url("images/background-card-3-pad.jpg") no-repeat right 65%;
+              url("images/background-card-3-pad.jpg") no-repeat center;
             background-size: 100%;
           }
 
@@ -700,7 +690,7 @@ body {
         .card-four {
           background: $card_gradient,
             url("images/background-card-4.jpg") no-repeat center;
-          background-size: 100% 100%;
+          background-size: 100% ;
 
           @media (min-width: 1000px) and (max-width: 1850px) {
             background: $card_gradient,
@@ -708,11 +698,11 @@ body {
             background-size: 100%;
           }
 
-          @media (min-width: 360px) and (max-width: 999px) {
-            background: $card_gradient,
-              url("images/background-card-4-pad.jpg") no-repeat center;
-            background-size: 100%;
-          }
+          // @media (min-width: 360px) and (max-width: 999px) {
+          //   background: $card_gradient,
+          //     url("images/background-card-4-pad.jpg") no-repeat center;
+          //   background-size: 100%;
+          // }
         }
 
         .card-five {
@@ -757,7 +747,7 @@ body {
           border-radius: 50px;
           padding: 50px 50px 50px 50px;
           cursor: pointer;
-          transition: background-size 0.5s ease-in-out;
+          transition: background-size 0.5s ease-in;
 
           @media (min-width: 1000px) and (max-width: 1850px) {
             width: 450px;
@@ -1941,7 +1931,7 @@ body {
     &-block {
       position: relative;
       width: 100%;
-      padding: 60px 60px 60px 60px;
+      padding: 60px;
       border-radius: 50px;
       cursor: pointer;
 
@@ -2094,19 +2084,24 @@ body {
       }
     }
 
+    
+
     .one-block {
       background: $stories_gradient,
         url("images/story\ photo-1.jpg") no-repeat center;
+    
       margin-bottom: 50px;
 
       @media (min-width: 1000px) and (max-width: 1850px) {
         background: $stories_gradient,
           url("images/story\ photo-1Pad.jpg") no-repeat center;
+          
       }
 
       @media (min-width: 360px) and (max-width: 999px) {
         background: $stories_gradient,
           url("images/story\ photo-1Mobile.png") no-repeat center;
+          
         margin-bottom: 20px;
       }
     }
@@ -2205,11 +2200,12 @@ body {
         bottom: 60px;
       }
     }
+
     .one-block,
     .two-block,
     .three-block {
-      background-size: 100% 100%;
-      //transition: background-size 0.5s ease;
+      background-size: 100%;
+      transition:background-size 0.5s ease;
 
       @media (min-width: 360px) and (max-width: 999px) {
         background-size: cover;
@@ -2219,12 +2215,13 @@ body {
     .two-block:hover,
     .three-block:hover {
       background-size: 153%;
-      //transition: background-size 0.5s ease;
+      transition: background-size 0.5s ease;
 
       @media (min-width: 360px) and (max-width: 999px) {
         background-size: 100%;
       }
     }
+   
   }
 }
 //////*****************
