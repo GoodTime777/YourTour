@@ -14,7 +14,7 @@ const swiper = new Swiper(".mySwiper", {
       loop: false,
       mousewheel: false,
     },
-    1024: {
+    1000: {
       spaceBetween: 18,
     },
     1920: {
@@ -24,7 +24,7 @@ const swiper = new Swiper(".mySwiper", {
 });
 
 function changeDirection() {
-  window.innerWidth < 1024
+  window.innerWidth < 1000
     ? swiper.changeDirection("vertical")
     : swiper.changeDirection("horizontal");
 }
