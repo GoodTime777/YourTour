@@ -16,9 +16,11 @@ const swiper = new Swiper(".mySwiper", {
     },
     1000: {
       spaceBetween: 18,
+      mousewheel: true,
     },
     1920: {
       spaceBetween: 30,
+      mousewheel: true,
     },
   },
 });
