@@ -49,7 +49,7 @@ h3 {
   margin-left: -20px;
   margin-bottom: -9px;
   border-radius: 50px;
-  transition: background 0.3s ease-in-out 0.3s;
+  transition: background 0.2s ease-in-out 0.2s;
 }
 @media (min-width: 360px) and (max-width: 999px) {
   .detailed {
@@ -271,10 +271,7 @@ section {
 }
 @media (min-width: 360px) and (max-width: 999px) {
   .header__navigation.navigation-scroll {
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 20px;
-    padding-top: 30px;
+    padding: 30px 20px 20px 20px;
   }
 }
 .header__navigation.navigation-scroll .logo-white {
@@ -671,11 +668,6 @@ section {
 .card__container-content-items-item-title {
   margin-bottom: 16px;
 }
-@media (min-width: 1000px) and (max-width: 1850px) {
-  .card__container-content-items-item-title {
-    margin-bottom: 16px;
-  }
-}
 @media (min-width: 360px) and (max-width: 999px) {
   .card__container-content-items-item-title {
     margin-bottom: 14px;
@@ -1003,7 +995,7 @@ section {
 }
 @media (min-width: 1000px) and (max-width: 1850px) {
   .application__box-form-date input {
-    padding-top: 18.5px;
+    padding-top: 18px;
   }
 }
 @media (min-width: 360px) and (max-width: 999px) {
@@ -1023,6 +1015,16 @@ section {
     margin-bottom: 0px;
   }
 }
+.application__box-form-date input[type=date]:focus {
+  padding-top: 16px !important;
+}
+@media (min-width: 360px) and (max-width: 999px) {
+  .application__box-form-date input[type=date]:focus {
+    width: 280px;
+    padding: 8px 9px 8px 9px !important;
+    margin-bottom: 0px;
+  }
+}
 @media (min-width: 360px) and (max-width: 999px) {
   .application__box-form .date-from {
     margin-bottom: 2px;
@@ -1034,7 +1036,7 @@ section {
 @media (min-width: 1000px) and (max-width: 1850px) {
   .application__box-form-comment {
     margin-top: -0.8px;
-    margin-bottom: -2.5px;
+    margin-bottom: -2px;
   }
 }
 @media (min-width: 360px) and (max-width: 999px) {
@@ -1821,11 +1823,6 @@ section {
 .stories__container-block-content-title {
   margin-bottom: 37px;
 }
-@media (min-width: 1000px) and (max-width: 1850px) {
-  .stories__container-block-content-title {
-    margin-bottom: 37px;
-  }
-}
 @media (min-width: 360px) and (max-width: 999px) {
   .stories__container-block-content-title {
     max-width: 162px;
@@ -1850,11 +1847,6 @@ section {
 }
 .stories__container-block-content-list {
   margin-top: 26px;
-}
-@media (min-width: 1000px) and (max-width: 1850px) {
-  .stories__container-block-content-list {
-    margin-top: 27px;
-  }
 }
 @media (min-width: 360px) and (max-width: 999px) {
   .stories__container-block-content-list {
@@ -1977,6 +1969,16 @@ section {
     margin-bottom: 88.5px;
   }
 }
+@media (min-width: 1000px) and (max-width: 1850px) {
+  .one-block .stories__container-block-content-title {
+    margin-top: 1px;
+  }
+}
+@media (min-width: 360px) and (max-width: 999px) {
+  .one-block .stories__container-block-content-title {
+    margin-bottom: 22.5px;
+  }
+}
 .stories__container .two-block {
   background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0.01%, rgba(0, 0, 0, 0.2) 100%), url("images/story photo-2.jpg") no-repeat center;
   margin-bottom: 50px;
@@ -2038,7 +2040,7 @@ section {
 }
 @media (min-width: 1000px) and (max-width: 1850px) {
   .stories__container .three-block {
-    background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0.01%, rgba(0, 0, 0, 0.2) 100%), url("images//story photo-3Pad.jpg") no-repeat 48%;
+    background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0.01%, rgba(0, 0, 0, 0.2) 100%), url("images/story photo-3Pad.jpg") no-repeat 48%;
   }
 }
 @media (min-width: 360px) and (max-width: 999px) {
@@ -2074,7 +2076,7 @@ section {
 }
 @media (min-width: 360px) and (max-width: 999px) {
   .three-block .stories__container-block-content-title {
-    margin-bottom: 21px;
+    margin-bottom: 21.5px;
   }
 }
 .stories__container .one-block,
@@ -2132,7 +2134,7 @@ section {
   .communication__block {
     max-width: 360px;
     flex-wrap: wrap;
-    gap: 31.13px;
+    gap: 30.5px;
   }
 }
 .communication__block-background {
