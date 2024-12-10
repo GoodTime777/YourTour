@@ -130,6 +130,7 @@ body {
 }
 
 section {
+  max-width: 1170px;
   overflow: hidden;
   position: relative;
   margin: 0 auto;
@@ -742,7 +743,7 @@ section {
 }
 @media (min-width: 360px) and (max-width: 999px) {
   .application {
-    margin-bottom: 77px;
+    margin-bottom: 76px;
   }
 }
 .application__title {
@@ -853,13 +854,14 @@ section {
   border: 1px solid #f4f0e9;
   border-radius: 10px;
   padding: 18px 20px 19px 18.9px;
+  box-sizing: border-box;
   cursor: pointer;
 }
 @media (min-width: 1000px) and (max-width: 1850px) {
   .application__box-form input,
   .application__box-form select {
     width: 389px;
-    padding-top: 18.8px;
+    padding-top: 19px;
     padding-bottom: 19.8px;
   }
 }
@@ -982,6 +984,12 @@ section {
 }
 .application__box-form-date {
   margin-bottom: 0px;
+  box-sizing: border-box;
+}
+@media (min-width: 1000px) and (max-width: 1850px) {
+  .application__box-form-date {
+    margin-bottom: 1.5px;
+  }
 }
 @media (min-width: 360px) and (max-width: 999px) {
   .application__box-form-date {
@@ -995,7 +1003,7 @@ section {
 }
 @media (min-width: 1000px) and (max-width: 1850px) {
   .application__box-form-date input {
-    color: red;
+    padding-top: 18.5px;
   }
 }
 @media (min-width: 360px) and (max-width: 999px) {
@@ -1006,12 +1014,12 @@ section {
   }
 }
 .application__box-form-date input[type=date] {
-  padding-top: 17px !important;
+  padding-top: 16px !important;
 }
 @media (min-width: 360px) and (max-width: 999px) {
   .application__box-form-date input[type=date] {
     width: 280px;
-    padding: 7.5px 9px 8px 9px !important;
+    padding: 8px 9px 8px 9px !important;
     margin-bottom: 0px;
   }
 }
@@ -1026,7 +1034,7 @@ section {
 @media (min-width: 1000px) and (max-width: 1850px) {
   .application__box-form-comment {
     margin-top: -0.8px;
-    margin-bottom: -1px;
+    margin-bottom: -2.5px;
   }
 }
 @media (min-width: 360px) and (max-width: 999px) {
@@ -1130,14 +1138,13 @@ section {
 @media (min-width: 1000px) and (max-width: 1850px) {
   .application__box-form-agreement-contract {
     gap: 11px;
-    margin-bottom: 32.5px;
   }
 }
 @media (min-width: 360px) and (max-width: 999px) {
   .application__box-form-agreement-contract {
     gap: 10px;
     align-items: start;
-    margin-bottom: 27.5px;
+    margin-bottom: 30.5px;
     line-height: 141%;
   }
 }
@@ -1155,14 +1162,19 @@ section {
   letter-spacing: -0.19px;
   line-height: 142%;
   color: #a6a6a6;
-  margin-bottom: 0;
+  margin-bottom: -3px;
+}
+@media (min-width: 1000px) and (max-width: 1850px) {
+  .application__box-form-agreement-contract .checkbox-text {
+    margin-bottom: 0;
+  }
 }
 @media (min-width: 360px) and (max-width: 999px) {
   .application__box-form-agreement-contract .checkbox-text {
     flex-shrink: 2;
     font-size: 16px;
     letter-spacing: 0px;
-    line-height: 142%;
+    line-height: 144%;
   }
 }
 .application__box-form-agreement-contract .checkbox-text a {
@@ -1300,8 +1312,8 @@ section {
   line-height: 142%;
   color: #ffffff;
   width: 235px;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 15.5px;
+  padding-bottom: 14px;
   border-radius: 10px;
   transition: background 0.1s ease-in-out 0.1s;
 }
@@ -1456,7 +1468,7 @@ section {
 @media (min-width: 360px) and (max-width: 999px) {
   .reviews .swiper-slide .mari,
   .reviews .swiper-slide-mobile .mari {
-    margin-bottom: 34px;
+    margin-bottom: 35px;
   }
   .reviews .swiper-slide .mari img,
   .reviews .swiper-slide-mobile .mari img {
@@ -1819,7 +1831,7 @@ section {
     max-width: 162px;
     letter-spacing: 1px;
     line-height: 122%;
-    margin-bottom: 23px;
+    margin-bottom: 22px;
   }
 }
 .stories__container-block-content-text {

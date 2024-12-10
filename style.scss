@@ -196,7 +196,7 @@ body {
 }
 
 section {
-  //max-width: 1170px;
+  max-width: 1170px;
   overflow: hidden;
   position: relative;
   margin: 0 auto;
@@ -374,12 +374,12 @@ section {
     }
   }
 
-  &__navigation.navigation-scroll+&__content{
+  &__navigation.navigation-scroll + &__content {
     padding-top: 5px;
-    @media (min-width: 1000px) and (max-width: 1850px){
+    @media (min-width: 1000px) and (max-width: 1850px) {
       padding-top: 0;
     }
-    @media (min-width: 360px) and (max-width: 999px){
+    @media (min-width: 360px) and (max-width: 999px) {
       padding-top: 2px;
     }
   }
@@ -425,8 +425,8 @@ section {
 
       @media (min-width: 1000px) and (max-width: 1850px) {
         line-height: 109%;
-       
-        margin: 0 auto ;
+
+        margin: 0 auto;
       }
 
       @media (min-width: 360px) and (max-width: 999px) {
@@ -467,8 +467,8 @@ section {
       padding-top: 3px;
       margin-bottom: 6px;
 
-      @media (min-width: 1000px) and (max-width: 1850px){
-       // padding-top: 5px;
+      @media (min-width: 1000px) and (max-width: 1850px) {
+        // padding-top: 5px;
       }
 
       @media (min-width: 360px) and (max-width: 999px) {
@@ -835,10 +835,10 @@ section {
 
 .application {
   text-align: center;
-  margin-bottom: 135px; 
+  margin-bottom: 135px;
 
-  @media (min-width: 360px) and (max-width: 999px) {  
-    margin-bottom: 77px;
+  @media (min-width: 360px) and (max-width: 999px) {
+    margin-bottom: 76px;
   }
 
   &__title {
@@ -888,7 +888,7 @@ section {
       text-align: left;
       display: flex;
       flex-wrap: wrap;
-      gap: 33px 30px; 
+      gap: 33px 30px;
       padding: 70px;
       background-color: $white;
       border-radius: 50px;
@@ -937,12 +937,13 @@ section {
         border: 1px solid $beige_200;
         border-radius: 10px;
         padding: 18px 20px 19px 18.9px;
+        box-sizing: border-box;
         //padding: 18.5px 19px 19px 19px;
         cursor: pointer;
 
         @media (min-width: 1000px) and (max-width: 1850px) {
           width: 389px;
-          padding-top: 18.8px;
+          padding-top: 19px;
           padding-bottom: 19.8px;
         }
 
@@ -1083,6 +1084,11 @@ section {
 
       &-date {
         margin-bottom: 0px;
+        box-sizing: border-box;
+
+        @media (min-width: 1000px) and (max-width: 1850px) {
+          margin-bottom: 1.5px;
+        }
 
         @media (min-width: 360px) and (max-width: 999px) {
           margin-bottom: 1.2px;
@@ -1095,11 +1101,8 @@ section {
         }
 
         input {
-          //padding: 18px 20px 19px 18.9px;
-
           @media (min-width: 1000px) and (max-width: 1850px) {
-            //padding-top: 18.7px;
-            color: red; //временно
+            padding-top: 18.5px;
           }
 
           @media (min-width: 360px) and (max-width: 999px) {
@@ -1110,11 +1113,12 @@ section {
         }
 
         input[type="date"] {
-          padding-top: 17px !important;
+          //box-sizing: border-box;
+          padding-top: 16px !important;
 
           @media (min-width: 360px) and (max-width: 999px) {
             width: 280px;
-            padding: 7.5px 9px 8px 9px !important;
+            padding: 8px 9px 8px 9px !important;
             margin-bottom: 0px;
           }
         }
@@ -1132,7 +1136,7 @@ section {
 
         @media (min-width: 1000px) and (max-width: 1850px) {
           margin-top: -0.8px;
-          margin-bottom: -1px;
+          margin-bottom: -2.5px;
         }
 
         @media (min-width: 360px) and (max-width: 999px) {
@@ -1243,14 +1247,13 @@ section {
 
           @media (min-width: 1000px) and (max-width: 1850px) {
             gap: 11px;
-            margin-bottom: 32.5px;
           }
 
           @media (min-width: 360px) and (max-width: 999px) {
             // display: inline;
             gap: 10px;
             align-items: start;
-            margin-bottom: 27.5px;
+            margin-bottom: 30.5px;
             line-height: 141%;
           }
           input {
@@ -1270,13 +1273,17 @@ section {
               $letter-spacing: -0.19px,
               $color: $gray_300
             );
-            margin-bottom: 0;
+            margin-bottom: -3px;
+
+            @media (min-width: 1000px) and (max-width: 1850px) {
+              margin-bottom: 0;
+            }
 
             @media (min-width: 360px) and (max-width: 999px) {
               flex-shrink: 2;
               font-size: $fz_16;
               letter-spacing: 0px;
-              line-height: 142%;
+              line-height: 144%;
             }
           }
           .checkbox-text a {
@@ -1416,8 +1423,8 @@ section {
           &-btn {
             @include fontText();
             width: 235px;
-            padding-top: 15px;
-            padding-bottom: 15px;
+            padding-top: 15.5px;
+            padding-bottom: 14px;
             border-radius: 10px;
             transition: background 0.1s ease-in-out 0.1s;
 
@@ -1569,7 +1576,7 @@ section {
         margin-bottom: 373px;
       }
       @media (min-width: 360px) and (max-width: 999px) {
-        margin-bottom: 34px;
+        margin-bottom: 35px;
 
         img {
           margin-top: -1px;
@@ -1956,7 +1963,7 @@ section {
         }
 
         &-title {
-          margin-bottom: 37px; //37
+          margin-bottom: 37px;
 
           @media (min-width: 1000px) and (max-width: 1850px) {
             margin-bottom: 37px;
@@ -1966,7 +1973,7 @@ section {
             max-width: 162px;
             letter-spacing: 1px; //4%
             line-height: 122%; //122
-            margin-bottom: 23px; //19.5
+            margin-bottom: 22px; //19.5
           }
         }
         &-text {
@@ -2213,7 +2220,6 @@ section {
         margin-bottom: 21px;
       }
     }
- 
 
     .one-block,
     .two-block,
