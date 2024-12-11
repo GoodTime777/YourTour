@@ -1102,7 +1102,6 @@ section {
   }
 }
 .application__box-form-inputs-comment textarea:focus {
-  box-shadow: 0px 0px 0px 1px #a6a6a6 inset;
   color: #1b1f2b;
 }
 .application__box-form-agreement {
