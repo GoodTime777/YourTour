@@ -1101,9 +1101,6 @@ section {
     height: 132px;
   }
 }
-.application__box-form-inputs-comment textarea:focus {
-  color: #1b1f2b;
-}
 .application__box-form-agreement {
   width: 100%;
 }
