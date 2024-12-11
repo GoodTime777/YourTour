@@ -56,3 +56,5 @@ formApplication.addEventListener("submit", (e) => {
 
 inputDateFrom.setAttribute("min", new Date().toISOString().split("T")[0]);
 inputDateTo.setAttribute("min", new Date().toISOString().split("T")[0]);
+
+
