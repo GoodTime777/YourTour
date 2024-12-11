@@ -1,12 +1,10 @@
-// const formContract=document.querySelector('.application__box-form-agreement-contract');
-// const contract=document.querySelector('.contract');
 const formApplication = document.forms.formApplication;
 const inputDateFrom = formApplication.elements.user_date_from;
 const inputDateTo = formApplication.elements.user_date_to;
 const inputName = formApplication.elements.user_name;
 const inputMail = formApplication.elements.user_email;
 const inputTel = formApplication.elements.user_tel;
-const age=formApplication.elements.age;
+const age = formApplication.elements.age;
 
 const maskOptions = {
   mask: "+{7} ( 0 0 0 ) 0 0 0 - 0 0 - 0 0",
@@ -49,23 +47,12 @@ formApplication.addEventListener("submit", (e) => {
     inputMail.focus();
   }
 
-  if(inputDateTo.value<inputDateFrom.value){   
+  if (inputDateTo.value < inputDateFrom.value) {
     e.preventDefault();
     inputDateTo.style.color = "red";
     inputDateTo.focus();
   }
-
-  // age.forEach(btn=>{
-  //   console.log(btn.value)
-  // })
 });
 
 inputDateFrom.setAttribute("min", new Date().toISOString().split("T")[0]);
 inputDateTo.setAttribute("min", new Date().toISOString().split("T")[0]);
-
-// formContract.addEventListener('mouseover', (e)=>{
-//   console.log(e.target)
-//   if(e.target){
-//     contract.style.cursor='pointer';
-//   }
-// })

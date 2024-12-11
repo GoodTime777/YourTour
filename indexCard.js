@@ -8,9 +8,9 @@ tabs.forEach((tab) => {
     tabs.forEach((item) => {
       item.classList.remove("active");
     });
-      
+
     tab.classList.add("active");
-      
+
     cards.forEach((card) => {
       const cardAttribute = card.getAttribute("data-card");
 

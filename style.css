@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("styleNull.css");
+@import url("https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css");
 h2 {
   font-size: 59px;
   letter-spacing: 0;
@@ -57,20 +59,21 @@ h3 {
     margin-left: -15px;
   }
 }
-.detailed a {
+.detailed button {
   position: relative;
   font-size: 23px;
   letter-spacing: 0;
   line-height: 122%;
   color: #ffffff;
   font-weight: 700;
+  background-color: transparent;
 }
 @media (min-width: 360px) and (max-width: 999px) {
-  .detailed a {
+  .detailed button {
     font-size: 16px;
   }
 }
-.detailed a::after {
+.detailed button::after {
   content: url("images/arrow white.svg");
   position: absolute;
   width: 22px;
@@ -79,7 +82,7 @@ h3 {
   padding-left: 16px;
 }
 @media (min-width: 360px) and (max-width: 999px) {
-  .detailed a::after {
+  .detailed button::after {
     top: 1.5px;
   }
 }
@@ -152,7 +155,7 @@ section {
   color: #ffffff;
   background: url("images/header-background.jpg") no-repeat 0% 51.2%/100% 99.65%;
   margin: 0px auto 133px auto;
-  padding-bottom: 119px;
+  padding-bottom: 120px;
 }
 @media (min-width: 1000px) and (max-width: 1850px) {
   .header {
@@ -164,7 +167,7 @@ section {
 @media (min-width: 360px) and (max-width: 999px) {
   .header {
     background: url("images/pad-header-background.jpg") no-repeat 50%/cover;
-    padding-bottom: 51px;
+    padding-bottom: 52px;
     margin-bottom: 76px;
   }
 }
@@ -293,6 +296,7 @@ section {
 }
 .header__navigation.navigation-scroll + .header__content {
   padding-top: 5px;
+  padding-bottom: 1px;
 }
 @media (min-width: 1000px) and (max-width: 1850px) {
   .header__navigation.navigation-scroll + .header__content {
@@ -303,6 +307,9 @@ section {
   .header__navigation.navigation-scroll + .header__content {
     padding-top: 2px;
   }
+}
+.header__navigation.navigation-scroll + .header__content button {
+  margin-top: -2px;
 }
 .header__content {
   max-width: 768px;
@@ -378,15 +385,10 @@ section {
     margin-left: -1px;
   }
 }
-.header__content-btn {
-  padding-top: 3px;
-  margin-bottom: 6px;
-}
 @media (min-width: 360px) and (max-width: 999px) {
   .header__content-btn {
     margin-top: 1px;
     margin-right: 1px;
-    padding-top: 5px;
   }
 }
 .header__content-btn-link {
@@ -397,18 +399,20 @@ section {
   font-weight: 400;
   border-radius: 10px;
   background-color: #ffffff;
-  padding: 7.5px 20px 6.5px 20px;
+  padding: 5px 20px 3.5px 20px;
   transition: 0.3s ease;
 }
 @media (min-width: 1000px) and (max-width: 1850px) {
   .header__content-btn-link {
-    padding: 7px 20px;
+    margin-top: -1.5px;
+    padding: 4.5px 20px 5px 20px;
   }
 }
 @media (min-width: 360px) and (max-width: 999px) {
   .header__content-btn-link {
+    margin-top: -1.5px;
     font-size: 16px;
-    padding: 6.5px 20.5px 7.5px 19.5px;
+    padding: 6.8px 20.5px 4.8px 19.5px;
     letter-spacing: -0.11px;
     line-height: 131%;
   }
@@ -692,12 +696,12 @@ section {
     margin-bottom: 174px;
   }
 }
-.card__container-content-items-item .detailed a::after {
+.card__container-content-items-item .detailed button::after {
   padding-left: 16.5px;
   top: -1px;
 }
 @media (min-width: 360px) and (max-width: 999px) {
-  .card__container-content-items-item .detailed a::after {
+  .card__container-content-items-item .detailed button::after {
     top: 1px;
   }
 }
@@ -757,7 +761,10 @@ section {
   }
 }
 .application__subtitle {
+  max-width: 405px;
   margin-bottom: 99px;
+  margin-left: auto;
+  margin-right: auto;
   line-height: 144%;
 }
 @media (min-width: 1000px) and (max-width: 1850px) {
@@ -865,7 +872,9 @@ section {
   }
 }
 .application__box-form input:focus:hover,
-.application__box-form input:focus {
+.application__box-form input:focus,
+.application__box-form textarea:focus:hover,
+.application__box-form textarea:focus {
   background-color: #f4f0e9;
   border-color: #a6a6a6;
 }
@@ -959,105 +968,120 @@ section {
     background: url("images/arrow-dropdown.svg") no-repeat 241px/26px 26px, linear-gradient(#f9f7f4, #f9f7f4);
   }
 }
+.application__box-form-inputs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 33px 30px;
+}
+@media (min-width: 1000px) and (max-width: 1850px) {
+  .application__box-form-inputs {
+    gap: 32.1px 20px;
+  }
+}
 @media (min-width: 360px) and (max-width: 999px) {
-  .application__box-form-email {
+  .application__box-form-inputs {
+    gap: 30px 0px;
+  }
+}
+@media (min-width: 360px) and (max-width: 999px) {
+  .application__box-form-inputs-email {
     margin-bottom: 1px;
   }
 }
 @media (min-width: 360px) and (max-width: 999px) {
-  .application__box-form-email input {
+  .application__box-form-inputs-email input {
     padding-top: 10px;
   }
 }
 @media (min-width: 360px) and (max-width: 999px) {
-  .application__box-form-tel {
+  .application__box-form-inputs-tel {
     margin-bottom: 1.3px;
   }
 }
-.application__box-form-date {
+.application__box-form-inputs-date {
   margin-bottom: 0px;
   box-sizing: border-box;
 }
 @media (min-width: 1000px) and (max-width: 1850px) {
-  .application__box-form-date {
+  .application__box-form-inputs-date {
     margin-bottom: 1.5px;
   }
 }
 @media (min-width: 360px) and (max-width: 999px) {
-  .application__box-form-date {
+  .application__box-form-inputs-date {
     margin-bottom: 1.2px;
   }
 }
 @media (min-width: 1000px) and (max-width: 1850px) {
-  .application__box-form-date label {
+  .application__box-form-inputs-date label {
     margin-bottom: 7.8px;
   }
 }
 @media (min-width: 1000px) and (max-width: 1850px) {
-  .application__box-form-date input {
+  .application__box-form-inputs-date input {
     padding-top: 18px;
   }
 }
 @media (min-width: 360px) and (max-width: 999px) {
-  .application__box-form-date input {
+  .application__box-form-inputs-date input {
     width: 280px;
     padding: 10px 9px 8px 9px;
     margin-bottom: 0px;
   }
 }
-.application__box-form-date input[type=date] {
+.application__box-form-inputs-date input[type=date] {
   padding-top: 16px !important;
 }
 @media (min-width: 360px) and (max-width: 999px) {
-  .application__box-form-date input[type=date] {
+  .application__box-form-inputs-date input[type=date] {
     width: 280px;
     padding: 8px 9px 8px 9px !important;
     margin-bottom: 0px;
   }
 }
-.application__box-form-date input[type=date]:focus {
+.application__box-form-inputs-date input[type=date]:focus {
   padding-top: 16px !important;
 }
 @media (min-width: 360px) and (max-width: 999px) {
-  .application__box-form-date input[type=date]:focus {
+  .application__box-form-inputs-date input[type=date]:focus {
     width: 280px;
     padding: 8px 9px 8px 9px !important;
     margin-bottom: 0px;
   }
 }
 @media (min-width: 360px) and (max-width: 999px) {
-  .application__box-form .date-from {
+  .application__box-form-inputs .date-from {
     margin-bottom: 2px;
   }
 }
-.application__box-form-comment {
+.application__box-form-inputs-comment {
   width: 100%;
 }
 @media (min-width: 1000px) and (max-width: 1850px) {
-  .application__box-form-comment {
+  .application__box-form-inputs-comment {
     margin-top: -0.8px;
     margin-bottom: -2px;
   }
 }
 @media (min-width: 360px) and (max-width: 999px) {
-  .application__box-form-comment {
+  .application__box-form-inputs-comment {
     margin-bottom: -1px;
   }
 }
-.application__box-form-comment label {
+.application__box-form-inputs-comment label {
   margin-bottom: 8px;
 }
 @media (min-width: 1000px) and (max-width: 1850px) {
-  .application__box-form-comment label {
+  .application__box-form-inputs-comment label {
     margin-bottom: 7.5px;
   }
 }
 @media (min-width: 360px) and (max-width: 999px) {
-  .application__box-form-comment label {
+  .application__box-form-inputs-comment label {
     margin-bottom: 7px;
   }
 }
-.application__box-form-comment textarea {
+.application__box-form-inputs-comment textarea {
   height: 152px;
   width: 100%;
   font-size: 20px;
@@ -1072,14 +1096,17 @@ section {
   cursor: pointer;
 }
 @media (min-width: 360px) and (max-width: 999px) {
-  .application__box-form-comment textarea {
+  .application__box-form-inputs-comment textarea {
     font-size: 16px;
     height: 132px;
   }
 }
-.application__box-form-comment textarea:focus {
+.application__box-form-inputs-comment textarea:focus {
   box-shadow: 0px 0px 0px 1px #a6a6a6 inset;
   color: #1b1f2b;
+}
+.application__box-form-agreement {
+  width: 100%;
 }
 .application__box-form-agreement input {
   padding: 0;
@@ -1132,10 +1159,9 @@ section {
 .application__box-form-agreement-contract {
   position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   gap: 19px;
-  margin-bottom: 33px;
 }
 @media (min-width: 1000px) and (max-width: 1850px) {
   .application__box-form-agreement-contract {
@@ -1146,7 +1172,6 @@ section {
   .application__box-form-agreement-contract {
     gap: 10px;
     align-items: start;
-    margin-bottom: 30.5px;
     line-height: 141%;
   }
 }
@@ -1299,16 +1324,16 @@ section {
   background: #ffffff;
   border-color: #ffffff;
 }
-.application__box-form-agreement-buttons {
+.application__box-form-buttons {
   display: flex;
   gap: 30px;
 }
 @media (min-width: 360px) and (max-width: 999px) {
-  .application__box-form-agreement-buttons {
+  .application__box-form-buttons {
     gap: 10px;
   }
 }
-.application__box-form-agreement-buttons-btn {
+.application__box-form-buttons-btn {
   font-size: 20px;
   letter-spacing: 0;
   line-height: 142%;
@@ -1320,40 +1345,40 @@ section {
   transition: background 0.1s ease-in-out 0.1s;
 }
 @media (min-width: 360px) and (max-width: 999px) {
-  .application__box-form-agreement-buttons-btn {
+  .application__box-form-buttons-btn {
     width: 134px;
     font-size: 16px;
     padding-top: 13px;
     padding-bottom: 11px;
   }
 }
-.application__box-form-agreement-buttons .submit {
+.application__box-form-buttons .submit {
   background-color: #286562;
 }
-.application__box-form-agreement-buttons .submit:hover {
+.application__box-form-buttons .submit:hover {
   background-color: #3b7e7b;
 }
 @media (min-width: 360px) and (max-width: 999px) {
-  .application__box-form-agreement-buttons .submit:hover {
+  .application__box-form-buttons .submit:hover {
     background-color: #286562;
   }
 }
-.application__box-form-agreement-buttons .submit:active {
+.application__box-form-buttons .submit:active {
   background-color: #627f7e;
 }
-.application__box-form-agreement-buttons .reset {
+.application__box-form-buttons .reset {
   background-color: #e0f0e5;
   color: #286562;
 }
-.application__box-form-agreement-buttons .reset:hover {
+.application__box-form-buttons .reset:hover {
   background-color: #f1f3f2;
 }
 @media (min-width: 360px) and (max-width: 999px) {
-  .application__box-form-agreement-buttons .reset:hover {
+  .application__box-form-buttons .reset:hover {
     background-color: #e0f0e5;
   }
 }
-.application__box-form-agreement-buttons .reset:active {
+.application__box-form-buttons .reset:active {
   background-color: #d9dfdb;
 }
 
@@ -1372,6 +1397,9 @@ section {
   }
 }
 .reviews__title {
+  max-width: 600px;
+  margin-right: auto;
+  margin-left: auto;
   margin-bottom: 29.5px;
 }
 @media (min-width: 360px) and (max-width: 999px) {
@@ -1379,6 +1407,11 @@ section {
     letter-spacing: 0.7px;
     margin-bottom: 20px;
   }
+}
+.reviews__subtitle {
+  max-width: 405px;
+  margin-right: auto;
+  margin-left: auto;
 }
 .reviews .block-transparent-for-scroll {
   display: none;
@@ -1457,6 +1490,26 @@ section {
     letter-spacing: 0.01px;
   }
 }
+.reviews .swiper-slide__content-one p,
+.reviews .swiper-slide-mobile__content-one p {
+  font-weight: 700;
+}
+.reviews .swiper-slide__content-one .text-one-pavel,
+.reviews .swiper-slide-mobile__content-one .text-one-pavel {
+  margin-bottom: 30px;
+}
+@media (min-width: 1000px) and (max-width: 1850px) {
+  .reviews .swiper-slide__content-one .text-one-pavel,
+  .reviews .swiper-slide-mobile__content-one .text-one-pavel {
+    margin-bottom: 28px;
+  }
+}
+@media (min-width: 360px) and (max-width: 999px) {
+  .reviews .swiper-slide__content-one .text-one-pavel,
+  .reviews .swiper-slide-mobile__content-one .text-one-pavel {
+    margin-bottom: 22px;
+  }
+}
 .reviews .swiper-slide .mari,
 .reviews .swiper-slide-mobile .mari {
   margin-bottom: 261px;
@@ -1472,6 +1525,8 @@ section {
   .reviews .swiper-slide-mobile .mari {
     margin-bottom: 35px;
   }
+}
+@media (min-width: 360px) and (max-width: 999px) and (min-width: 360px) and (max-width: 999px) {
   .reviews .swiper-slide .mari img,
   .reviews .swiper-slide-mobile .mari img {
     margin-top: -1px;
@@ -1490,7 +1545,7 @@ section {
 @media (min-width: 1000px) and (max-width: 1850px) {
   .reviews .swiper-slide .pavel img,
   .reviews .swiper-slide-mobile .pavel img {
-    margin-top: 3px;
+    margin-top: 5px;
   }
 }
 @media (min-width: 360px) and (max-width: 999px) {
@@ -1596,6 +1651,9 @@ section {
 .gallery__subtitle {
   line-height: 143%;
   margin-bottom: 99px;
+  max-width: 405px;
+  margin-right: auto;
+  margin-left: auto;
 }
 @media (min-width: 360px) and (max-width: 999px) {
   .gallery__subtitle {
@@ -1773,8 +1831,11 @@ section {
   }
 }
 .stories__subtitle {
+  max-width: 405px;
   line-height: 141%;
   margin-bottom: 99px;
+  margin-left: auto;
+  margin-right: auto;
 }
 @media (min-width: 360px) and (max-width: 999px) {
   .stories__subtitle {
@@ -1896,11 +1957,11 @@ section {
     bottom: 35px;
   }
 }
-.stories__container-block .detailed a::after {
+.stories__container-block .detailed button::after {
   top: 0px;
 }
 @media (min-width: 360px) and (max-width: 999px) {
-  .stories__container-block .detailed a::after {
+  .stories__container-block .detailed button::after {
     padding-left: 17px;
     top: 2px;
   }
@@ -2089,7 +2150,7 @@ section {
   .stories__container .one-block,
   .stories__container .two-block,
   .stories__container .three-block {
-    background-size: cover;
+    background-size: 100%;
   }
 }
 .stories__container .one-block:hover,
@@ -2184,6 +2245,8 @@ section {
 @media (min-width: 360px) and (max-width: 999px) {
   .communication__block-content-text {
     max-width: 292px;
+    margin-left: auto;
+    margin-right: auto;
     font-size: 16px;
     letter-spacing: 0;
     line-height: 142%;

@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("styleNull.css");
+@import url("https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css");
 
-//variables
 $blackForGradient: rgba(0, 0, 0, 0.5);
 $white: #ffffff;
 $black: #1b1f2b;
@@ -16,7 +17,6 @@ $green_400: #286562;
 $orange_100: #f8e6be;
 $orange_200: #efa501;
 
-//variables-fonts
 $mainFont: "Roboto", sans-serif;
 $fz_h1: 96px;
 $fz_h2: 59px;
@@ -34,7 +34,6 @@ $fw_regular: 400;
 
 $ls: 0;
 
-//decor
 $stories_gradient: linear-gradient(
   270deg,
   rgba(0, 0, 0, 0) 0.01%,
@@ -50,12 +49,12 @@ $select_gradient: linear-gradient($beige_100, $beige_100);
 $select_gradient_focus: linear-gradient($beige_200, $beige_200);
 $select_gradient_hover: linear-gradient($beige_200, $beige_200);
 
-//mixins
 @mixin font($letter-spacing: $ls, $font-weight: $fw_bold, $color: $white) {
   letter-spacing: $letter-spacing;
   font-weight: $font-weight;
   color: $color;
 }
+
 @mixin fontText(
   $font-size: $fz_20,
   $letter-spacing: $ls,
@@ -106,6 +105,7 @@ h3 {
   @include fontText($color: $gray_300);
   text-align: center;
   margin-bottom: 100px;
+
   @media (min-width: 360px) and (max-width: 999px) {
     font-size: $fz_16;
     margin-bottom: 50px;
@@ -125,17 +125,18 @@ h3 {
     margin-left: -15px;
   }
 
-  a {
+  button {
     position: relative;
     @include fontText($font-size: $fz_23, $line-height: 122%);
     font-weight: $fw_bold;
+    background-color: transparent;
 
     @media (min-width: 360px) and (max-width: 999px) {
       font-size: $fz_16;
     }
   }
 
-  a::after {
+  button::after {
     content: url("images/arrow white.svg");
     position: absolute;
     width: 22px;
@@ -183,7 +184,7 @@ h3 {
     transition: none;
   }
 }
-//////////////////////////
+
 body {
   height: 100%;
   font-family: $mainFont;
@@ -197,9 +198,11 @@ section {
   overflow: hidden;
   position: relative;
   margin: 0 auto;
+
   @media (min-width: 1000px) and (max-width: 1850px) {
     max-width: 918px;
   }
+
   @media (min-width: 360px) and (max-width: 999px) {
     max-width: 318px;
   }
@@ -211,7 +214,7 @@ section {
   background: url("images/header-background.jpg") no-repeat 0% 51.2% / 100%
     99.65%;
   margin: 0px auto 133px auto;
-  padding-bottom: 119px;
+  padding-bottom: 120px;
 
   @media (min-width: 1000px) and (max-width: 1850px) {
     background: url("images/pad-header-background.jpg") no-repeat 50% 0%/111.9%
@@ -222,7 +225,7 @@ section {
 
   @media (min-width: 360px) and (max-width: 999px) {
     background: url("images/pad-header-background.jpg") no-repeat 50% / cover;
-    padding-bottom: 51px;
+    padding-bottom: 52px;
     margin-bottom: 76px;
   }
 
@@ -287,7 +290,7 @@ section {
 
     &-phone {
       line-height: 138%;
-     
+
       @media (min-width: 360px) and (max-width: 999px) {
         margin-top: -1px;
       }
@@ -326,8 +329,10 @@ section {
     .logo-white {
       display: none;
     }
+
     .logo-black {
       display: block;
+
       @media (min-width: 360px) and (max-width: 999px) {
         margin-top: -7px;
       }
@@ -344,11 +349,18 @@ section {
 
   &__navigation.navigation-scroll + &__content {
     padding-top: 5px;
+    padding-bottom: 1px;
+
     @media (min-width: 1000px) and (max-width: 1850px) {
       padding-top: 0;
     }
+
     @media (min-width: 360px) and (max-width: 999px) {
       padding-top: 2px;
+    }
+
+    button {
+      margin-top: -2px;
     }
   }
 
@@ -423,13 +435,9 @@ section {
     }
 
     &-btn {
-      padding-top: 3px;
-      margin-bottom: 6px;
-
       @media (min-width: 360px) and (max-width: 999px) {
         margin-top: 1px;
         margin-right: 1px;
-        padding-top: 5px;
       }
 
       &-link {
@@ -441,16 +449,18 @@ section {
         font-weight: $fw_regular;
         border-radius: 10px;
         background-color: $white;
-        padding: 7.5px 20px 6.5px 20px;
+        padding: 5px 20px 3.5px 20px;
         transition: 0.3s ease;
 
         @media (min-width: 1000px) and (max-width: 1850px) {
-          padding: 7px 20px;
+          margin-top: -1.5px;
+          padding: 4.5px 20px 5px 20px;
         }
 
         @media (min-width: 360px) and (max-width: 999px) {
+          margin-top: -1.5px;
           font-size: $fz_16;
-          padding: 6.5px 20.5px 7.5px 19.5px;
+          padding: 6.8px 20.5px 4.8px 19.5px;
           letter-spacing: -0.11px;
           line-height: 131%;
         }
@@ -726,7 +736,7 @@ section {
             }
           }
 
-          .detailed a::after {
+          .detailed button::after {
             padding-left: 16.5px;
             top: -1px;
 
@@ -795,7 +805,10 @@ section {
   }
 
   &__subtitle {
+    max-width: 405px;
     margin-bottom: 99px;
+    margin-left: auto;
+    margin-right: auto;
     line-height: 144%;
 
     @media (min-width: 1000px) and (max-width: 1850px) {
@@ -889,7 +902,9 @@ section {
       }
 
       input:focus:hover,
-      input:focus {
+      input:focus,
+      textarea:focus:hover,
+      textarea:focus {
         background-color: $beige_200;
         border-color: $gray_300;
       }
@@ -943,6 +958,7 @@ section {
         color: $gray_300;
         padding-right: 0;
       }
+
       select:required:invalid:focus:hover,
       select:required:invalid:focus {
         color: $gray_300;
@@ -983,129 +999,144 @@ section {
         }
       }
 
-      &-email {
-        @media (min-width: 360px) and (max-width: 999px) {
-          margin-bottom: 1px;
-        }
-
-        input {
-          @media (min-width: 360px) and (max-width: 999px) {
-            padding-top: 10px;
-          }
-        }
-      }
-
-      &-tel {
-        @media (min-width: 360px) and (max-width: 999px) {
-          margin-bottom: 1.3px;
-        }
-      }
-
-      &-date {
-        margin-bottom: 0px;
-        box-sizing: border-box;
+      &-inputs {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 33px 30px;
 
         @media (min-width: 1000px) and (max-width: 1850px) {
-          margin-bottom: 1.5px;
+          gap: 32.1px 20px;
         }
 
         @media (min-width: 360px) and (max-width: 999px) {
-          margin-bottom: 1.2px;
+          gap: 30px 0px;
         }
 
-        label {
-          @media (min-width: 1000px) and (max-width: 1850px) {
-            margin-bottom: 7.8px;
-          }
-        }
-
-        input {
-          @media (min-width: 1000px) and (max-width: 1850px) {
-            padding-top: 18px;
-          }
-
+        &-email {
           @media (min-width: 360px) and (max-width: 999px) {
-            width: 280px;
-            padding: 10px 9px 8px 9px;
-            margin-bottom: 0px;
+            margin-bottom: 1px;
+          }
+
+          input {
+            @media (min-width: 360px) and (max-width: 999px) {
+              padding-top: 10px;
+            }
           }
         }
 
-        input[type="date"] {
-          padding-top: 16px !important;
-
+        &-tel {
           @media (min-width: 360px) and (max-width: 999px) {
-            width: 280px;
-            padding: 8px 9px 8px 9px !important;
-            margin-bottom: 0px;
+            margin-bottom: 1.3px;
           }
         }
 
-        input[type="date"]:focus {
-          padding-top: 16px !important;
-
-          @media (min-width: 360px) and (max-width: 999px) {
-            width: 280px;
-            padding: 8px 9px 8px 9px !important;
-            margin-bottom: 0px;
-          }
-        }
-      }
-
-      .date-from {
-        @media (min-width: 360px) and (max-width: 999px) {
-          margin-bottom: 2px;
-        }
-      }
-
-      &-comment {
-        width: 100%;
-
-        @media (min-width: 1000px) and (max-width: 1850px) {
-          margin-top: -0.8px;
-          margin-bottom: -2px;
-        }
-
-        @media (min-width: 360px) and (max-width: 999px) {
-          margin-bottom: -1px;
-        }
-
-        label {
-          margin-bottom: 8px;
+        &-date {
+          margin-bottom: 0px;
+          box-sizing: border-box;
 
           @media (min-width: 1000px) and (max-width: 1850px) {
-            margin-bottom: 7.5px;
+            margin-bottom: 1.5px;
           }
 
           @media (min-width: 360px) and (max-width: 999px) {
-            margin-bottom: 7px;
+            margin-bottom: 1.2px;
+          }
+
+          label {
+            @media (min-width: 1000px) and (max-width: 1850px) {
+              margin-bottom: 7.8px;
+            }
+          }
+
+          input {
+            @media (min-width: 1000px) and (max-width: 1850px) {
+              padding-top: 18px;
+            }
+
+            @media (min-width: 360px) and (max-width: 999px) {
+              width: 280px;
+              padding: 10px 9px 8px 9px;
+              margin-bottom: 0px;
+            }
+          }
+
+          input[type="date"] {
+            padding-top: 16px !important;
+
+            @media (min-width: 360px) and (max-width: 999px) {
+              width: 280px;
+              padding: 8px 9px 8px 9px !important;
+              margin-bottom: 0px;
+            }
+          }
+
+          input[type="date"]:focus {
+            padding-top: 16px !important;
+
+            @media (min-width: 360px) and (max-width: 999px) {
+              width: 280px;
+              padding: 8px 9px 8px 9px !important;
+              margin-bottom: 0px;
+            }
           }
         }
 
-        textarea {
-          height: 152px;
+        .date-from {
+          @media (min-width: 360px) and (max-width: 999px) {
+            margin-bottom: 2px;
+          }
+        }
+
+        &-comment {
           width: 100%;
-          @include fontText($color: $black);
-          background-color: $beige_100;
-          border: 1px solid $beige_200;
-          border-radius: 10px;
-          padding: 10px;
-          resize: none;
-          cursor: pointer;
+
+          @media (min-width: 1000px) and (max-width: 1850px) {
+            margin-top: -0.8px;
+            margin-bottom: -2px;
+          }
 
           @media (min-width: 360px) and (max-width: 999px) {
-            font-size: $fz_16;
-            height: 132px;
+            margin-bottom: -1px;
           }
-        }
 
-        textarea:focus {
-          box-shadow: 0px 0px 0px 1px $gray_300 inset;
-          color: $black;
+          label {
+            margin-bottom: 8px;
+
+            @media (min-width: 1000px) and (max-width: 1850px) {
+              margin-bottom: 7.5px;
+            }
+
+            @media (min-width: 360px) and (max-width: 999px) {
+              margin-bottom: 7px;
+            }
+          }
+
+          textarea {
+            height: 152px;
+            width: 100%;
+            @include fontText($color: $black);
+            background-color: $beige_100;
+            border: 1px solid $beige_200;
+            border-radius: 10px;
+            padding: 10px;
+            resize: none;
+            cursor: pointer;
+
+            @media (min-width: 360px) and (max-width: 999px) {
+              font-size: $fz_16;
+              height: 132px;
+            }
+          }
+
+          textarea:focus {
+            box-shadow: 0px 0px 0px 1px $gray_300 inset;
+            color: $black;
+          }
         }
       }
 
       &-agreement {
+        width: 100%;
         input {
           padding: 0;
         }
@@ -1133,6 +1164,7 @@ section {
               margin-bottom: 15px;
             }
           }
+
           &-answer {
             display: flex;
             gap: 31px;
@@ -1155,8 +1187,7 @@ section {
 
         &-contract {
           position: relative;
-          @include flex($gap: 19px);
-          margin-bottom: 33px;
+          @include flex($gap: 19px, $justify-content: start);
 
           @media (min-width: 1000px) and (max-width: 1850px) {
             gap: 11px;
@@ -1165,9 +1196,9 @@ section {
           @media (min-width: 360px) and (max-width: 999px) {
             gap: 10px;
             align-items: start;
-            margin-bottom: 30.5px;
             line-height: 141%;
           }
+
           input {
             position: absolute;
           }
@@ -1198,6 +1229,7 @@ section {
               line-height: 144%;
             }
           }
+
           .checkbox-text a {
             color: $black;
             font-size: 17px;
@@ -1327,63 +1359,62 @@ section {
           background: $white;
           border-color: $white;
         }
+      }
+      &-buttons {
+        display: flex;
+        gap: 30px;
 
-        &-buttons {
-          display: flex;
-          gap: 30px;
+        @media (min-width: 360px) and (max-width: 999px) {
+          gap: 10px;
+        }
+
+        &-btn {
+          @include fontText();
+          width: 235px;
+          padding-top: 15.5px;
+          padding-bottom: 14px;
+          border-radius: 10px;
+          transition: background 0.1s ease-in-out 0.1s;
 
           @media (min-width: 360px) and (max-width: 999px) {
-            gap: 10px;
+            width: 134px;
+            font-size: $fz_16;
+            padding-top: 13px;
+            padding-bottom: 11px;
           }
+        }
 
-          &-btn {
-            @include fontText();
-            width: 235px;
-            padding-top: 15.5px;
-            padding-bottom: 14px;
-            border-radius: 10px;
-            transition: background 0.1s ease-in-out 0.1s;
+        .submit {
+          background-color: $green_400;
+        }
 
-            @media (min-width: 360px) and (max-width: 999px) {
-              width: 134px;
-              font-size: $fz_16;
-              padding-top: 13px;
-              padding-bottom: 11px;
-            }
-          }
+        .submit:hover {
+          background-color: $green_300;
 
-          .submit {
+          @media (min-width: 360px) and (max-width: 999px) {
             background-color: $green_400;
           }
+        }
 
-          .submit:hover {
-            background-color: $green_300;
+        .submit:active {
+          background-color: $green_200;
+        }
 
-            @media (min-width: 360px) and (max-width: 999px) {
-              background-color: $green_400;
-            }
-          }
+        .reset {
+          background-color: $green_100;
+          color: $green_400;
+        }
 
-          .submit:active {
-            background-color: $green_200;
-          }
+        .reset:hover {
+          background-color: $gray_100;
 
-          .reset {
+          @media (min-width: 360px) and (max-width: 999px) {
             background-color: $green_100;
-            color: $green_400;
           }
+        }
 
-          .reset:hover {
-            background-color: $gray_100;
-
-            @media (min-width: 360px) and (max-width: 999px) {
-              background-color: $green_100;
-            }
-          }
-
-          .reset:active {
-            background-color: $gray_200;
-          }
+        .reset:active {
+          background-color: $gray_200;
         }
       }
     }
@@ -1405,12 +1436,21 @@ section {
   }
 
   &__title {
+    max-width: 600px;
+    margin-right: auto;
+    margin-left: auto;
     margin-bottom: 29.5px;
 
     @media (min-width: 360px) and (max-width: 999px) {
       letter-spacing: 0.7px;
       margin-bottom: 20px;
     }
+  }
+
+  &__subtitle {
+    max-width: 405px;
+    margin-right: auto;
+    margin-left: auto;
   }
 
   .block-transparent-for-scroll {
@@ -1482,6 +1522,22 @@ section {
         line-height: 144%;
         letter-spacing: 0.01px;
       }
+
+      p {
+        font-weight: $fw_bold;
+      }
+
+      .text-one-pavel {
+        margin-bottom: 30px;
+
+        @media (min-width: 1000px) and (max-width: 1850px) {
+          margin-bottom: 28px;
+        }
+
+        @media (min-width: 360px) and (max-width: 999px) {
+          margin-bottom: 22px;
+        }
+      }
     }
 
     .mari {
@@ -1495,7 +1551,9 @@ section {
         margin-bottom: 35px;
 
         img {
-          margin-top: -1px;
+          @media (min-width: 360px) and (max-width: 999px) {
+            margin-top: -1px;
+          }
         }
       }
     }
@@ -1509,7 +1567,7 @@ section {
 
       img {
         @media (min-width: 1000px) and (max-width: 1850px) {
-          margin-top: 3px;
+          margin-top: 5px;
         }
 
         @media (min-width: 360px) and (max-width: 999px) {
@@ -1613,6 +1671,9 @@ section {
   &__subtitle {
     line-height: 143%;
     margin-bottom: 99px;
+    max-width: 405px;
+    margin-right: auto;
+    margin-left: auto;
 
     @media (min-width: 360px) and (max-width: 999px) {
       margin-bottom: 49px;
@@ -1711,6 +1772,7 @@ section {
             @media (min-width: 1000px) and (max-width: 1850px) {
               object-fit: fill !important;
             }
+
             @media (min-width: 360px) and (max-width: 999px) {
               object-fit: fill !important;
             }
@@ -1728,11 +1790,13 @@ section {
             width: 99.33px;
           }
         }
+
         &-second-foto-one {
           &-img {
             width: 349.16px;
           }
         }
+
         &-second-foto-two,
         &-second-foto-three,
         &-second-foto-four {
@@ -1816,8 +1880,11 @@ section {
   }
 
   &__subtitle {
+    max-width: 405px;
     line-height: 141%;
     margin-bottom: 99px;
+    margin-left: auto;
+    margin-right: auto;
 
     @media (min-width: 360px) and (max-width: 999px) {
       line-height: 142%;
@@ -1927,7 +1994,7 @@ section {
         }
       }
 
-      .detailed a::after {
+      .detailed button::after {
         top: 0px;
 
         @media (min-width: 360px) and (max-width: 999px) {
@@ -1983,7 +2050,6 @@ section {
     .one-block {
       background: $stories_gradient,
         url("images/story\ photo-1.jpg") no-repeat center;
-
       margin-bottom: 50px;
 
       @media (min-width: 1000px) and (max-width: 1850px) {
@@ -2126,7 +2192,7 @@ section {
       transition: background-size 0.5s ease;
 
       @media (min-width: 360px) and (max-width: 999px) {
-        background-size: cover;
+        background-size: 100%;
       }
     }
 
@@ -2206,6 +2272,8 @@ section {
 
         @media (min-width: 360px) and (max-width: 999px) {
           max-width: 292px;
+          margin-left: auto;
+          margin-right: auto;
           @include fontText($font-size: $fz_16, $color: $gray_300);
         }
       }
@@ -2299,6 +2367,7 @@ section {
               margin-top: -2px;
             }
           }
+
           .inst {
             margin-left: -1.3px;
           }
