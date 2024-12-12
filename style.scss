@@ -261,9 +261,9 @@ section {
       &-icon {
         display: block;
 
-        @media (min-width: 1000px) and (max-width: 1850px) {
-          margin-top: 1px;
-        }
+        // @media (min-width: 1000px) and (max-width: 1850px) {
+        //   margin-top: 1px;
+        // }
 
         .logo-black {
           display: none;

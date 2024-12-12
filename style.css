@@ -208,11 +208,6 @@ section {
 .header__navigation-logo-icon {
   display: block;
 }
-@media (min-width: 1000px) and (max-width: 1850px) {
-  .header__navigation-logo-icon {
-    margin-top: 1px;
-  }
-}
 .header__navigation-logo-icon .logo-black {
   display: none;
 }
