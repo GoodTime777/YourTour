@@ -265,9 +265,6 @@ section {
     line-height: 142%;
   }
 }
-.header__navigation .underline::before {
-  bottom: -3px;
-}
 .header__navigation.navigation-scroll {
   position: fixed;
   width: 100%;
@@ -317,6 +314,9 @@ section {
 }
 .header__navigation.navigation-scroll + .header__content button {
   margin-top: -2px;
+}
+.navigation-scroll .header__navigation-logo {
+  margin-top: -1px;
 }
 .header__content {
   max-width: 768px;
