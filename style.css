@@ -265,6 +265,9 @@ section {
     line-height: 142%;
   }
 }
+.header__navigation .underline::before {
+  bottom: -3px;
+}
 .header__navigation.navigation-scroll {
   position: fixed;
   width: 100%;

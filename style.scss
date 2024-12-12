@@ -314,9 +314,9 @@ section {
       }
     }
 
-    // .underline::before {
-    //   bottom: -3px;
-    // }
+    .underline::before {
+      bottom: -3px;
+    }
   }
 
   &__navigation.navigation-scroll {
