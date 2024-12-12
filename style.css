@@ -321,9 +321,6 @@ section {
 .header__navigation.navigation-scroll + .header__content button {
   margin-top: -2px;
 }
-.navigation-scroll .header__navigation-logo {
-  margin-top: -1px;
-}
 .header__content {
   max-width: 768px;
   text-align: center;
