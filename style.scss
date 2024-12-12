@@ -317,6 +317,9 @@ section {
     .underline::before {
       bottom: -3px;
     }
+    .underline:hover::before {
+      bottom: -3px;
+    }
   }
 
   &__navigation.navigation-scroll {
