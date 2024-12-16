@@ -215,20 +215,19 @@ section {
     max-width: 318px;
   }
 }
-///////////////////
 
 .header {
   @include font();
   background: url("images/header-background.jpg") no-repeat 0% 51.2% / 100%
     99.65%;
-  margin: 0px auto 133px auto;
+  margin: 0px auto 134px auto;
   padding-bottom: 120px;
 
   @media (min-width: 1000px) and (max-width: 1850px) {
     background: url("images/pad-header-background.jpg") no-repeat 50% 0%/111.9%
       100%;
-    padding-bottom: 117.8px;
-    margin-bottom: 135px;
+    padding-bottom: 119px;
+    margin-bottom: 134px;
   }
 
   @media (min-width: 360px) and (max-width: 999px) {
@@ -260,10 +259,6 @@ section {
 
       &-icon {
         display: block;
-
-        // @media (min-width: 1000px) and (max-width: 1850px) {
-        //   margin-top: 1px;
-        // }
 
         .logo-black {
           display: none;
@@ -317,6 +312,7 @@ section {
     .underline::before {
       bottom: -3px;
     }
+
     .underline:hover::before {
       bottom: -3px;
     }
@@ -342,7 +338,6 @@ section {
 
     .logo-black {
       display: block;
-      //margin-top: -1px;
 
       @media (min-width: 360px) and (max-width: 999px) {
         margin-top: -7px;
@@ -375,8 +370,6 @@ section {
     }
   }
 
- 
-
   &__content {
     max-width: 768px;
     text-align: center;
@@ -386,9 +379,9 @@ section {
     margin: 114px auto 0 auto;
 
     @media (min-width: 1000px) and (max-width: 1850px) {
-      max-width: 914px;
+      max-width: 614px;
       gap: 51px;
-      margin: 117px auto 0 auto;
+      margin: 118px auto 0 auto;
     }
 
     @media (min-width: 360px) and (max-width: 999px) {
@@ -410,8 +403,9 @@ section {
       margin-right: auto;
 
       @media (min-width: 1000px) and (max-width: 1850px) {
-        line-height: 109%;
-        margin: 0 auto;
+        line-height: 109.5%;
+        letter-spacing: 2px;
+        margin: 1px auto -1px auto;
       }
 
       @media (min-width: 360px) and (max-width: 999px) {
@@ -431,7 +425,7 @@ section {
 
       @media (min-width: 1000px) and (max-width: 1850px) {
         max-width: 405px;
-        padding-left: 1.85px;
+        padding-left: 0.5px;
         letter-spacing: 0.015px;
       }
 
@@ -500,9 +494,9 @@ section {
     }
   }
 }
-//////*************
+
 .card {
-  margin: 0 auto 135.425px auto;
+  margin: 0 auto 136px auto;
 
   @media (min-width: 360px) and (max-width: 999px) {
     margin: 0 auto 75.8px auto;
@@ -510,6 +504,10 @@ section {
 
   &__title {
     margin-bottom: 35px;
+
+    @media (min-width: 1000px) and (max-width: 1850px) {
+      margin-bottom: 34px;
+    }
 
     @media (min-width: 360px) and (max-width: 999px) {
       margin-bottom: 30px;
@@ -521,7 +519,7 @@ section {
   &__tabs {
     @include fontText($font-size: $fz_23, $color: $black, $line-height: 122%);
     font-weight: $fw_bold;
-    margin-bottom: 106px;
+    margin-bottom: 105px;
 
     @media (min-width: 1000px) and (max-width: 1850px) {
       margin-left: -1.55px;
@@ -726,7 +724,7 @@ section {
           }
 
           &-title {
-            margin-bottom: 16px;
+            margin-bottom: 17px;
 
             @media (min-width: 360px) and (max-width: 999px) {
               margin-bottom: 14px;
@@ -789,11 +787,14 @@ section {
     }
   }
 }
-//////*************
 
 .application {
   text-align: center;
-  margin-bottom: 135px;
+  margin-bottom: 135.5px;
+
+  @media (min-width: 1000px) and (max-width: 1850px) {
+    margin-bottom: 135px;
+  }
 
   @media (min-width: 360px) and (max-width: 999px) {
     margin-bottom: 76px;
@@ -802,10 +803,6 @@ section {
   &__title {
     margin-bottom: 30px;
     margin-top: -0.8px;
-
-    @media (min-width: 1000px) and (max-width: 1850px) {
-      margin-bottom: 29.5px;
-    }
 
     @media (min-width: 360px) and (max-width: 999px) {
       letter-spacing: 0.7px;
@@ -818,13 +815,14 @@ section {
 
   &__subtitle {
     max-width: 405px;
-    margin-bottom: 99px;
+    margin-bottom: 98px;
     margin-left: auto;
     margin-right: auto;
     line-height: 144%;
 
     @media (min-width: 1000px) and (max-width: 1850px) {
-      margin-bottom: 100px;
+      margin-bottom: 101px;
+      line-height: 140%;
     }
 
     @media (min-width: 360px) and (max-width: 999px) {
@@ -850,7 +848,7 @@ section {
       display: flex;
       flex-wrap: wrap;
       gap: 33px 30px;
-      padding: 70px;
+      padding: 70px 70px 70px 70px;
       background-color: $white;
       border-radius: 50px;
       line-height: 142%;
@@ -887,7 +885,7 @@ section {
         }
 
         @media (min-width: 360px) and (max-width: 999px) {
-          margin-bottom: 7px;
+          margin-bottom: 6px;
         }
       }
 
@@ -897,7 +895,7 @@ section {
         background-color: $beige_100;
         border: 1px solid $beige_200;
         border-radius: 10px;
-        padding: 18px 20px 19px 18.9px;
+        padding: 19px 20px 19px 18.9px;
         box-sizing: border-box;
 
         @media (min-width: 1000px) and (max-width: 1850px) {
@@ -1023,9 +1021,28 @@ section {
           gap: 30px 0px;
         }
 
+        &-select {
+          label {
+            @media (min-width: 360px) and (max-width: 999px) {
+              margin-bottom: 7px;
+            }
+          }
+        }
+
         &-email {
+          margin-top: 1px;
+
+          @media (min-width: 1000px) and (max-width: 1850px) {
+            margin-top: 0;
+          }
+
           @media (min-width: 360px) and (max-width: 999px) {
             margin-bottom: 1px;
+            margin-top: 0;
+          }
+
+          label {
+            margin-bottom: 7px;
           }
 
           input {
@@ -1036,8 +1053,18 @@ section {
         }
 
         &-tel {
+          margin-top: 1px;
+
+          @media (min-width: 1000px) and (max-width: 1850px) {
+            margin-top: 0;
+          }
+
           @media (min-width: 360px) and (max-width: 999px) {
             margin-bottom: 1.3px;
+          }
+
+          label {
+            margin-bottom: 7px;
           }
         }
 
@@ -1050,10 +1077,12 @@ section {
           }
 
           @media (min-width: 360px) and (max-width: 999px) {
-            margin-bottom: 1.2px;
+            margin-bottom: 1px;
           }
 
           label {
+            margin-bottom: 6px;
+
             @media (min-width: 1000px) and (max-width: 1850px) {
               margin-bottom: 7.8px;
             }
@@ -1098,8 +1127,17 @@ section {
           }
         }
 
+        .date-to {
+          label {
+            @media (min-width: 360px) and (max-width: 999px) {
+              margin-bottom: 7px;
+            }
+          }
+        }
+
         &-comment {
           width: 100%;
+          margin-bottom: 1px;
 
           @media (min-width: 1000px) and (max-width: 1850px) {
             margin-top: -0.8px;
@@ -1107,7 +1145,7 @@ section {
           }
 
           @media (min-width: 360px) and (max-width: 999px) {
-            margin-bottom: -1px;
+            margin-bottom: 0px;
           }
 
           label {
@@ -1142,6 +1180,7 @@ section {
 
       &-agreement {
         width: 100%;
+
         input {
           padding: 0;
         }
@@ -1162,7 +1201,11 @@ section {
 
           &-question {
             @include fontText($line-height: 71%, $color: $black);
-            margin-bottom: 15.5px;
+            margin-bottom: 14.5px;
+
+            @media (min-width: 1000px) and (max-width: 1850px) {
+              margin-bottom: 16px;
+            }
 
             @media (min-width: 360px) and (max-width: 999px) {
               font-size: $fz_16;
@@ -1196,12 +1239,14 @@ section {
 
           @media (min-width: 1000px) and (max-width: 1850px) {
             gap: 11px;
+            margin-bottom: 1px;
           }
 
           @media (min-width: 360px) and (max-width: 999px) {
             gap: 10px;
             align-items: start;
             line-height: 141%;
+            margin-bottom: 1px;
           }
 
           input {
@@ -1427,15 +1472,9 @@ section {
   }
 }
 
-//////**************
-
 .reviews {
-  margin-bottom: 96.5px;
+  margin-bottom: 96px;
   position: relative;
-
-  @media (min-width: 1000px) and (max-width: 1850px) {
-    margin-bottom: 96px;
-  }
 
   @media (min-width: 360px) and (max-width: 999px) {
     margin-bottom: 56px;
@@ -1500,6 +1539,7 @@ section {
     height: 673px;
     font-size: $fz_23;
     line-height: 122%;
+    letter-spacing: 0px;
     border-radius: 50px;
     background-color: $beige_200;
     padding: 39px 40px 40px 40px;
@@ -1534,7 +1574,7 @@ section {
       }
 
       .text-one-pavel {
-        margin-bottom: 30px;
+        margin-bottom: 28px;
 
         @media (min-width: 1000px) and (max-width: 1850px) {
           margin-bottom: 28px;
@@ -1547,7 +1587,7 @@ section {
     }
 
     .mari {
-      margin-bottom: 261px;
+      margin-bottom: 260px;
 
       @media (min-width: 1000px) and (max-width: 1850px) {
         margin-bottom: 373px;
@@ -1587,7 +1627,7 @@ section {
 
       &-text {
         &-title {
-          margin-bottom: 8px;
+          margin-bottom: 8.5px;
 
           @media (min-width: 360px) and (max-width: 999px) {
             letter-spacing: 1px;
@@ -1611,7 +1651,7 @@ section {
       }
 
       &-foto {
-        padding-top: 4.5px;
+        padding-top: 5px;
 
         img {
           width: 75px;
@@ -1645,8 +1685,6 @@ section {
     background-color: $black;
   }
 }
-
-//////***************
 
 .gallery {
   max-width: 1920px;
@@ -1863,13 +1901,12 @@ section {
   }
 }
 
-//////****************
 .stories {
   text-align: center;
   margin-bottom: 134px;
 
   @media (min-width: 1000px) and (max-width: 1850px) {
-    margin-bottom: 135px;
+    margin-bottom: 137px;
   }
 
   @media (min-width: 360px) and (max-width: 999px) {
@@ -1951,7 +1988,7 @@ section {
         }
 
         &-list {
-          margin-top: 26px;
+          margin-top: 27px;
 
           @media (min-width: 360px) and (max-width: 999px) {
             margin-top: 23px;
@@ -2087,10 +2124,16 @@ section {
       }
     }
 
+    .one-block &-block-content-text {
+      @media (min-width: 1000px) and (max-width: 1850px) {
+        line-height: 140%;
+      }
+    }
+
     .two-block {
       background: $stories_gradient,
         url("images/story\ photo-2.jpg") no-repeat center;
-      margin-bottom: 50px;
+      margin-bottom: 49.5px;
 
       @media (min-width: 1000px) and (max-width: 1850px) {
         background: $stories_gradient,
@@ -2114,7 +2157,7 @@ section {
     }
 
     .two-block &-block-network {
-      bottom: 58px;
+      bottom: 60px;
 
       @media (min-width: 1000px) and (max-width: 1850px) {
         bottom: 59px;
@@ -2181,12 +2224,21 @@ section {
     .three-block &-block-content-title {
       margin-bottom: 38px;
 
-      @media (min-width: 1000px) and (max-width: 1850px) {
-        margin-bottom: 37px;
-      }
-
       @media (min-width: 360px) and (max-width: 999px) {
         margin-bottom: 21.5px;
+      }
+    }
+    .three-block &-block-content-text {
+      @media (min-width: 1000px) and (max-width: 1850px) {
+        line-height: 140%;
+      }
+    }
+
+    .three-block &-block-network {
+      bottom: 61px;
+
+      @media (min-width: 1000px) and (max-width: 1850px) {
+        bottom: 58px;
       }
     }
 
@@ -2213,10 +2265,14 @@ section {
     }
   }
 }
-//////*****************
+
 .communication {
   @include flex();
   margin-bottom: 135px;
+
+  @media (min-width: 1000px) and (max-width: 1850px) {
+    margin-bottom: 134px;
+  }
 
   @media (min-width: 360px) and (max-width: 999px) {
     margin-bottom: 75px;
@@ -2267,8 +2323,9 @@ section {
         }
 
         @media (min-width: 360px) and (max-width: 999px) {
-          letter-spacing: 0.9px;
-          margin-bottom: 21px;
+          letter-spacing: 1px;
+          margin-bottom: 20.5px;
+          line-height: 121%;
         }
       }
 
@@ -2304,7 +2361,7 @@ section {
     }
   }
 }
-//////*****************
+
 .footer {
   @include flex();
   background-color: $beige_200;
