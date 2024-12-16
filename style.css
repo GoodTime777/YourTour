@@ -2034,6 +2034,9 @@ section {
 .stories__container-block-network .underline:active::before {
   background-color: #efa501 !important;
 }
+.stories__container-block-network .underline:hover::before {
+  bottom: -3px;
+}
 .stories__container-block:hover .detailed {
   background-color: #286562;
 }

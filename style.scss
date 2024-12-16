@@ -2068,6 +2068,9 @@ section {
         .underline:active::before {
           background-color: $orange_200 !important;
         }
+        .underline:hover::before{
+          bottom: -3px;
+        }
       }
     }
 
