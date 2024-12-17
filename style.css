@@ -59,7 +59,7 @@ textarea {
   margin-left: -20px;
   margin-bottom: -9px;
   border-radius: 50px;
-  transition: background 0.2s ease-in-out 0.2s;
+  transition: background 0.1s ease-in-out 0.1s;
 }
 @media (min-width: 360px) and (max-width: 999px) {
   .detailed {

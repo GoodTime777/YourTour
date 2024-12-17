@@ -126,7 +126,7 @@ textarea {
   margin-left: -20px;
   margin-bottom: -9px;
   border-radius: 50px;
-  transition: background 0.2s ease-in-out 0.2s;
+  transition: background 0.1s ease-in-out 0.1s;
 
   @media (min-width: 360px) and (max-width: 999px) {
     padding: 7px 50px 7px 15px;
@@ -2068,7 +2068,7 @@ section {
         .underline:active::before {
           background-color: $orange_200 !important;
         }
-        .underline:hover::before{
+        .underline:hover::before {
           bottom: -3px;
         }
       }
