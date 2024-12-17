@@ -978,6 +978,7 @@ section {
   }
 }
 .application__box-form-inputs {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   gap: 33px 30px;

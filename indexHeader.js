@@ -3,7 +3,6 @@ const header = document.querySelector(".header");
 
 window.addEventListener("scroll", () => {
   const scroll = window.scrollY;
-  console.log(window.scrollY);
 
   if (scroll >= 450) {
     nav.classList.add("navigation-scroll");

@@ -503,17 +503,21 @@
             <div class="application__box-form-inputs-name">
               <label for="name">Имя</label>
               <input
-                class="input-application"
+                name="user_name"
                 required
+                class="input-application"
                 type="text"
                 id="name"
                 placeholder="Введите Ваше имя"
-                name="user_name"
                 autocomplete="off" />
             </div>
             <div class="application__box-form-inputs-select">
               <label for="tour">Направление</label>
-              <select required id="tour" class="input-application">
+              <select
+                name="select-tour"
+                required
+                id="tour"
+                class="input-application">
                 <option value="" selected disabled hidden>
                   Куда хотите ехать
                 </option>
@@ -525,47 +529,47 @@
             <div class="application__box-form-inputs-email">
               <label for="selectorMail">Email</label>
               <input
+                name="user_email"
                 required
                 class="input-application"
                 type="text"
                 id="selectorMail"
-                placeholder="example@mail.com"
-                name="user_email" />
+                placeholder="example@mail.com" />
             </div>
             <div class="application__box-form-inputs-tel">
               <label for="selectorTel">Телефон</label>
               <input
+                name="user_tel"
                 required
                 class="input-application"
                 type="text"
                 id="selectorTel"
                 placeholder="+ 7 ( _ _ _ ) _ _ _ - _ _ - _ _"
-                name="user_tel"
                 autocomplete="off" />
             </div>
             <div class="application__box-form-inputs-date date-from">
               <label for="date_from">Дата от</label>
               <input
+                name="user_date_from"
+                required
                 class="input-application"
                 id="date_from"
                 placeholder="ДД.ММ.ГГГГ"
                 onfocus="(this.type='date')"
                 onblur="(this.type='date')"
-                name="user_date_from"
-                max="2028-12-31"
-                required />
+                max="2028-12-31" />
             </div>
             <div class="application__box-form-inputs-date date-to">
               <label for="date_to">Дата до</label>
               <input
+                name="user_date_to"
+                required
                 class="input-application"
                 id="date_to"
                 placeholder="ДД.ММ.ГГГГ"
                 onfocus="(this.type='date')"
                 onblur="(this.type='date')"
-                name="user_date_to"
-                max="2028-12-31"
-                required />
+                max="2028-12-31" />
             </div>
             <div class="application__box-form-inputs-comment">
               <label for="comment">Комментарий </label>
@@ -584,19 +588,19 @@
                 <div
                   class="application__box-form-agreement-radiobox-answer-yes">
                   <input
+                    name="age"
                     required
                     id="radio-yes"
                     type="radio"
-                    name="age"
                     class="custom custom-radio" />
                   <label for="radio-yes" class="yes">Да</label>
                 </div>
                 <div class="application__box-form-agreement-radiobox-answer-no">
                   <input
+                    name="age"
                     required
                     id="radio-no"
                     type="radio"
-                    name="age"
                     class="custom custom-radio" />
                   <label for="radio-no" class="no"> Нет</label>
                 </div>
@@ -604,6 +608,7 @@
             </div>
             <div class="application__box-form-agreement-contract">
               <input
+                name="checkbox"
                 required
                 id="checkbox"
                 type="checkbox"
