@@ -547,13 +547,14 @@ section {
         gap: 10.3px;
         flex-wrap: wrap;
       }
+      &-item {
+        &-link {
+          display: inline-block;
 
-      &-link {
-        display: inline-block;
-
-        @media (min-width: 360px) and (max-width: 999px) {
-          line-height: 142%;
-          letter-spacing: 0px;
+          @media (min-width: 360px) and (max-width: 999px) {
+            line-height: 142%;
+            letter-spacing: 0px;
+          }
         }
       }
 
@@ -2057,14 +2058,14 @@ section {
         @media (min-width: 360px) and (max-width: 999px) {
           display: none;
         }
-
+&-item{
         &-link {
           @include fontText();
         }
 
         &-link:active {
           color: $orange_200;
-        }
+        }}
 
         .underline:active::before {
           background-color: $orange_200 !important;

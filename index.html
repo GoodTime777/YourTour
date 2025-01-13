@@ -78,46 +78,46 @@
         </div>
       </div>
     </header>
-    <section class="card" id="card">
+    <section class="section card" id="card">
       <h2 class="card__title">Выбери свой тур</h2>
       <div id="tabs" class="card__tabs">
         <ul class="card__tabs-links">
-          <li>
+          <li class="card__tabs-links-item">
             <a
               href="#popular"
-              class="card__tabs-links-link tab underline active"
+              class="card__tabs-links-item-link tab underline active"
               data-tab="popular">
               Популярные
             </a>
           </li>
-          <li>
+          <li class="card__tabs-links-item">
             <a
               href="#authorial"
-              class="card__tabs-links-link tab underline"
+              class="card__tabs-links-item-link tab underline"
               data-tab="authorial">
               Авторские
             </a>
           </li>
-          <li>
+          <li class="card__tabs-links-item">
             <a
               href="#expedition"
-              class="card__tabs-links-link tab underline"
+              class="card__tabs-links-item-link tab underline"
               data-tab="expedition">
               Походы
             </a>
           </li>
-          <li>
+          <li class="card__tabs-links-item">
             <a
               href="#rafting"
-              class="card__tabs-links-link tab underline"
+              class="card__tabs-links-item-link tab underline"
               data-tab="rafting">
               Сплавы
             </a>
           </li>
-          <li>
+          <li class="card__tabs-links-item">
             <a
               href="#cycling"
-              class="card__tabs-links-link tab underline"
+              class="card__tabs-links-item-link tab underline"
               data-tab="cycling">
               Велопрогулки
             </a>
@@ -486,7 +486,7 @@
         </div>
       </div>
     </section>
-    <section class="application" id="application">
+    <section class="section application" id="application">
       <h2 class="application__title">Собери свой тур</h2>
       <p class="application__subtitle subtitle">
         Идейные соображения высшего порядка, а также рамки и место обучения
@@ -501,58 +501,95 @@
           name="formApplication">
           <fieldset class="application__box-form-inputs">
             <div class="application__box-form-inputs-name">
-              <label for="name">Имя</label>
+              <label
+                for="name"
+                class="label application__box-form-inputs-name-label"
+                >Имя</label
+              >
               <input
                 name="user_name"
                 required
-                class="input-application"
+                class="input application__box-form-inputs-name-input input-application"
                 type="text"
                 id="name"
                 placeholder="Введите Ваше имя"
                 autocomplete="off" />
             </div>
             <div class="application__box-form-inputs-select">
-              <label for="tour">Направление</label>
+              <label
+                for="tour"
+                class="label application__box-form-inputs-select-label"
+                >Направление</label
+              >
               <select
                 name="select-tour"
                 required
                 id="tour"
-                class="input-application">
-                <option value="" selected disabled hidden>
+                class="select application__box-form-inputs-select-menu input-application">
+                <option
+                  value=""
+                  class="option application__box-form-inputs-select-menu_disabled"
+                  selected
+                  disabled
+                  hidden>
                   Куда хотите ехать
                 </option>
-                <option value="option-1">Option 1</option>
-                <option value="option-2">Option 2</option>
-                <option value="option-3">Option 3</option>
+                <option
+                  value="option-1"
+                  class="option application__box-form-inputs-select-menu_option-1">
+                  Option 1
+                </option>
+                <option
+                  value="option-2"
+                  class="option application__box-form-inputs-select-menu_option-2">
+                  Option 2
+                </option>
+                <option
+                  value="option-3"
+                  class="option application__box-form-inputs-select-menu_option-3">
+                  Option 3
+                </option>
               </select>
             </div>
             <div class="application__box-form-inputs-email">
-              <label for="selectorMail">Email</label>
+              <label
+                for="selectorMail"
+                class="label application__box-form-inputs-email-label"
+                >Email</label
+              >
               <input
                 name="user_email"
                 required
-                class="input-application"
+                class="input application__box-form-inputs-email-input input-application"
                 type="text"
                 id="selectorMail"
                 placeholder="example@mail.com" />
             </div>
             <div class="application__box-form-inputs-tel">
-              <label for="selectorTel">Телефон</label>
+              <label
+                for="selectorTel"
+                class="label application__box-form-inputs-tel-label"
+                >Телефон</label
+              >
               <input
                 name="user_tel"
                 required
-                class="input-application"
+                class="input application__box-form-inputs-tel-input input-application"
                 type="text"
                 id="selectorTel"
                 placeholder="+ 7 ( _ _ _ ) _ _ _ - _ _ - _ _"
                 autocomplete="off" />
             </div>
             <div class="application__box-form-inputs-date date-from">
-              <label for="date_from">Дата от</label>
+              <label
+                for="date_from"
+                class="label application__box-form-inputs-date-from-label"
+                >Дата от</label
+              >
               <input
                 name="user_date_from"
                 required
-                class="input-application"
+                class="input application__box-form-inputs-date-from-input input-application"
                 id="date_from"
                 placeholder="ДД.ММ.ГГГГ"
                 onfocus="(this.type='date')"
@@ -560,11 +597,15 @@
                 max="2028-12-31" />
             </div>
             <div class="application__box-form-inputs-date date-to">
-              <label for="date_to">Дата до</label>
+              <label
+                for="date_to"
+                class="label application__box-form-inputs-date-to-label"
+                >Дата до</label
+              >
               <input
                 name="user_date_to"
                 required
-                class="input-application"
+                class="input application__box-form-inputs-date-to-input input-application"
                 id="date_to"
                 placeholder="ДД.ММ.ГГГГ"
                 onfocus="(this.type='date')"
@@ -572,9 +613,13 @@
                 max="2028-12-31" />
             </div>
             <div class="application__box-form-inputs-comment">
-              <label for="comment">Комментарий </label>
+              <label
+                for="comment"
+                class="label application__box-form-inputs-comment-label"
+                >Комментарий
+              </label>
               <textarea
-                class="input-application"
+                class="textarea application__box-form-inputs-comment-textarea input-application"
                 id="comment"
                 name="user_comment"></textarea>
             </div>
@@ -592,8 +637,12 @@
                     required
                     id="radio-yes"
                     type="radio"
-                    class="custom custom-radio" />
-                  <label for="radio-yes" class="yes">Да</label>
+                    class="custom application__box-form-agreement-radiobox-answer-yes-input custom-radio" />
+                  <label
+                    for="radio-yes"
+                    class="yes application__box-form-agreement-radiobox-answer-yes-label"
+                    >Да</label
+                  >
                 </div>
                 <div class="application__box-form-agreement-radiobox-answer-no">
                   <input
@@ -601,8 +650,12 @@
                     required
                     id="radio-no"
                     type="radio"
-                    class="custom custom-radio" />
-                  <label for="radio-no" class="no"> Нет</label>
+                    class="custom application__box-form-agreement-radiobox-answer-no-input custom-radio" />
+                  <label
+                    for="radio-no"
+                    class="no application__box-form-agreement-radiobox-answer-no-label">
+                    Нет</label
+                  >
                 </div>
               </div>
             </div>
@@ -612,12 +665,16 @@
                 required
                 id="checkbox"
                 type="checkbox"
-                class="custom custom-checkbox" />
-              <label for="checkbox"> </label>
-              <p class="checkbox-text">
+                class="custom application__box-form-agreement-contract-input custom-checkbox" />
+              <label
+                for="checkbox"
+                class="application__box-form-agreement-contract-label">
+              </label>
+              <p
+                class="application__box-form-agreement-contract-text checkbox-text">
                 Нажимая кнопку, я принимаю условия
                 <a
-                  class="contract underline"
+                  class="contract application__box-form-agreement-contract-text-link underline"
                   href="#"
                   download="/doc/Договор.txt"
                   >Лицензионного договора</a
@@ -640,7 +697,7 @@
         </form>
       </div>
     </section>
-    <section class="reviews" id="reviews">
+    <section class="section reviews" id="reviews">
       <h2 class="reviews__title">Отзывы наших путешественников</h2>
       <p class="reviews__subtitle subtitle">
         Идейные соображения высшего порядка, а также рамки и место обучения
@@ -648,35 +705,51 @@
       </p>
       <div class="block-transparent-for-scroll"></div>
       <div class="reviews__swiper swiper mySwiper">
-        <ul class="swiper-wrapper">
-          <li class="swiper-slide swiper-slide-mobile">
-            <p class="swiper-slide__content-one mari">
+        <ul class="reviews__swiper-wrapper swiper-wrapper">
+          <li
+            class="swiper-slide reviews__swiper-wrapper-slide swiper-slide-mobile">
+            <p
+              class="swiper-slide__content-one reviews__swiper-wrapper-slide-content-one mari">
               Идейные соображения высшего порядка, а также рамки и место
               обучения кадров обеспечивает широкому кругу (специалистов) участие
               в формировании новых предложений. Идейные соображения высшего
               порядка, а также начало повседневной работы по формированию
               позиции позволяет оценить значение модели развития.
             </p>
-            <div class="swiper-slide__content-two">
-              <div class="swiper-slide__content-two-text">
-                <h3 class="swiper-slide__content-two-text-title">Мария</h3>
-                <p class="swiper-slide__content-two-text-subtext">
+            <div
+              class="swiper-slide__content-two reviews__swiper-wrapper-slide-content-two">
+              <div
+                class="swiper-slide__content-two-text reviews__swiper-wrapper-slide-content-two-text">
+                <h3
+                  class="swiper-slide__content-two-text-title reviews__swiper-wrapper-slide-content-two-text-title">
+                  Мария
+                </h3>
+                <p
+                  class="swiper-slide__content-two-text-subtext reviews__swiper-wrapper-slide-content-two-text-subtext">
                   Тур: Вдали от дома
                 </p>
               </div>
-              <div class="swiper-slide__content-two-foto">
-                <img src="images/fotoWoman.jpg" alt="Женщина на фоне реки" />
+              <div
+                class="swiper-slide__content-two-foto reviews__swiper-wrapper-slide-content-two-foto">
+                <img
+                  src="images/fotoWoman.jpg"
+                  class="reviews__swiper-wrapper-slide-content-two-foto-img"
+                  alt="Женщина на фоне реки" />
               </div>
             </div>
           </li>
-          <li class="swiper-slide swiper-slide-mobile">
-            <div class="swiper-slide__content-one pavel">
-              <p class="text-one-pavel">
+          <li
+            class="swiper-slide reviews__swiper-wrapper-slide swiper-slide-mobile">
+            <div
+              class="swiper-slide__content-one reviews__swiper-wrapper-slide-content-one pavel">
+              <p
+                class="reviews__swiper-wrapper-slide-content-one-text-one-pavel text-one-pavel">
                 Равным образом постоянный количественный рост и сфера нашей
                 активности играет важную роль в формировании системы обучения
                 кадров, соответствует насущным потребностям.
               </p>
-              <p>
+              <p
+                class="reviews__swiper-wrapper-slide-content-one-text-two-pavel">
                 Значимость этих проблем настолько очевидна, что дальнейшее
                 развитие различных форм деятельности обеспечивает широкому кругу
                 (специалистов) участие в формировании новых предложений.
@@ -685,46 +758,73 @@
                 модели развития.
               </p>
             </div>
-            <div class="swiper-slide__content-two">
-              <div class="text">
-                <h3 class="swiper-slide__content-two-text-title">Павел</h3>
-                <p class="swiper-slide__content-two-text-subtext">
+            <div
+              class="swiper-slide__content-two reviews__swiper-wrapper-slide-content-two">
+              <div
+                class="swiper-slide__content-two reviews__swiper-wrapper-slide-content-two-text text">
+                <h3
+                  class="swiper-slide__content-two-text-title reviews__swiper-wrapper-slide-content-two-text-title">
+                  Павел
+                </h3>
+                <p
+                  class="swiper-slide__content-two-text-subtext reviews__swiper-wrapper-slide-content-two-text-subtext">
                   Тур: Путешествие в горы
                 </p>
               </div>
-              <div class="swiper-slide__content-two-foto fotoPavel">
-                <img src="images/fotoMan.jpg" alt="Мужчина улыбается" />
+              <div
+                class="swiper-slide__content-two-foto reviews__swiper-wrapper-slide-content-two-foto fotoPavel">
+                <img
+                  src="images/fotoMan.jpg"
+                  class="reviews__swiper-wrapper-slide-content-two-foto-img"
+                  alt="Мужчина улыбается" />
               </div>
             </div>
           </li>
-          <li class="swiper-slide swiper-slide-desk">
-            <p class="swiper-slide__content-one mari">
+
+          <li
+            class="swiper-slide reviews__swiper-wrapper-slide swiper-slide-desk">
+            <p
+              class="swiper-slide__content-one reviews__swiper-wrapper-slide-content-one mari">
               Идейные соображения высшего порядка, а также рамки и место
               обучения кадров обеспечивает широкому кругу (специалистов) участие
               в формировании новых предложений. Идейные соображения высшего
               порядка, а также начало повседневной работы по формированию
               позиции позволяет оценить значение модели развития.
             </p>
-            <div class="swiper-slide__content-two">
-              <div class="swiper-slide__content-two-text">
-                <h3 class="swiper-slide__content-two-text-title">Мария</h3>
-                <p class="swiper-slide__content-two-text-subtext">
+            <div
+              class="swiper-slide__content-two reviews__swiper-wrapper-slide-content-two">
+              <div
+                class="swiper-slide__content-two-text reviews__swiper-wrapper-slide-content-two-text">
+                <h3
+                  class="swiper-slide__content-two-text-title reviews__swiper-wrapper-slide-content-two-text-title">
+                  Мария
+                </h3>
+                <p
+                  class="swiper-slide__content-two-text-subtext reviews__swiper-wrapper-slide-content-two-text-subtext">
                   Тур: Вдали от дома
                 </p>
               </div>
-              <div class="swiper-slide__content-two-foto">
-                <img src="images/fotoWoman.jpg" alt="Женщина на фоне реки" />
+              <div
+                class="swiper-slide__content-two-foto reviews__swiper-wrapper-slide-content-two-foto">
+                <img
+                  src="images/fotoWoman.jpg"
+                  class="reviews__swiper-wrapper-slide-content-two-foto-img"
+                  alt="Женщина на фоне реки" />
               </div>
             </div>
           </li>
-          <li class="swiper-slide swiper-slide-desk">
-            <div class="swiper-slide__content-one pavel">
-              <p class="text-one-pavel">
+          <li
+            class="swiper-slide reviews__swiper-wrapper-slide swiper-slide-desk">
+            <div
+              class="swiper-slide__content-one reviews__swiper-wrapper-slide-content-one pavel">
+              <p
+                class="reviews__swiper-wrapper-slide-content-one-text-one-pavel text-one-pavel">
                 Равным образом постоянный количественный рост и сфера нашей
                 активности играет важную роль в формировании системы обучения
                 кадров, соответствует насущным потребностям.
               </p>
-              <p>
+              <p
+                class="reviews__swiper-wrapper-slide-content-one-text-two-pavel">
                 Значимость этих проблем настолько очевидна, что дальнейшее
                 развитие различных форм деятельности обеспечивает широкому кругу
                 (специалистов) участие в формировании новых предложений.
@@ -733,46 +833,72 @@
                 модели развития.
               </p>
             </div>
-            <div class="swiper-slide__content-two">
-              <div class="text">
-                <h3 class="swiper-slide__content-two-text-title">Павел</h3>
-                <p class="swiper-slide__content-two-text-subtext">
+            <div
+              class="swiper-slide__content-two reviews__swiper-wrapper-slide-content-two">
+              <div class="reviews__swiper-wrapper-slide-content-two-text text">
+                <h3
+                  class="swiper-slide__content-two-text-title reviews__swiper-wrapper-slide-content-two-text-title">
+                  Павел
+                </h3>
+                <p
+                  class="swiper-slide__content-two-text-subtext reviews__swiper-wrapper-slide-content-two-text-subtext">
                   Тур: Путешествие в горы
                 </p>
               </div>
-              <div class="swiper-slide__content-two-foto">
-                <img src="images/fotoMan.jpg" alt="Мужчина улыбается" />
+              <div
+                class="swiper-slide__content-two-foto reviews__swiper-wrapper-slide-content-two-foto">
+                <img
+                  src="images/fotoMan.jpg"
+                  class="reviews__swiper-wrapper-slide-content-two-foto-img"
+                  alt="Мужчина улыбается" />
               </div>
             </div>
           </li>
-          <li class="swiper-slide swiper-slide-desk">
-            <p class="swiper-slide__content-one mari">
+
+          <li
+            class="swiper-slide reviews__swiper-wrapper-slide swiper-slide-desk">
+            <p
+              class="swiper-slide__content-one reviews__swiper-wrapper-slide-content-one mari">
               Идейные соображения высшего порядка, а также рамки и место
               обучения кадров обеспечивает широкому кругу (специалистов) участие
               в формировании новых предложений. Идейные соображения высшего
               порядка, а также начало повседневной работы по формированию
               позиции позволяет оценить значение модели развития.
             </p>
-            <div class="swiper-slide__content-two">
-              <div class="swiper-slide__content-two-text">
-                <h3 class="swiper-slide__content-two-text-title">Мария</h3>
-                <p class="swiper-slide__content-two-text-subtext">
+            <div
+              class="swiper-slide__content-two reviews__swiper-wrapper-slide-content-two">
+              <div
+                class="swiper-slide__content-two-text reviews__swiper-wrapper-slide-content-two-text">
+                <h3
+                  class="swiper-slide__content-two-text-title reviews__swiper-wrapper-slide-content-two-text-title">
+                  Мария
+                </h3>
+                <p
+                  class="swiper-slide__content-two-text-subtext reviews__swiper-wrapper-slide-content-two-text-subtext">
                   Тур: Вдали от дома
                 </p>
               </div>
-              <div class="swiper-slide__content-two-foto">
-                <img src="images/fotoWoman.jpg" alt="Женщина на фоне реки" />
+              <div
+                class="swiper-slide__content-two-foto reviews__swiper-wrapper-slide-content-two-foto">
+                <img
+                  src="images/fotoWoman.jpg"
+                  class="reviews__swiper-wrapper-slide-content-two-foto-img"
+                  alt="Женщина на фоне реки" />
               </div>
             </div>
           </li>
-          <li class="swiper-slide swiper-slide-desk">
-            <div class="swiper-slide__content-one pavel">
-              <p class="text-one-pavel">
+          <li
+            class="swiper-slide reviews__swiper-wrapper-slide swiper-slide-desk">
+            <div
+              class="swiper-slide__content-one reviews__swiper-wrapper-slide-content-one pavel">
+              <p
+                class="reviews__swiper-wrapper-slide-content-one-text-one-pavel text-one-pavel">
                 Равным образом постоянный количественный рост и сфера нашей
                 активности играет важную роль в формировании системы обучения
                 кадров, соответствует насущным потребностям.
               </p>
-              <p>
+              <p
+                class="reviews__swiper-wrapper-slide-content-one-text-two-pavel">
                 Значимость этих проблем настолько очевидна, что дальнейшее
                 развитие различных форм деятельности обеспечивает широкому кругу
                 (специалистов) участие в формировании новых предложений.
@@ -781,46 +907,72 @@
                 модели развития.
               </p>
             </div>
-            <div class="swiper-slide__content-two">
-              <div class="text">
-                <h3 class="swiper-slide__content-two-text-title">Павел</h3>
-                <p class="swiper-slide__content-two-text-subtext">
+            <div
+              class="swiper-slide__content-two reviews__swiper-wrapper-slide-content-two">
+              <div class="reviews__swiper-wrapper-slide-content-two-text text">
+                <h3
+                  class="swiper-slide__content-two-text-title reviews__swiper-wrapper-slide-content-two-text-title">
+                  Павел
+                </h3>
+                <p
+                  class="swiper-slide__content-two-text-subtext reviews__swiper-wrapper-slide-content-two-text-subtext">
                   Тур: Путешествие в горы
                 </p>
               </div>
-              <div class="swiper-slide__content-two-foto">
-                <img src="images/fotoMan.jpg" alt="Мужчина улыбается" />
+              <div
+                class="swiper-slide__content-two-foto reviews__swiper-wrapper-slide-content-two-foto">
+                <img
+                  src="images/fotoMan.jpg"
+                  class="reviews__swiper-wrapper-slide-content-two-foto-img"
+                  alt="Мужчина улыбается" />
               </div>
             </div>
           </li>
-          <li class="swiper-slide swiper-slide-desk">
-            <p class="swiper-slide__content-one mari">
+
+          <li
+            class="swiper-slide reviews__swiper-wrapper-slide swiper-slide-desk">
+            <p
+              class="swiper-slide__content-one reviews__swiper-wrapper-slide-content-one mari">
               Идейные соображения высшего порядка, а также рамки и место
               обучения кадров обеспечивает широкому кругу (специалистов) участие
               в формировании новых предложений. Идейные соображения высшего
               порядка, а также начало повседневной работы по формированию
               позиции позволяет оценить значение модели развития.
             </p>
-            <div class="swiper-slide__content-two">
-              <div class="swiper-slide__content-two-text">
-                <h3 class="swiper-slide__content-two-text-title">Мария</h3>
-                <p class="swiper-slide__content-two-text-subtext">
+            <div
+              class="swiper-slide__content-two reviews__swiper-wrapper-slide-content-two">
+              <div
+                class="swiper-slide__content-two-text reviews__swiper-wrapper-slide-content-two-text">
+                <h3
+                  class="swiper-slide__content-two-text-title reviews__swiper-wrapper-slide-content-two-text-title">
+                  Мария
+                </h3>
+                <p
+                  class="swiper-slide__content-two-text-subtext reviews__swiper-wrapper-slide-content-two-text-subtext">
                   Тур: Вдали от дома
                 </p>
               </div>
-              <div class="swiper-slide__content-two-foto">
-                <img src="images/fotoWoman.jpg" alt="Женщина на фоне реки" />
+              <div
+                class="swiper-slide__content-two-foto reviews__swiper-wrapper-slide-content-two-foto">
+                <img
+                  src="images/fotoWoman.jpg"
+                  class="reviews__swiper-wrapper-slide-content-two-foto-img"
+                  alt="Женщина на фоне реки" />
               </div>
             </div>
           </li>
-          <li class="swiper-slide swiper-slide-desk">
-            <div class="swiper-slide__content-one pavel">
-              <p class="text-one-pavel">
+          <li
+            class="swiper-slide reviews__swiper-wrapper-slide swiper-slide-desk">
+            <div
+              class="swiper-slide__content-one reviews__swiper-wrapper-slide-content-one pavel">
+              <p
+                class="reviews__swiper-wrapper-slide-content-one-text-one-pavel text-one-pavel">
                 Равным образом постоянный количественный рост и сфера нашей
                 активности играет важную роль в формировании системы обучения
                 кадров, соответствует насущным потребностям.
               </p>
-              <p>
+              <p
+                class="reviews__swiper-wrapper-slide-content-one-text-two-pavel">
                 Значимость этих проблем настолько очевидна, что дальнейшее
                 развитие различных форм деятельности обеспечивает широкому кругу
                 (специалистов) участие в формировании новых предложений.
@@ -829,24 +981,33 @@
                 модели развития.
               </p>
             </div>
-            <div class="swiper-slide__content-two">
-              <div class="text">
-                <h3 class="swiper-slide__content-two-text-title">Павел</h3>
-                <p class="swiper-slide__content-two-text-subtext">
+            <div
+              class="swiper-slide__content-two reviews__swiper-wrapper-slide-content-two">
+              <div class="reviews__swiper-wrapper-slide-content-two-text text">
+                <h3
+                  class="swiper-slide__content-two-text-title reviews__swiper-wrapper-slide-content-two-text-title">
+                  Павел
+                </h3>
+                <p
+                  class="swiper-slide__content-two-text-subtext reviews__swiper-wrapper-slide-content-two-text-subtext">
                   Тур: Путешествие в горы
                 </p>
               </div>
-              <div class="swiper-slide__content-two-foto">
-                <img src="images/fotoMan.jpg" alt="Мужчина улыбается" />
+              <div
+                class="swiper-slide__content-two-foto reviews__swiper-wrapper-slide-content-two-foto">
+                <img
+                  src="images/fotoMan.jpg"
+                  class="reviews__swiper-wrapper-slide-content-two-foto-img"
+                  alt="Мужчина улыбается" />
               </div>
             </div>
           </li>
         </ul>
 
-        <div class="swiper-pagination"></div>
+        <div class="swiper-pagination reviews__swiper-pagination"></div>
       </div>
     </section>
-    <section class="gallery">
+    <section class="section gallery">
       <h2 class="gallery__title">Фотографии путешествий</h2>
       <p class="gallery__subtitle subtitle">
         Идейные соображения высшего порядка, а также рамки и место обучения
@@ -980,7 +1141,7 @@
         </div>
       </div>
     </section>
-    <section class="stories" id="stories">
+    <section class="section stories" id="stories">
       <h2 class="stories__title">Истории путешествий</h2>
       <p class="stories__subtitle subtitle">
         Идейные соображения высшего порядка, а также рамки и место обучения
@@ -1010,27 +1171,29 @@
             </ul>
           </div>
           <div class="stories__container-block-detailed detailed">
-            <button>Подробнее</button>
+            <button class="stories__container-block-detailed-btn">
+              Подробнее
+            </button>
           </div>
           <ul class="stories__container-block-network">
-            <li>
+            <li class="stories__container-block-network-item">
               <a
                 href="https://instagram.softonic.ru/"
-                class="stories__container-block-network-link instagram underline"
+                class="stories__container-block-network-item-link instagram underline"
                 >instagram</a
               >
             </li>
-            <li>
+            <li class="stories__container-block-network-item">
               <a
                 href="https://www.facebook.com/"
-                class="stories__container-block-network-link facebook underline"
+                class="stories__container-block-network-item-link facebook underline"
                 >facebook</a
               >
             </li>
-            <li>
+            <li class="stories__container-block-network-item">
               <a
                 href="https://www.youtube.com/"
-                class="stories__container-block-network-link you-tube underline"
+                class="stories__container-block-network-item-link you-tube underline"
                 >YouTube</a
               >
             </li>
@@ -1048,20 +1211,22 @@
             </p>
           </div>
           <div class="stories__container-block-detailed detailed">
-            <button>Подробнее</button>
+            <button class="stories__container-block-detailed-btn">
+              Подробнее
+            </button>
           </div>
           <ul class="stories__container-block-network">
-            <li>
+            <li class="stories__container-block-network-item">
               <a
                 href="https://instagram.softonic.ru/"
-                class="stories__container-block-network-link instagram underline"
+                class="stories__container-block-network-item-link instagram underline"
                 >instagram</a
               >
             </li>
-            <li>
+            <li class="stories__container-block-network-item">
               <a
                 href="https://vk.com/snp.agency?trackcode=13ee46df_Ai3VHIpqy7Hmmi589gATPebrBaQTxTy0Gpofmmn0p9uaTSH9FLEV9CSc7bAxQJw9Y-sB5pBHOnKb2VYQLrAlDhvP-qEO6g"
-                class="stories__container-block-network-link vkontakte underline"
+                class="stories__container-block-network-item-link vkontakte underline"
                 >ВКонтакте</a
               >
             </li>
@@ -1079,27 +1244,29 @@
             </p>
           </div>
           <div class="stories__container-block-detailed detailed">
-            <button>Подробнее</button>
+            <button class="stories__container-block-detailed-btn">
+              Подробнее
+            </button>
           </div>
           <ul class="stories__container-block-network">
-            <li>
+            <li class="stories__container-block-network-item">
               <a
                 href="https://instagram.softonic.ru/"
-                class="stories__container-block-network-link instagram underline"
+                class="stories__container-block-network-item-link instagram underline"
                 >instagram</a
               >
             </li>
-            <li>
+            <li class="stories__container-block-network-item">
               <a
                 href="https://www.facebook.com/"
-                class="stories__container-block-network-link facebook underline"
+                class="stories__container-block-network-item-link facebook underline"
                 >facebook</a
               >
             </li>
-            <li>
+            <li class="stories__container-block-network-item">
               <a
                 href="https://vk.com/snp.agency?trackcode=13ee46df_Ai3VHIpqy7Hmmi589gATPebrBaQTxTy0Gpofmmn0p9uaTSH9FLEV9CSc7bAxQJw9Y-sB5pBHOnKb2VYQLrAlDhvP-qEO6g"
-                class="stories__container-block-network-link vkontakte underline"
+                class="stories__container-block-network-item-link vkontakte underline"
                 >ВКонтакте</a
               >
             </li>
@@ -1107,7 +1274,7 @@
         </li>
       </ul>
     </section>
-    <section class="communication">
+    <section class="section communication">
       <div class="communication__block">
         <div class="communication__block-background"></div>
         <div class="communication__block-content">

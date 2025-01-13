@@ -511,11 +511,11 @@ section {
     flex-wrap: wrap;
   }
 }
-.card__tabs-links-link {
+.card__tabs-links-item-link {
   display: inline-block;
 }
 @media (min-width: 360px) and (max-width: 999px) {
-  .card__tabs-links-link {
+  .card__tabs-links-item-link {
     line-height: 142%;
     letter-spacing: 0px;
   }
@@ -2023,13 +2023,13 @@ section {
     display: none;
   }
 }
-.stories__container-block-network-link {
+.stories__container-block-network-item-link {
   font-size: 20px;
   letter-spacing: 0;
   line-height: 142%;
   color: #ffffff;
 }
-.stories__container-block-network-link:active {
+.stories__container-block-network-item-link:active {
   color: #efa501;
 }
 .stories__container-block-network .underline:active::before {
